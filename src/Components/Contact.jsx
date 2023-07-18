@@ -86,7 +86,7 @@ const Contact = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "10px" : "10.4%", flexDirection:'row',marginTop:"30px"}} >
+             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "10px" : "10.4%", flexDirection:'row',marginTop:"10px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
@@ -96,13 +96,13 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
-    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%",height:"100vh"}}>
+    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%", height:"80vh"}}>
 
   
     <Grid item xs={12} sm={6}  >
  
     <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "400px" : "500px"
+     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "300px" : "500px"
     }}>
 
      <div style={{fontSize: ismobile? "20px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
@@ -130,7 +130,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:'10%', marginTop: ismobile? "50px" : "30px", height: "500px", 
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:'10%', marginTop: ismobile? "20px" : "30px", height: "500px"
               
 
             }}

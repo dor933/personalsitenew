@@ -24,15 +24,15 @@ const About = () => {
    </span> 
      <br/>
      </Grid>
-       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',height:"100vh",marginTop: ismobile? "3%": "1%"}}>  
+       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"80vh"}}>  
        <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "20px" : "0%"}} >
 
                 
        <img src="https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/Profiles/0544474788" style={{ borderRadius:"50%",
     
     //make the image responsive and fit the screen
-     maxWidth:"100%",
-     maxHeight:"30%",
+    width: ismobile? "140px" : "300px",
+    height: ismobile? "140px" : "300px",
      objectFit:"cover",
      //make it sharp
         imageRendering:"auto",
@@ -48,8 +48,8 @@ const About = () => {
        
 
         </Grid>    
-        <Grid item xs={1} style={{ height:"80%"}}  >
-                <div style={{height:"50%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
+        <Grid item xs={1} style={{ height:"600px"}}  >
+                <div style={{height:"80%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
         <Grid item xs={5} style={{textAlign:'center', height:"25%", width:"100%"}} >

@@ -46,7 +46,7 @@ const Projects = () => {
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:"20px",width:"100%",height:"100vh"}}>
+<Grid container justify="center" style={{marginTop:"20px",width:"100%"}}>
 
 
 {myprojects.map((project,index) => (

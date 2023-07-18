@@ -54,7 +54,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',height:"100vh",marginTop:"50px"}}>
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px"}}>
 
             <Grid item xs={5} style={{textAlign:'center', height:"100%"}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
