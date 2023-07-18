@@ -66,18 +66,18 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{paddingLeft:"10px"}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "100px"}}>
+                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "80px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "100px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "80px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "30px" : "100px"}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "30px" : "80px"}}>
                       Information systems Specialist and Applications Developer.
                     
                 </span>
@@ -109,7 +109,7 @@ const Home = () => {
             </Grid>
 
             <Grid item xs={5} style={{textAlign:'center'}} className={isLoaded3? 'fadeIn' : 'hidden'}>
-            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "25px" : "100px"}}>
+            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "25px" : "80px",textAlign:'left'}}>
 
                Achivements.
                    </h1>
