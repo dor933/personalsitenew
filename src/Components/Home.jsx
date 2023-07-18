@@ -58,7 +58,7 @@ const Home = () => {
 
             <Grid item xs={5} style={{textAlign:'center', height:"100%"}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "15%": "20%",
-            fontSize:bigscreen? "15px":"20px"
+            fontSize:bigscreen? "15px":"17px"
             }}>
                     Hello Friends! 👋
                 </h2>
@@ -66,18 +66,18 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{paddingLeft:"10px"}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "80px"}}>
+                <span className="Hometext" style={{fontSize:bigscreen? "35px" : "80px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "80px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "35px" : "80px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "30px" : "80px"}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "35px" : "80px"}}>
                       Information systems Specialist and Applications Developer.
                     
                 </span>
@@ -103,13 +103,13 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={2} style={{ height:"60%"}}  >
+            <Grid item xs={1} style={{ height:"60%"}}  >
                 <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>
 
             <Grid item xs={5} style={{textAlign:'center'}} className={isLoaded3? 'fadeIn' : 'hidden'}>
-            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "25px" : "80px",textAlign:'left'}}>
+            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "25px" : "80px",textAlign:'center'}}>
 
                Achivements.
                    </h1>

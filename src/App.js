@@ -11,6 +11,7 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import AuthContext from './Components/Usecontexts/Maincontext';
+import poster from './/assets/images/postar.jpg';
 
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
     <Router>
     <div className="App">
 
-        <video autoPlay loop muted className='video' >
+        <video autoPlay loop muted className='video' poster={poster} >
 
           <source src={video} type='video/mp4' />
         </video>

@@ -48,7 +48,7 @@ const About = () => {
        
 
         </Grid>    
-        <Grid item xs={2} style={{ height:"80%"}}  >
+        <Grid item xs={1} style={{ height:"80%"}}  >
                 <div style={{height:"50%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
