@@ -96,7 +96,7 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
-    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%", height:"80vh"}}>
+    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%", height:"75vh"}}>
 
   
     <Grid item xs={12} sm={6}  >
