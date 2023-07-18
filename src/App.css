@@ -71,9 +71,10 @@
   }
 
 .footer {
+  position:"absolute";
   left: 0;
   width: 70%;
-  height: 7vh;
+  height: "10%";
   opacity: 0.8;
   align-content: center;
   margin-left: 16%;
@@ -98,9 +99,9 @@
 
 .content {
   position: relative;
-  overflow-y: scroll;
-  height: 93vh;
-  ;
+  height: 100vh;
+  overflow-y: auto;
+  
   
 
   
