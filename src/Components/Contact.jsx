@@ -86,25 +86,24 @@ const Contact = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "3%" : "10.4%", flexDirection:'row',marginTop:"3%"}} >
+             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "10px" : "10.4%", flexDirection:'row',marginTop:"30px"}} >
 
-<span className="Hometext" style={{fontSize: ismobile? "30px" : "100px", color:'#f02e1d'}} >
+<span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
     Contact
     </span>
-    <span className="Hometext" style={{fontSize: ismobile? "30px" : "100px" , marginLeft: ismobile? "3%" : "1.1%"}} >
+    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "3%" : "1.1%"}} >
         Me.
     </span>
     </Grid>
-    <Grid container justify="center" style={{marginTop: smaller900? "8%" : "0%",width:"100%",height:"100vh"}}>
+    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%",height:"100vh"}}>
 
   
     <Grid item xs={12} sm={6}  >
  
-    <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "100%" : "85%", margin: "auto",
-     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "7%" :"5%",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "10%" : "0%", height: ismobile? "100%" : 
-     "70%"
-}}>
+    <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
+     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "400px" : "500px"
+    }}>
 
      <div style={{fontSize: ismobile? "20px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
         <span style={{color:'white'}}>Lets</span> 
@@ -130,9 +129,9 @@ const Contact = () => {
                 }}
                 noValidate
                 autoComplete="off"
-                style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: "100%", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:'10%', marginTop: ismobile? "30%" : "5%", marginBottom:ismobile? "0%" : "0%", height: ismobile? "100%" : 
-                "70%"
+                style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:'10%', marginTop: ismobile? "50px" : "30px", height: "500px", 
+              
 
             }}
             >

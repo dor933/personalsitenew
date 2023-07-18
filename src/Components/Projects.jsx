@@ -33,20 +33,20 @@ const Projects = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"3%"}} >
+             <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"50px"}} >
 
-<span className="Hometext" style={{fontSize: ismobile? "50px" : "100px", color:'#f02e1d'}} >
+<span className="Hometext" style={{fontSize: ismobile? "50px" : "80px", color:'#f02e1d'}} >
 
   My 
    </span>    
-   <span className="Hometext" style={{fontSize: ismobile? "50px" : "100px" , marginLeft: ismobile? "3%" : "1.1%"}} >
+   <span className="Hometext" style={{fontSize: ismobile? "50px" : "80px" , marginLeft: ismobile? "14px" : "20px"}} >
 
   Projects.
    </span> 
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:"3%",width:"100%",height:"100vh"}}>
+<Grid container justify="center" style={{marginTop:"20px",width:"100%",height:"100vh"}}>
 
 
 {myprojects.map((project,index) => (

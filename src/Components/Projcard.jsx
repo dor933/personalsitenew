@@ -28,7 +28,7 @@ const Projcard = ({project}) => {
 
     return (
         <>
-        <Card sx={{ width:ismobile? 300 : 400, marginBottom:5 }}>
+        <Card sx={{ width:ismobile? 300 : 400, marginBottom:5,marginTop:"20px" }}>
                     <CardMedia
                     component="img"
                     sx={{ height: "200px",width:"100%"}}

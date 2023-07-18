@@ -60,18 +60,12 @@
   }
 
 .footer {
-  position: fixed;
   left: 0;
-  height: 7vh;
-  height:auto;
-  bottom: 0;
   width: 70%;
   opacity: 0.8;
   align-content: center;
   margin-left: 16%;
-  color: white;
-  ;
-  
+  color: white;  
   text-align: center;
   border-top-width:  0.001rem;
   border-top-style: solid;
@@ -94,6 +88,8 @@
   position: relative;
   overflow-y: scroll;
   height: 93vh;
+  ;
+  
 
   
   /* Decrease the z-index of .content */

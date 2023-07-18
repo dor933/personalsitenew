@@ -12,18 +12,22 @@ import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import AuthContext from './Components/Usecontexts/Maincontext';
 import poster from './/assets/images/postar.jpg';
+import { useMediaQuery } from '@mui/material';
 
 
 function App() {
 
   const [menupress, setMenupress] = useState(false);
+  const ismobile = useMediaQuery('(max-width:600px)');
 
   return (
     <AuthContext.Provider value={{menupress,setMenupress}}>
     <Router>
     <div className="App">
 
-        <video autoPlay loop muted className='video' poster={poster} >
+     
+
+        <video autoPlay loop muted className='video' poster={poster}   >
 
           <source src={video} type='video/mp4' />
         </video>

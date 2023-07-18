@@ -12,7 +12,7 @@ const About = () => {
 
     return (
         <>
-                <Grid item xs={12} style={{textAlign:'center', height:"15%", flexDirection:'row',marginTop:"3%"}} >
+                <Grid item xs={12} style={{textAlign:'center', height:"15%", flexDirection:'row',marginTop:"40px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "50px" : "100px", color:'#f02e1d'}} >
 
@@ -25,7 +25,7 @@ const About = () => {
      <br/>
      </Grid>
        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',height:"100vh",marginTop: ismobile? "3%": "1%"}}>  
-       <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "17%" : "0%"}} >
+       <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "20px" : "0%"}} >
 
                 
        <img src="https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/Profiles/0544474788" style={{ borderRadius:"50%",
