@@ -102,7 +102,7 @@ body, html {
 
 
 .content {
-  flex: 1 0 auto; 
+  flex: 0 0 auto;
   position: relative;
   overflow: auto; /* allow content to scroll if it overflows .App */
   padding-bottom: 20px; /* prevent content from being obscured by .footer */
