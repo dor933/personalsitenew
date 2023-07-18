@@ -23,14 +23,17 @@ function App() {
   return (
     <AuthContext.Provider value={{menupress,setMenupress}}>
     <Router>
-    <div className="App">
+    <div className={`App ${ismobile? "inmobile" : ""}`}>
 
      
+       {
+        !ismobile &&   <video autoPlay loop muted className='video' poster={poster}   >
 
-        <video autoPlay loop muted className='video' poster={poster}   >
+        <source src={video} type='video/mp4' />
+      </video>
+       }
 
-          <source src={video} type='video/mp4' />
-        </video>
+      
         <div className='content' style={{opacity:menupress? "0.2" : "1"}} >
         <Header/>
         <Routes>
