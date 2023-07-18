@@ -74,6 +74,7 @@
   position:"fixed";
   left: 0;
   width: 70%;
+  height:7vh;
   
   opacity: 0.8;
   align-content: center;
@@ -99,7 +100,7 @@
 
 .content {
   position: relative;
-  height: 100vh;
+  height: 93vh;
   overflow-y: auto;
   
   
