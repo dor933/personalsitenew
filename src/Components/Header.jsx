@@ -44,7 +44,7 @@ const Header = () => {
         fontWeight: 'bold',
         textTransform: 'none',
         color: '#ffffff',
-        zindex: 1302,
+        zindex: 1,
       };
 
       useEffect(() => {
@@ -126,7 +126,12 @@ const Header = () => {
                             style: {
                                 backgroundColor: 'transparent',
                                 boxShadow: 'none',
-                                marginTop: '50px',
+                                position:'fixed',
+                                zIndex: 1,
+                                width: '100%',
+                                height: '100%',
+                                top: 10,
+                                left: 0,
                             }
                         }}
                         

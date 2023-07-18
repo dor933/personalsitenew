@@ -11,8 +11,7 @@ body, html {
 }
 
 .App {
-  display: flex;
-  flex-direction: column;
+ 
   width: 100%;
   height: 100vh; /* make sure App takes the full viewport height */
   position: relative; /* establish a positioning context for .footer */
@@ -76,17 +75,18 @@ body, html {
     bottom: 0; /* stick to the bottom */
     left: 0;
     width: 60%; /* take the full width */
-    height: 7vh; /* adjust as needed */
     opacity: 0.8;
-    align-content: center;
     color: white;  
     text-align: center;
     border-top-width: 0.001rem;
     border-top-style: solid;
     border-top-color: #dbd3d3;
     z-index: 1;
+    display: flex;
     left: 20%; 
     right: 20%;
+    justify-content: center;
+    margin-top: 10px;
     }
 
 .video {
@@ -105,7 +105,7 @@ body, html {
   flex: 1 0 auto; 
   position: relative;
   overflow: auto; /* allow content to scroll if it overflows .App */
-  padding-bottom: 7vh; /* prevent content from being obscured by .footer */
+  padding-bottom: 20px; /* prevent content from being obscured by .footer */
   z-index: 0;
 }
 
