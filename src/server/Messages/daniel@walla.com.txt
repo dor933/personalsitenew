@@ -1,0 +1,3 @@
+SubjectHello
+From: daniel@walla.com
+Message: this is my text
