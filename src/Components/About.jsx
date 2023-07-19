@@ -96,6 +96,13 @@ color:"#d45959"
 
 
            </Grid>
+           <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"0px"}} >
+          
+          <div className='footer'>
+              <p>© 2023 by <a href="https://www.linkedin.com/in/abhishek-kumar-2a1b3a1b0/">Dor Ratzabi</a></p>
+      
+              </div>
+              </Grid>
     </>
     );
     }

@@ -73,6 +73,7 @@ const Contact = () => {
               },
               '& .MuiOutlinedInput-input': {
                 color: '#ffffff', // Change input text color
+                height:"10px"
               },
               '&:hover .MuiOutlinedInput-notchedOutline': {
                 borderColor: '#ffffff', // Change border color on hover
@@ -113,10 +114,10 @@ const Contact = () => {
     <Grid item xs={12} sm={6}  >
  
     <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "300px" : "500px"
+     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "230px" : "500px"
     }}>
 
-     <div style={{fontSize: ismobile? "20px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+     <div style={{fontSize: ismobile? "15px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
         <span style={{color:'white'}}>Lets</span> 
         <span style={{color:'#f02e1d',marginLeft:ismobile? 3: 0}}> Connent.</span>
          <br/> <br/>
@@ -132,7 +133,7 @@ const Contact = () => {
         </div>
 
         </Grid>
-        <Grid item xs={12} sm={6} style={{}} >
+        <Grid item xs={12} sm={6} style={{height:"450px"}} >
             <Box 
             component="form"
             sx={{
@@ -141,7 +142,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:'10%', marginTop: ismobile? "20px" : "30px", height: "500px"
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:ismobile?'5%': "10%", marginTop: ismobile? "10px" : "30px", height: ismobile? "350px" : "500px",
               
 
             }}
@@ -154,7 +155,7 @@ const Contact = () => {
                     <span style={{color:'white',marginLeft:ismobile? 5: 4}}> a</span>
                     <span style={{color:'white',marginLeft:ismobile? 5: 4}}> Message.</span>
                     </div>
-                    <br/> <br/>
+                    <br/> 
                     <ThemeProvider theme={theme}> 
                     <TextField
                     id="outlined-multiline-flexible"
@@ -166,7 +167,7 @@ const Contact = () => {
 
                     maxRows={4}
                  
-                    style={{width:"100%"}}
+                    style={{width:"100%",height:"20px",paddingBottom:"10px"}}
                     />
                     </ThemeProvider>
                     <br/> <br/>
@@ -177,7 +178,7 @@ const Contact = () => {
                     label="Email"
                     multiline
                     maxRows={4}
-                    style={{width:"100%"}}
+                    style={{width:"100%",height:"20px",paddingBottom:"10px"}}
                     onChange={handleemailchange}
                     />
                     </ThemeProvider>
@@ -189,7 +190,7 @@ const Contact = () => {
                     label="Message"
                     multiline
                     maxRows={4}
-                    style={{width:"100%"}}
+                    style={{width:"100%", color:"#ffffff"}}
                     onChange={handlemessagechange}
 
 
@@ -201,10 +202,10 @@ const Contact = () => {
                     </ThemeProvider>
                     <br/> <br/>
 
-                    <div style={{display: "flex", justifyContent: "center", height:"50px", maxWidth: "600px", width: "100%", margin: "auto"}}>
+                    <div style={{display: "flex", justifyContent: "center", height:ismobile? "30px":"50px", maxWidth: "600px", width: "100%", margin: "auto"}}>
 
                     <Button variant="contained" onClick={sendmessage}    >
-                        <span className="button" style={{paddingTop:13}}  >
+                        <span className="button" style={{paddingTop:13,fontSize:ismobile?"10px":"20px"}}  >
                             Send
                         </span>
                     </Button>
@@ -219,6 +220,16 @@ const Contact = () => {
         </Grid>
         
         </Grid>
+
+        
+
+       <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"0px"}} >
+          
+        <div className='footer'>
+            <p>© 2023 by <a href="https://www.linkedin.com/in/abhishek-kumar-2a1b3a1b0/">Dor Ratzabi</a></p>
+    
+            </div>
+            </Grid>
       
         </>
 

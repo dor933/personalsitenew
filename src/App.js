@@ -18,7 +18,7 @@ import { useMediaQuery } from '@mui/material';
 function App() {
 
   const [menupress, setMenupress] = useState(false);
-  const ismobile = useMediaQuery('(max-width:600px)');
+  const ismobile = useMediaQuery('(max-width:1700px)');
   const [isincontactpage, setIsincontactpage] = useState(false);
 
 
@@ -47,19 +47,17 @@ function App() {
         </Routes>
 
          
-         {
-          !isincontactpage && (
-            <div className='footer'>
-            <p>© 2023 by <a href="https://www.linkedin.com/in/abhishek-kumar-2a1b3a1b0/">Dor Ratzabi</a></p>
-    
-            </div>
-          )
+         
+     
+          
 
-         }
+         
        
        
 
         </div>
+
+
 
        
 
