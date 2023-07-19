@@ -5,7 +5,7 @@ require('dotenv').config();
 
 // const serviceAccount = JSON.parse(process.env.SERVICE_ACCOUNT_JSON);
 
-const serviceaccount="asdalkj";
+const serviceAccount="asdalkj";
 
 const storage = new Storage( {
     projectId: process.env.PROJECT_ID,
