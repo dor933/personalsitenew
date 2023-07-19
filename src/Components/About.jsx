@@ -49,7 +49,7 @@ const About = () => {
 
         </Grid>    
         <Grid item xs={1} style={{ height:"100%"}}  >
-                <div style={{height:"100%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
+                <div style={{height:"50%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
         <Grid item xs={5} style={{textAlign:'center', width:"100%",height:"100%"}} >
