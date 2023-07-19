@@ -7,16 +7,16 @@
 body, html {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .App {
- 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
   width: 100%;
-  position: relative; /* establish a positioning context for .footer */
-  overflow-x: hidden; /* hide horizontal scrollbar */
-  z-index: 0;
-  height: 100vh;
+  overflow-x: hidden;
 }
 
 .inmobile {
@@ -71,10 +71,10 @@ body, html {
   }
 
   .footer {
-    position: fixed; /* fixed positioning */
+    
+    position: fixed;
     bottom: 0; /* stick to the bottom */
-    left: 0;
-    width: 60%; /* take the full width */
+    width: 60%;
     opacity: 0.8;
     color: white;  
     text-align: center;
@@ -83,11 +83,10 @@ body, html {
     border-top-color: #dbd3d3;
     z-index: 1;
     display: flex;
-    left: 20%; 
-    right: 20%;
     justify-content: center;
-    
-    }
+    margin-left: 20%; 
+    margin-right: 20%;
+  }
 
     .footercontact{
       bottom: 0; /* stick to the bottom */
@@ -120,15 +119,9 @@ body, html {
 
 
 .content {
-  flex: 1 0 auto; /* grow if necessary */
-  position: relative;
-  overflow: auto; /* allow content to scroll if it overflows .App */
-  padding-bottom: 20px; /* prevent content from being obscured by .footer */
-  z-index: 0;
-  height:"600px";
-  padding-bottom: 0;
-  padding-top: 0;
-  
+  flex: 1 0 auto; 
+  padding-bottom: 50px; /* Adjust this value according to the height of your footer */
+
 }
 
 .button {

@@ -36,7 +36,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress? "0.2" : "1", height:isincontactpage? "1000px" : "800px"}} >
+        <div className='content' style={{opacity:menupress? "0.2" : "1"}} >
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />
