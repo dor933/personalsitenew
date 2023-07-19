@@ -10,6 +10,7 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Socialcomp from "./Socialcomp";
 import TextField from '@mui/material/TextField';
 import { createTheme,ThemeProvider } from "@mui/material";
+import AuthContext from './Usecontexts/Maincontext';
 
 
 const Contact = () => {
@@ -20,6 +21,16 @@ const Contact = () => {
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const {isincontactpage,setIsincontactpage}= useContext(AuthContext);
+
+    useEffect(() => {
+        setIsincontactpage(true);
+
+        return () => {
+            setIsincontactpage(false);
+        }
+
+    }, [])
 
     const handlemessagechange = (e) => {
         setMessage(e.target.value)
@@ -96,7 +107,7 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
-    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%", height:"calc(75vh - env(safe-area-inset-bottom))"}}>
+    <Grid container justify="center" style={{marginTop: smaller900? "30px" : "0%",width:"100%", height:"100%"}}>
 
   
     <Grid item xs={12} sm={6}  >
@@ -208,6 +219,7 @@ const Contact = () => {
         </Grid>
         
         </Grid>
+      
         </>
 
     )

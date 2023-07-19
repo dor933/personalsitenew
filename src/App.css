@@ -17,7 +17,6 @@ body, html {
   overflow-x: hidden; /* hide horizontal scrollbar */
   z-index: 0;
   height: 100vh;
-  height: calc(100vh - env(safe-area-inset-bottom));
 }
 
 .inmobile {
@@ -90,6 +89,23 @@ body, html {
     
     }
 
+    .footercontact{
+      bottom: 0; /* stick to the bottom */
+      width: 60%; /* take the full width */
+      opacity: 0.8;
+      color: white;  
+      text-align: center;
+      border-top-width: 0.001rem;
+      border-top-style: solid;
+      border-top-color: #dbd3d3;
+      z-index: 1;
+      justify-content: center;
+      left: 20%;
+      right: 20%;
+      position: fixed; /* fixed positioning */
+      
+    }
+
 .video {
   min-width: 100%;
   min-height: 100vh;
@@ -99,15 +115,20 @@ body, html {
   left: 0;
   z-index: -1;
   filter: blur(0.5px);
+  
 }
 
 
 .content {
-  flex: 0 0 auto;
+  flex: 1 0 auto; /* grow if necessary */
   position: relative;
   overflow: auto; /* allow content to scroll if it overflows .App */
   padding-bottom: 20px; /* prevent content from being obscured by .footer */
   z-index: 0;
+  height:"600px";
+  padding-bottom: 0;
+  padding-top: 0;
+  
 }
 
 .button {

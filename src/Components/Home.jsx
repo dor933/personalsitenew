@@ -54,7 +54,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px"}}>
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"80%"}}>
 
             <Grid item xs={5} style={{textAlign:'center', height:"100%"}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
@@ -103,7 +103,7 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"60%"}}  >
+            <Grid item xs={1} style={{ height:"500px"}}  >
                 <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>

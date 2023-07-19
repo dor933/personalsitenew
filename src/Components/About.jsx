@@ -12,7 +12,7 @@ const About = () => {
 
     return (
         <>
-                <Grid item xs={12} style={{textAlign:'center', height:"15%", flexDirection:'row',marginTop:"40px"}} >
+                <Grid item xs={12} style={{textAlign:'center', height:ismobile? "80px" : "140px", flexDirection:'row',marginTop:"40px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "50px" : "100px", color:'#f02e1d'}} >
 
@@ -24,7 +24,7 @@ const About = () => {
    </span> 
      <br/>
      </Grid>
-       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"calc(75vh - env(safe-area-inset-bottom))"}}>  
+       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"10%"}}>  
        <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "20px" : "0%"}} >
 
                 
@@ -48,11 +48,11 @@ const About = () => {
        
 
         </Grid>    
-        <Grid item xs={1} style={{ height:"600px"}}  >
+        <Grid item xs={1} style={{ height:"550px"}}  >
                 <div style={{height:"80%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
-        <Grid item xs={5} style={{textAlign:'center', height:"25%", width:"100%"}} >
+        <Grid item xs={5} style={{textAlign:'center', width:"100%",height:"500px"}} >
 
 
 <div className="Homesecondtext" style={{textAlign:'left',fontSize:ismobile && !smallmobile? "22px" : smallmobile && !verysmallmobile? "17px": verysmallmobile? "12px": "24px" ,

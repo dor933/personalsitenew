@@ -19,10 +19,11 @@ function App() {
 
   const [menupress, setMenupress] = useState(false);
   const ismobile = useMediaQuery('(max-width:600px)');
+  const [isincontactpage, setIsincontactpage] = useState(false);
 
 
   return (
-    <AuthContext.Provider value={{menupress,setMenupress}}>
+    <AuthContext.Provider value={{menupress,setMenupress, isincontactpage, setIsincontactpage}}>
     <Router>
     <div className={`App ${ismobile? "inmobile" : ""}`}>
 
@@ -35,7 +36,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress? "0.2" : "1"}} >
+        <div className='content' style={{opacity:menupress? "0.2" : "1", height:isincontactpage? "1000px" : "800px"}} >
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />
@@ -45,15 +46,22 @@ function App() {
 
         </Routes>
 
+         
+         {
+          !isincontactpage && (
+            <div className='footer'>
+            <p>© 2023 by <a href="https://www.linkedin.com/in/abhishek-kumar-2a1b3a1b0/">Dor Ratzabi</a></p>
+    
+            </div>
+          )
+
+         }
        
-   
+       
 
         </div>
 
-        <div className='footer'>
-        <p>© 2023 by <a href="https://www.linkedin.com/in/abhishek-kumar-2a1b3a1b0/">Dor Ratzabi</a></p>
-
-        </div>
+       
 
 
    
