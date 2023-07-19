@@ -23,14 +23,20 @@ const Contact = () => {
     const [email, setEmail] = useState('')
     const {isincontactpage,setIsincontactpage}= useContext(AuthContext);
 
+
+    
+
     useEffect(() => {
         setIsincontactpage(true);
+        
 
         return () => {
             setIsincontactpage(false);
         }
 
     }, [])
+
+
 
     const handlemessagechange = (e) => {
         setMessage(e.target.value)
@@ -58,8 +64,11 @@ const Contact = () => {
             email: myemail,
             message: mymessage
         }
+
+        console.log('this is the data', data)
+
         const res = await axios.post('/sendmessage', data);
-        console.log(res);
+
     }
 
 
@@ -204,7 +213,7 @@ const Contact = () => {
 
                     <div style={{display: "flex", justifyContent: "center", height:ismobile? "30px":"50px", maxWidth: "600px", width: "100%", margin: "auto"}}>
 
-                    <Button variant="contained" onClick={sendmessage}    >
+                    <Button variant="contained" onClick={async() => sendmessage()}    >
                         <span className="button" style={{paddingTop:13,fontSize:ismobile?"10px":"20px"}}  >
                             Send
                         </span>
