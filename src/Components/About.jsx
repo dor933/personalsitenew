@@ -24,7 +24,7 @@ const About = () => {
    </span> 
      <br/>
      </Grid>
-       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"70vh"}}>  
+       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"calc(75vh - env(safe-area-inset-bottom))"}}>  
        <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "20px" : "0%"}} >
 
                 
