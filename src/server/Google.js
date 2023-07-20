@@ -3,8 +3,10 @@ const { Storage } = require("@google-cloud/storage");
 require('dotenv').config();
 
 
-const jsonString =process.env.SERVICE_ACCOUNT_JSON;
-const serviceAccount = JSON.parse(jsonString.replace(/\\n/g, "\n"));
+let jsonString =process.env.SERVICE_ACCOUNT_JSON;
+jsonString = jsonString.replace(/\n/g, "\\n");
+let serviceAccount = JSON.parse(jsonString);
+serviceAccount.private_key=serviceAccount.private_key.replace(/\\n/g, "\n");
 
 const storage = new Storage( {
     projectId: process.env.PROJECT_ID,
