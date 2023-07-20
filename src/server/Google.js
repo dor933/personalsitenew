@@ -4,7 +4,7 @@ require('dotenv').config();
 
 
 const jsonString =process.env.SERVICE_ACCOUNT_JSON;
-const serviceAccount = JSON.parse(jsonString);
+const serviceAccount = JSON.parse(jsonString.replace(/\\n/g, "\n"));
 
 const storage = new Storage( {
     projectId: process.env.PROJECT_ID,
