@@ -74,18 +74,14 @@ const Contact = () => {
 
           setIssucceeded(true);
           setPopup(true);
-          setMessage('');
-          setName('');
-          setEmail('');
+        
 
           
         }
         else{
           setIssucceeded(false);
           setPopup(true);
-          setMessage('');
-          setName('');
-          setEmail('');
+        
         }
 
 
