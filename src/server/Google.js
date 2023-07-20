@@ -10,7 +10,7 @@ async function uploadmessage (myfile) {
 
     const base64key= process.env.NEWPRIVATEKEY;
 const buff = Buffer.from(base64key, 'base64');
-const key = buff.toString('utf-8');
+const key = JSON.parse(buff.toString('utf-8')); 
 
 console.log("key", key);
 
