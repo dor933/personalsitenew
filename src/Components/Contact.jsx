@@ -22,6 +22,8 @@ const Contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const {isincontactpage,setIsincontactpage}= useContext(AuthContext);
+    const {issucceeded,setIssucceeded}= useContext(AuthContext);
+    const {popup,setPopup}= useContext(AuthContext);
 
 
     
@@ -68,6 +70,24 @@ const Contact = () => {
         console.log('this is the data', data)
 
         const res = await axios.post('/sendmessage', data);
+        if(res.status === 200){
+
+          setIssucceeded(true);
+          setPopup(true);
+          setMessage('');
+          setName('');
+          setEmail('');
+
+          
+        }
+        else{
+          setIssucceeded(false);
+          setPopup(true);
+          setMessage('');
+          setName('');
+          setEmail('');
+        }
+
 
     }
 

@@ -13,17 +13,20 @@ import Contact from './Components/Contact';
 import AuthContext from './Components/Usecontexts/Maincontext';
 import poster from './/assets/images/postar.jpg';
 import { useMediaQuery } from '@mui/material';
+import Popup from './Components/Popup';
 
 
 function App() {
 
   const [menupress, setMenupress] = useState(false);
+  const [popup, setPopup] = useState(false);
+  const [issucceeded, setIssucceeded] = useState(false);
   const ismobile = useMediaQuery('(max-width:1700px)');
   const [isincontactpage, setIsincontactpage] = useState(false);
 
 
   return (
-    <AuthContext.Provider value={{menupress,setMenupress, isincontactpage, setIsincontactpage}}>
+    <AuthContext.Provider value={{menupress,issucceeded,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
     <div className={`App ${ismobile? "inmobile" : ""}`}>
 
@@ -36,7 +39,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress? "0.2" : "1"}} >
+        <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />
@@ -45,6 +48,9 @@ function App() {
         <Route path="/contact" element={<Contact />} />
 
         </Routes>
+
+         
+
 
          
          
@@ -57,6 +63,9 @@ function App() {
 
         </div>
 
+        {
+              popup && <Popup/>
+           }
 
 
        
