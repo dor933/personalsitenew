@@ -7,6 +7,8 @@ let jsonString =process.env.SERVICE_ACCOUNT_JSON;
 jsonString = jsonString.replace(/\n/g, "\\n");
 let serviceAccount = JSON.parse(jsonString);
 serviceAccount.private_key=serviceAccount.private_key.replace(/\\n/g, "\n");
+console.log('hello', serviceAccount)
+
 
 const storage = new Storage( {
     projectId: process.env.PROJECT_ID,
