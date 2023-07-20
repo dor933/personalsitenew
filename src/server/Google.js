@@ -2,16 +2,15 @@ const fs = require('fs');
 const { Storage } = require("@google-cloud/storage");
 require('dotenv').config();
 
-let myprivatekey= process.env.PRIVATE_KEY;
-console.log("myprivatekey", myprivatekey);
-myprivatekey= myprivatekey.replace(/\\n/g, '\n');
-console.log('new private key', myprivatekey)
+const base64key= process.env.NEWPRIVATEKEY;
+const buff = Buffer.from(base64key, 'base64');
+const key = buff.toString('utf-8');
 
 let serviceAccount= {
     type: process.env.TYPE,
     project_id: process.env.PROJECT_ID,
     private_key_id: process.env.PRIVATE_KEY_ID,
-    private_key: myprivatekey,
+    private_key: key,
     client_email: process.env.CLIENT_EMAIL,
     client_id: process.env.CLIENT_ID,
     auth_uri: process.env.AUTH_URI ,
