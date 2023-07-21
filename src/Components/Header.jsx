@@ -178,20 +178,31 @@ const Header = () => {
   
         <Grid item xs="8" sm="4"
         
-        style={{flexDirection:'row',display:'flex',justifyContent:'center'}}
+        style={{flexDirection:'row',display:'flex',justifyContent:'center',paddingTop:6}}
         >
 
+      <a href="https://github.com/dor933" style={{marginRight:'10%'}} >
+
+         
         <AiFillGithub size={!isbigscreen? "25px": "35px"} color="#ffffff" 
         
-        style={{marginRight:'10%'}}
+         
 
         />
+        </a>
+
+        <a href="https://www.facebook.com/kushi101" style={{marginRight:'10%'}}>
         <BsFacebook size={!isbigscreen? "25px": "35px"} color="#ffffff"
         
         style={{marginRight:'10%'}}
         />
+        </a>
+            <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/" >
+
         <FaLinkedin size={!isbigscreen? "25px": "35px"} color="#ffffff"
         />
+                </a>
+
      
 
      
