@@ -23,10 +23,11 @@ function App() {
   const [issucceeded, setIssucceeded] = useState(false);
   const ismobile = useMediaQuery('(max-width:1700px)');
   const [isincontactpage, setIsincontactpage] = useState(false);
+  const [ishomepage, setIshomepage] = useState(false);
 
 
   return (
-    <AuthContext.Provider value={{menupress,issucceeded,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
+    <AuthContext.Provider value={{menupress,issucceeded,ishomepage,setIshomepage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
     <div className={`App ${ismobile? "inmobile" : ""}`}>
 
@@ -39,7 +40,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
+        <div className='content' style={{opacity:menupress || popup? "0.2" : "1", height:!ishomepage? "80vh": "85vh"}} >
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />

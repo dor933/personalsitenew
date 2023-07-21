@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import axios from 'axios';
+import AuthContext from "./Usecontexts/Maincontext";
 
 
 
@@ -20,6 +21,18 @@ const Home = () => {
     const ismobile = useMediaQuery('(max-width:920px)');
     const smallmobile = useMediaQuery('(max-width:470px)');
     const verysmallmobile = useMediaQuery('(max-width:314px)');
+    const {ishomepage,setIshomepage}= useContext(AuthContext);
+
+    useEffect(() => {
+        setIshomepage(true);
+
+        return () => {
+            setIshomepage(false);
+        }
+
+    }, [])
+
+
 
 
     const download = () => {
