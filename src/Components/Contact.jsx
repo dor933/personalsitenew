@@ -123,17 +123,17 @@ const Contact = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "60px" : "10.4%", flexDirection:'row',marginTop:"10px"}} >
+             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "40px" : "10.4%", flexDirection:'row',marginTop:"10px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
     Contact
     </span>
-    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "3%" : "1.1%"}} >
+    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "3%" : "1.5%"}} >
         Me.
     </span>
     </Grid>
-    <Grid container  style={{width:"100%", height:"100vh", alignItems:'flex-end'}}>
+    <Grid container  style={{width:"100%", height:"100vh", alignItems:'center'}}>
 
   
     <Grid item xs={12} sm={6}  >
@@ -244,6 +244,10 @@ const Contact = () => {
             
         </Grid>
 
+  
+        
+        </Grid>
+
         <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"20px"}} >
           
           <div className='footer'>
@@ -251,8 +255,6 @@ const Contact = () => {
       
               </div>
               </Grid>
-        
-        </Grid>
 
         
 

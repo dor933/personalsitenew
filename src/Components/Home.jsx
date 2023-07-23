@@ -67,7 +67,10 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"90%"}}>
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"90%",
+    //make overflow y
+
+    }}>
 
             <Grid item xs={5} style={{textAlign:'center'}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
@@ -126,7 +129,7 @@ const Home = () => {
 
                Achivements.
                    </h1>
-                   <ul className="Homesecondtext" style={{textAlign:'left',fontSize:bigscreen? "15px" : "20px",paddingLeft:"10px"}}>
+                   <ul className="Homesecondtext" style={{textAlign:'left',fontSize:bigscreen? "14px" : "20px",paddingLeft:"10px"}}>
                           <li>  
                             <span style={{color:'#f02e1d'}}> 2023 </span> - Bachelor of Information Systems, Ruppin Academic Center- Avarage grade of 94.
                             </li>
@@ -157,20 +160,22 @@ Expected Completion: July 2025
                          </Grid>
 
 
-                         <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"2%",
-                        
-                        }} >
           
-          <div className='footer'>
-              <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
-      
-              </div>
-              </Grid>
 
            
      
 
         </Grid>
+
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"2%"
+                        
+                    }} >
+      
+      <div className='footer'>
+          <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
+  
+          </div>
+          </Grid>
    
         </>
     );
