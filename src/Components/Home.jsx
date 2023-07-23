@@ -67,9 +67,9 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"95%"}}>
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"90%"}}>
 
-            <Grid item xs={5} style={{textAlign:'center', height:"100%"}} >
+            <Grid item xs={5} style={{textAlign:'center'}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
             fontSize:bigscreen? "15px":"17px"
             }}>
@@ -79,18 +79,18 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "25px" : "80px"}}>
+                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "80px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "25px" : "80px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "80px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "25px" : "80px"}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "80px"}}>
                       Information systems,NOC and Support Specialist, and Applications Developer.
                     
                 </span>
@@ -116,17 +116,17 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"500px"}}  >
-                <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
+            <Grid item xs={1} style={{ height:"90%"}}  >
+                <div style={{height:"70%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>
 
             <Grid item xs={5} style={{textAlign:'center'}} className={isLoaded3? 'fadeIn' : 'hidden'}>
-            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "20px" : "80px",textAlign:'center'}}>
+            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "80px",textAlign:'center'}}>
 
                Achivements.
                    </h1>
-                   <ul className="Homesecondtext" style={{textAlign:'left',fontSize:bigscreen? "13px" : "20px",paddingLeft:"10px"}}>
+                   <ul className="Homesecondtext" style={{textAlign:'left',fontSize:bigscreen? "15px" : "20px",paddingLeft:"10px"}}>
                           <li>  
                             <span style={{color:'#f02e1d'}}> 2023 </span> - Bachelor of Information Systems, Ruppin Academic Center- Avarage grade of 94.
                             </li>
@@ -156,15 +156,22 @@ Expected Completion: July 2025
 
                          </Grid>
 
-        </Grid>
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"0px"}} >
+
+                         <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"2%",
+                        
+                        }} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
               </div>
               </Grid>
+
+           
      
+
+        </Grid>
+   
         </>
     );
     };

@@ -123,7 +123,7 @@ const Contact = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "10px" : "10.4%", flexDirection:'row',marginTop:"10px"}} >
+             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "60px" : "10.4%", flexDirection:'row',marginTop:"10px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
@@ -133,16 +133,16 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
-    <Grid container justify="center" style={{marginTop: smaller900? "50px" : "0%",width:"100%", height:"100%"}}>
+    <Grid container  style={{width:"100%", height:"100vh", alignItems:'flex-end'}}>
 
   
     <Grid item xs={12} sm={6}  >
  
-    <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-     borderRadius:'10px', paddingTop:'10%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "230px" : "500px"
+    <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",paddingBottom:ismobile? "4%" : "0%",
+     borderRadius:'10px', paddingTop:'7%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "280px" : "500px"
     }}>
 
-     <div style={{fontSize: ismobile? "15px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+     <div style={{fontSize: ismobile? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
         <span style={{color:'white'}}>Lets</span> 
         <span style={{color:'#f02e1d',marginLeft:ismobile? 3: 0}}> Connent.</span>
          <br/> <br/>
@@ -158,7 +158,7 @@ const Contact = () => {
         </div>
 
         </Grid>
-        <Grid item xs={12} sm={6} style={{height:"450px"}} >
+        <Grid item xs={12} sm={6} style={{}} >
             <Box 
             component="form"
             sx={{
@@ -167,7 +167,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:ismobile?'5%': "10%", marginTop: ismobile? "10px" : "30px", height: ismobile? "350px" : "500px",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", marginTop: ismobile? "10px" : "30px", height: ismobile? "350px" : "500px",
               
 
             }}
@@ -243,18 +243,20 @@ const Contact = () => {
 
             
         </Grid>
+
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"20px"}} >
+          
+          <div className='footer'>
+              <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
+      
+              </div>
+              </Grid>
         
         </Grid>
 
         
 
-       <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"0px"}} >
-          
-        <div className='footer'>
-            <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
-    
-            </div>
-            </Grid>
+      
       
         </>
 

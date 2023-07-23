@@ -72,6 +72,7 @@
     
     bottom: 0; /* stick to the bottom */
     width: 60%;
+    margin-top: 35px;
     opacity: 0.8;
     color: white;  
     text-align: center;

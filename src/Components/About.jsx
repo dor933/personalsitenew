@@ -24,7 +24,7 @@ const About = () => {
    </span> 
      <br/>
      </Grid>
-       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:  "5%", height:"95%"}}>  
+       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:  "5%", height:"75%"}}>  
        <Grid  item xs={5} style={{textAlign:'center',marginTop:ismobile? "20px" : "0%"}} >
 
                 
@@ -49,7 +49,7 @@ const About = () => {
 
         </Grid>    
         <Grid item xs={1} style={{ height:"100%"}}  >
-                <div style={{height:"50%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
+                <div style={{height:"70%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
         <Grid item xs={5} style={{textAlign:'center', width:"100%"}} >
@@ -94,15 +94,17 @@ color:"#d45959"
 </div>
             </Grid>
 
-
-           </Grid>
-           <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"0px"}} >
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"0px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
               </div>
               </Grid>
+
+
+           </Grid>
+    
     </>
     );
     }
