@@ -67,8 +67,8 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"90%",
-    //make overflow y
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"80%",
+  //make overflow y
 
     }}>
 
@@ -119,8 +119,8 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"90%"}}  >
-                <div style={{height:"70%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
+            <Grid item xs={1} style={{ height:"60%"}}  >
+                <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>
 
@@ -167,7 +167,7 @@ Expected Completion: July 2025
 
         </Grid>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"2%"
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row'
                         
                     }} >
       
