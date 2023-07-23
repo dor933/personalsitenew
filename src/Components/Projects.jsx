@@ -66,7 +66,7 @@ const Projects = () => {
     </Grid>
     <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"0px"}} >
           
-          <div className='footer'>
+          <div className='footer' style={{position:'fixed'}}>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
               </div>

@@ -67,7 +67,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"80%"}}>
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"95%"}}>
 
             <Grid item xs={5} style={{textAlign:'center', height:"100%"}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
@@ -157,7 +157,7 @@ Expected Completion: July 2025
                          </Grid>
 
         </Grid>
-        <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"0px"}} >
+        <Grid item xs={12} style={{textAlign:'center', height:"5%", flexDirection:'row',marginTop:"0px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>

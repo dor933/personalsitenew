@@ -40,7 +40,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress || popup? "0.2" : "1", height:!ishomepage? "80vh": "85vh"}} >
+        <div className='content' style={{opacity:menupress || popup? "0.2" : "1", height:"100vh"}} >
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />

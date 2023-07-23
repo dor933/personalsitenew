@@ -24,8 +24,8 @@ const About = () => {
    </span> 
      <br/>
      </Grid>
-       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop: ismobile? "3%": "1%", height:"550px"}}>  
-       <Grid  item xs={5} style={{textAlign:'center',height:"100%",marginTop:ismobile? "20px" : "0%"}} >
+       <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:  "5%", height:"95%"}}>  
+       <Grid  item xs={5} style={{textAlign:'center',marginTop:ismobile? "20px" : "0%"}} >
 
                 
        <img src="https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/Profiles/0544474788" style={{ borderRadius:"50%",
@@ -52,7 +52,7 @@ const About = () => {
                 <div style={{height:"50%",width:"1px",backgroundColor:"#ffffff",marginLeft:"53%", marginTop:"5%"}}></div>
                 
             </Grid>
-        <Grid item xs={5} style={{textAlign:'center', width:"100%",height:"100%"}} >
+        <Grid item xs={5} style={{textAlign:'center', width:"100%"}} >
 
 
 <div className="Homesecondtext" style={{textAlign:'left',fontSize:ismobile && !smallmobile? "22px" : smallmobile && !verysmallmobile? "14px": verysmallmobile? "12px": "24px" ,
@@ -96,7 +96,7 @@ color:"#d45959"
 
 
            </Grid>
-           <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"0px"}} >
+           <Grid item xs={12} style={{textAlign:'center', height:"5%", flexDirection:'row',marginTop:"0px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
