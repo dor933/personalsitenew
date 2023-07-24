@@ -72,7 +72,6 @@
     
     bottom: 0; /* stick to the bottom */
     width: 60%;
-    margin-top: 35px;
     opacity: 0.8;
     color: white;  
     text-align: center;
@@ -84,6 +83,7 @@
     justify-content: center;
     margin-left: 20%; 
     margin-right: 20%;
+    position: fixed;
   }
 
     .footercontact{
@@ -119,6 +119,7 @@
   position: relative;
   justify-content: center;
   align-items: center;
+  overflow-y: auto;
 
 
   
