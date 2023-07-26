@@ -12,6 +12,7 @@ const About = () => {
 
     return (
         <>
+
                 <Grid item xs={12} style={{textAlign:'center', height:ismobile? "80px" : "140px", flexDirection:'row',marginTop:"40px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "50px" : "100px", color:'#f02e1d'}} >

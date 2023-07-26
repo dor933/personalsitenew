@@ -60,7 +60,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"85%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"90%",
   //make overflow y
 
     }}>
@@ -174,6 +174,7 @@ Expected Completion: July 2025
   
           </div>
           </Grid>
+
    
         </>
     );
