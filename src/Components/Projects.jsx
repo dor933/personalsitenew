@@ -37,12 +37,7 @@ const Projects = () => {
             projectname:"Social Keeper",
             projectdescription:"Social Keeper is an app that automates meeting scheduling. It harmonizes personal hobbies, preferred times, and calendar events to devise the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, creating a hassle-free, personalized meet-up experience.",
             repositorylink:"https://github.com/dor933/socialkeeper2"
-        },       {
-            projectimage:"https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/SocialKeeper.png",
-            projectname:"Social Keeper",
-            projectdescription:"Social Keeper is an app that automates meeting scheduling. It harmonizes personal hobbies, preferred times, and calendar events to devise the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, creating a hassle-free, personalized meet-up experience.",
-            repositorylink:"https://github.com/dor933/socialkeeper2"
-        },
+        }
    
        
 
