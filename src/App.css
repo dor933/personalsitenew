@@ -9,7 +9,7 @@
 
 
 .inmobile {
-  background: url('./assets//images/postar.jpg');
+  background: url('./assets//images/postar.jpg') no-repeat center center fixed;
   height: 100vh;
    
 
