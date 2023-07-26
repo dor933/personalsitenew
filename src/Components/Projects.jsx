@@ -8,6 +8,8 @@ import IconButton from '@mui/material/IconButton';
 import axios from 'axios';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Projcard from "./Projcard";
+import AuthContext from './Usecontexts/Maincontext';
+
 
 
 //create new component
@@ -18,9 +20,24 @@ const Projects = () => {
     const issm= useMediaQuery('(max-width:600px)');
     const smallmobile = useMediaQuery('(max-width:470px)');
     const verysmallmobile = useMediaQuery('(max-width:314px)');
+    const {isprojectspage,setIsinprojectpage}= useContext(AuthContext);
+
+    useEffect(() => {
+        setIsinprojectpage(true);
+
+        return () => {
+            setIsinprojectpage(false);
+        }
+
+    }, [])
 
     const myprojects = [
         {
+            projectimage:"https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/SocialKeeper.png",
+            projectname:"Social Keeper",
+            projectdescription:"Social Keeper is an app that automates meeting scheduling. It harmonizes personal hobbies, preferred times, and calendar events to devise the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, creating a hassle-free, personalized meet-up experience.",
+            repositorylink:"https://github.com/dor933/socialkeeper2"
+        },       {
             projectimage:"https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/SocialKeeper.png",
             projectname:"Social Keeper",
             projectdescription:"Social Keeper is an app that automates meeting scheduling. It harmonizes personal hobbies, preferred times, and calendar events to devise the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, creating a hassle-free, personalized meet-up experience.",

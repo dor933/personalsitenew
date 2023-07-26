@@ -23,14 +23,7 @@ const Home = () => {
     const verysmallmobile = useMediaQuery('(max-width:314px)');
     const {ishomepage,setIshomepage}= useContext(AuthContext);
 
-    useEffect(() => {
-        setIshomepage(true);
 
-        return () => {
-            setIshomepage(false);
-        }
-
-    }, [])
 
 
 
@@ -67,7 +60,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"90%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"85%",
   //make overflow y
 
     }}>
@@ -157,7 +150,11 @@ Expected Completion: July 2025
 
                             </ul>
 
+                          
+
                          </Grid>
+
+                      
 
 
           
@@ -166,8 +163,9 @@ Expected Completion: July 2025
      
 
         </Grid>
+        
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row'
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', height:"5%"
                         
                     }} >
       

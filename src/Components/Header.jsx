@@ -101,7 +101,8 @@ const Header = () => {
         <>
         <Grid container  direction='row' 
         justifyContent="space-between"
-        alignItems="center" marginTop="10px"
+        alignItems="center" marginTop="5px"
+        style={{height:"5%"}}
 
         >
             <Grid item xs="4" sm="8"

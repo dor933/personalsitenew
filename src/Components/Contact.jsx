@@ -139,7 +139,7 @@ const Contact = () => {
     <Grid item xs={12} sm={6}  >
  
     <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",paddingBottom:ismobile? "4%" : "0%",
-     borderRadius:'10px', paddingTop:'7%', marginTop:ismobile? "10px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "5px" : "0%", height: ismobile? "280px" : "500px"
+     borderRadius:'10px', paddingTop:'7%', marginTop:ismobile? "15px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "0px" : "0%", height: ismobile? "280px" : "500px"
     }}>
 
      <div style={{fontSize: ismobile? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
@@ -167,7 +167,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", marginTop: ismobile? "10px" : "30px", height: ismobile? "350px" : "500px",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", marginTop: ismobile? "0px" : "30px", height: ismobile? "350px" : "500px",
               
 
             }}
@@ -248,7 +248,7 @@ const Contact = () => {
         
         </Grid>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row'}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',height:"5%"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
