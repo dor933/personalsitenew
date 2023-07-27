@@ -9,6 +9,9 @@ import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import axios from 'axios';
 import AuthContext from "./Usecontexts/Maincontext";
+import CheckIcon from '@mui/icons-material/Check';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import SupportIcon from '@mui/icons-material/Support';
 
 
 
@@ -40,6 +43,9 @@ const Home = () => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isLoaded2, setIsLoaded2] = useState(false);
     const [isLoaded3, setIsLoaded3] = useState(false);
+    const [isLoaded4, setIsLoaded4] = useState(false);
+    const [isLoaded5, setIsLoaded5] = useState(false);
+    const [isLoaded6, setIsLoaded6] = useState(false);
 
     useEffect(() => {
 
@@ -50,17 +56,32 @@ const Home = () => {
             setIsLoaded2(true);
         }
         , 1400);
+
+        setTimeout(() => {
+            setIsLoaded6(true);
+        }
+        , 1600);
         setTimeout(() => {
             setIsLoaded3(true);
         }
         , 2000);
+
+        setTimeout(() => {
+            setIsLoaded4(true);
+        }
+        , 3000);
+        setTimeout(() => {
+            setIsLoaded5(true);
+        }
+        , 4000);
     }, []);
 
 
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"90%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"60%",
+        marginBottom:smallmobile? "60px": "0px"
   //make overflow y
 
     }}>
@@ -75,18 +96,18 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "80px"}}>
+                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "50px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "80px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "50px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "80px"}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px"}}>
                       Information systems,NOC and Support Specialist, and Applications Developer.
                     
                 </span>
@@ -112,13 +133,13 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"60%"}}  >
+            <Grid item xs={1} style={{ height:"70%"}} className={isLoaded6? 'fadeIn' : 'hidden'}  >
                 <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>
 
             <Grid item xs={5} style={{textAlign:'center'}} className={isLoaded3? 'fadeIn' : 'hidden'}>
-            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "80px",textAlign:'center'}}>
+            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "50px",textAlign:'center'}}>
 
                Achivements.
                    </h1>
@@ -163,9 +184,87 @@ Expected Completion: July 2025
      
 
         </Grid>
+
+       
+
+            <Grid item xs={10} className={isLoaded4? 'fadeIn' : 'hidden'} style={{marginTop:"10px",
+           display:"flex", flexDirection:"row", marginLeft:"10%"
+        }}  > 
+
+            <span className="Hometext" style={{color:'#ffffff',fontSize:bigscreen? "30px" : "50px", borderBottom:'1px solid #ffffff'}}>
+            I'm
+            </span>
+            <span className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "50px", paddingLeft:bigscreen? "10px" : "20px",
+        borderBottom:'1px solid #ffffff'}}>
+               Guarentee.
+                     </span>
+
+            </Grid>
+
+         
+
+            <Grid container xs={10} className={isLoaded5? 'fadeIn': 'hidden'} style={{ marginLeft:"3%", 
+            marginTop:"10px", padding:"10px",
+         backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px'}}>
+
+            <Grid item xs={12} style={{textAlign:'left',marginTop:"10px", padding:'5px',flexDirection:'row',display:'flex',
+        alignItems:'center'}} >
+
+            <CheckIcon style={{color:'#2a612f',fontSize:bigscreen? "20px" : "30px", paddingRight:"7px",paddingBottom:"5px"}} />
+
+                
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "16px" : "20px", color:'#2a612f', width:"60px"}} >
+
+                Quality Assurance.
+                </span>
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px",
+            lineHeight:'1.6'}} >
+
+                I commit to delivering high-quality work that meets your specific needs.
+
+                    </span>
+                </Grid>
+
+                <Grid item xs={12} style={{textAlign:'left',marginTop:"10px", padding:'5px',flexDirection:'row',display:'flex',
+        alignItems:'center'}} >
+
+            <AccessTimeIcon style={{color:'#f02e1d',fontSize:bigscreen? "20px" : "30px", paddingRight:"7px",paddingBottom:"5px"}} />
+
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "16px" : "20px", color:'#f02e1d',width:"60px"}} >
+                Timely Delivery.
+                                </span>
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px", lineHeight:'1.6'}} >
+
+                I promise to respect and adhere to our agreed timelines.
+                    </span>
+                </Grid>
+
+                <Grid item xs={12} style={{textAlign:'left',marginTop:"15px", padding:'5px',flexDirection:'row',display:'flex',
+        alignItems:'center'}} >
+
+            <SupportIcon style={{color:'#4256db',fontSize:bigscreen? "20px" : "30px", paddingRight:"7px",paddingBottom:"5px"}} />
+
+
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "16px" : "20px", color:'#4256db',width:"60px"}} >
+                Ongoing Support.                                </span>
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px", lineHeight:'1.6'}} >
+
+                I guarantee ongoing support and maintenance for my work, standing by to assist with any post-delivery concerns or updates.                    </span>
+                </Grid>
+
+
+            </Grid>
+
+      
+
+
+         
+
+
+
         
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', height:"5%"
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"40px"
                         
                     }} >
       

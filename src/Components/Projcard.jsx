@@ -37,12 +37,14 @@ const Projcard = ({project}) => {
                     />
                     <CardContent style={{backgroundColor:"#3a3d3b",paddingBottom:0}}>
 
-                  <Typography gutterBottom variant="h5" component="div" style={{ color:"#3a3d3b"}}>
-                    <span className="Homesecondtext" style={{fontSize: !smallmobile? "24px" : "17px", color:'#f02e1d',fontWeight:'bold'}} >
+                  <Typography gutterBottom variant="h5" component="div" style={{ color:"#3a3d3b",textAlign:'left'}}>
+                    <span className="Homesecondtext" style={{fontSize: !smallmobile? "24px" : "17px", color:'#f02e1d',fontWeight:'bold',
+                    paddingLeft:"8px"
+                }} >
                 {projectname}
                 </span>
                     </Typography>
-                    <Typography variant="body2" color="text.secondary" style={{ color:"#ffffff",paddingTop:"1.3%"}}>
+                    <Typography variant="body2" color="text.secondary" style={{ color:"#ffffff",paddingTop:"1.3%",marginTop:"8px"}}>
                     <span className="Homesecondtext" style={{fontSize: !bigscreen? "12px": "18px", color:'#ffffff'}} >
                     {projectdescription}
                     </span>
