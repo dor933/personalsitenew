@@ -80,7 +80,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"60%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"100%",
         marginBottom:smallmobile? "60px": "0px"
   //make overflow y
 
@@ -133,7 +133,7 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"70%"}} className={isLoaded6? 'fadeIn' : 'hidden'}  >
+            <Grid item xs={1} style={{ height:"40%"}} className={isLoaded6? 'fadeIn' : 'hidden'}  >
                 <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
                 
             </Grid>
@@ -178,17 +178,8 @@ Expected Completion: July 2025
                       
 
 
-          
-
-           
-     
-
-        </Grid>
-
-       
-
-            <Grid item xs={10} className={isLoaded4? 'fadeIn' : 'hidden'} style={{marginTop:"10px",
-           display:"flex", flexDirection:"row", marginLeft:"10%"
+                         <Grid item xs={10} className={isLoaded4? 'fadeIn' : 'hidden'} style={{marginTop:"70px",
+           display:"flex", flexDirection:"row", marginLeft: smallmobile? "10%" : "4%"
         }}  > 
 
             <span className="Hometext" style={{color:'#ffffff',fontSize:bigscreen? "30px" : "50px", borderBottom:'1px solid #ffffff'}}>
@@ -204,7 +195,7 @@ Expected Completion: July 2025
          
 
             <Grid container xs={10} className={isLoaded5? 'fadeIn': 'hidden'} style={{ marginLeft:"3%", 
-            marginTop:"10px", padding:"10px",
+            marginTop:"15px", padding:"10px",
          backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px'}}>
 
             <Grid item xs={12} style={{textAlign:'left',marginTop:"10px", padding:'5px',flexDirection:'row',display:'flex',
@@ -217,7 +208,7 @@ Expected Completion: July 2025
 
                 Quality Assurance.
                 </span>
-                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px",
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:smallmobile?"55px" : "90px",
             lineHeight:'1.6'}} >
 
                 I commit to delivering high-quality work that meets your specific needs.
@@ -225,7 +216,7 @@ Expected Completion: July 2025
                     </span>
                 </Grid>
 
-                <Grid item xs={12} style={{textAlign:'left',marginTop:"10px", padding:'5px',flexDirection:'row',display:'flex',
+                <Grid item xs={12} style={{textAlign:'left',marginTop:smallmobile? "15px": "25px", padding:'5px',flexDirection:'row',display:'flex',
         alignItems:'center'}} >
 
             <AccessTimeIcon style={{color:'#f02e1d',fontSize:bigscreen? "20px" : "30px", paddingRight:"7px",paddingBottom:"5px"}} />
@@ -233,13 +224,13 @@ Expected Completion: July 2025
                 <span className="Homesecondtext" style={{fontSize:bigscreen? "16px" : "20px", color:'#f02e1d',width:"60px"}} >
                 Timely Delivery.
                                 </span>
-                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px", lineHeight:'1.6'}} >
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:smallmobile?"55px" : "90px", lineHeight:'1.6'}} >
 
                 I promise to respect and adhere to our agreed timelines.
                     </span>
                 </Grid>
 
-                <Grid item xs={12} style={{textAlign:'left',marginTop:"15px", padding:'5px',flexDirection:'row',display:'flex',
+                <Grid item xs={12} style={{textAlign:'left',marginTop:smallmobile? "15px" : "20px", padding:'5px',flexDirection:'row',display:'flex',
         alignItems:'center'}} >
 
             <SupportIcon style={{color:'#4256db',fontSize:bigscreen? "20px" : "30px", paddingRight:"7px",paddingBottom:"5px"}} />
@@ -247,13 +238,30 @@ Expected Completion: July 2025
 
                 <span className="Homesecondtext" style={{fontSize:bigscreen? "16px" : "20px", color:'#4256db',width:"60px"}} >
                 Ongoing Support.                                </span>
-                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:"55px", lineHeight:'1.6'}} >
+                <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:smallmobile?"55px" : "90px", lineHeight:'1.6'}} >
 
                 I guarantee ongoing support and maintenance for my work, standing by to assist with any post-delivery concerns or updates.                    </span>
                 </Grid>
 
 
             </Grid>
+
+           
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop:"80px"
+                        
+                    }} >
+      
+      <div className='footer'>
+          <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
+  
+          </div>
+          </Grid>
+
+        </Grid>
+
+       
+
+       
 
       
 
@@ -264,15 +272,7 @@ Expected Completion: July 2025
 
         
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"40px"
-                        
-                    }} >
       
-      <div className='footer'>
-          <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
-  
-          </div>
-          </Grid>
 
    
         </>
