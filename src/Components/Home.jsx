@@ -80,7 +80,7 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"30px", height:"100%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"100%",
         marginBottom:smallmobile? "60px": "0px"
   //make overflow y
 
@@ -102,12 +102,12 @@ const Home = () => {
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"26px", fontSize:bigscreen? "40px" : "50px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"15px", fontSize:bigscreen? "40px" : "50px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px"}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px",zIndex:4}}>
                       Information systems,NOC and Support Specialist, and Applications Developer.
                     
                 </span>
@@ -195,7 +195,7 @@ Expected Completion: July 2025
          
 
             <Grid container xs={10} className={isLoaded5? 'fadeIn': 'hidden'} style={{ marginLeft:"3%", 
-            marginTop:"15px", padding:"10px",
+            marginTop:"10px", padding:"10px",
          backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px'}}>
 
             <Grid item xs={12} style={{textAlign:'left',marginTop:"10px", padding:'5px',flexDirection:'row',display:'flex',
@@ -247,7 +247,7 @@ Expected Completion: July 2025
             </Grid>
 
            
-            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop:"80px"
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop:smallmobile?"80px" : "110px"
                         
                     }} >
       
