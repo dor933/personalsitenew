@@ -12,6 +12,8 @@ import AuthContext from "./Usecontexts/Maincontext";
 import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
+import myimage from '../assets/images/dorpaint.jpg';
+import myimage2 from '../assets/images/dortwo.jpg';
 
 
 
@@ -81,12 +83,16 @@ const Home = () => {
     return (
         <>
         <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"100%",
-        marginBottom:smallmobile? "60px": "0px"
+        marginBottom:smallmobile? "60px": "0px", padding:"20px"
   //make overflow y
 
     }}>
 
-            <Grid item xs={5} style={{textAlign:'center'}} >
+        <Grid container item xs={12} style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start', 
+        marginBottom:smallmobile? "60px": "30px"}}
+        >
+
+            <Grid item xs={8} style={{textAlign:'center',paddingRight:"15px"}} >
                 <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
             fontSize:bigscreen? "15px":"17px"
             }}>
@@ -96,19 +102,19 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "40px" : "50px"}}>
+                <span className="Hometext" style={{fontSize:bigscreen? "30px" : "60px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"15px", fontSize:bigscreen? "40px" : "50px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"15px", fontSize:bigscreen? "30px" : "60px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
                 <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px",zIndex:4}}>
-                      Information systems,NOC and Support Specialist, and Applications Developer.
+                      Information systems,NOC and Support Specialist, and Applications & Websites Developer.
                     
                 </span>
                 <br/>
@@ -133,17 +139,40 @@ const Home = () => {
           
 
             </Grid>
-            <Grid item xs={1} style={{ height:"40%"}} className={isLoaded6? 'fadeIn' : 'hidden'}  >
-                <div style={{height:"100%",width: "0.3px",backgroundColor:"#ffffff",marginLeft:"55%", marginTop:"5%"}}></div>
-                
-            </Grid>
 
-            <Grid item xs={5} style={{textAlign:'center'}} className={isLoaded3? 'fadeIn' : 'hidden'}>
-            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "50px",textAlign:'center'}}>
+              <Grid item xs={4} style={{textAlign:'center',marginTop:smallmobile? "0px" : "10px", alignSelf:'center'}} 
+              
+              className={isLoaded6? "fadeIn" : "hidden"}              >
+
+                <img src={myimage2} style={{width:bigscreen? "100%": "auto", height:bigscreen? "100%" : "400px", borderRadius:"10px",
+                //make the image look sharp
+                imageRendering:"auto",
+                imageRendering:"-moz-crisp-edges",
+                imageRendering:"pixelated",
+                //make the image look like a painting
+                filter:"grayscale(100%)",
+                filter:"contrast(150%)",
+                filter:"brightness(80%)",
+                filter:"saturate(150%)",
+                filter:"hue-rotate(10deg)",
+                filter:"blur(0.8px)",
+                filter:"invert(10%)",
+                filter:"sepia(50%)",
+                //make the image fill the container
+
+            
+            }}/>
+              </Grid>
+
+            </Grid>
+        
+
+            <Grid item xs={10} style={{backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px',padding:"40px",marginTop:"30px",marginBottom:"20px"}} className={isLoaded3? 'fadeIn' : 'hidden'}>
+            <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "50px",textAlign:'center',marginTop:"0px"}}>
 
                Achivements.
                    </h1>
-                   <ul className="Homesecondtext" style={{textAlign:'left',fontSize:bigscreen? "14px" : "20px",paddingLeft:"10px"}}>
+                   <ul className="Homesecondtext" style={{fontSize:bigscreen? "14px" : "25px",padding:"5px"}}>
                           <li>  
                             <span style={{color:'#f02e1d'}}> 2023 </span> - Bachelor of Information Systems, Ruppin Academic Center- Avarage grade of 94.
                             </li>
@@ -153,18 +182,26 @@ const Home = () => {
 
                         
                             <li>
-                             Dean's list in each year.
+                            <span style={{color:'#f02e1d'}}> 2020-2023 </span> - Dean's list in each year.
                             </li>
                             <br/>
 
                             <li>
-                            In progress: Master’s in Information Systems, Infrastructure and Cybersecurity focus in Bar Ilan University
+                            <span style={{color:'#f02e1d'}}> In progress </span> - Master’s in Information Systems, Infrastructure and Cybersecurity focus in Bar Ilan University
 Expected Completion: July 2025
+
+                                
+                           
                             </li>
 
                             <br/>
                             <li>
+
+
                             Main developer of Social Keeper- algorithm based meetings app, press <a href="https://github.com/dor933/socialkeeper2">here</a> to see the repository.
+
+
+
 
                          
                             </li>
