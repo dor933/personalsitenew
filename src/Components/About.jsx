@@ -18,7 +18,7 @@ const About = () => {
 
 
     return (
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"20px", height:"100%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"20px", height:"100%",
         marginBottom:smallmobile? "30px": "0px", padding:"20px"
   //make overflow y
 
@@ -128,7 +128,7 @@ fontSize:issmallscreen? "15px" : "20px",lineHeight:2
     paddingTop:issmallscreen? "0px":"10px"}} >
             <AdvancedCarousel/>
             </Grid>
-            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:'30px'}} >
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:'100px'}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
