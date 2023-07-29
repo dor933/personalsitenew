@@ -100,7 +100,7 @@ const Home = () => {
                 </h2>
                 
                 <br/>
-                <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{}}>
+                <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{lineHeight:2}}>
 
                 <span className="Hometext" style={{fontSize:bigscreen? "30px" : "60px"}}>
 
@@ -114,7 +114,7 @@ const Home = () => {
                 <br/>
 
                 <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px",zIndex:4}}>
-                      Information systems,NOC and Support Specialist, and Applications & Websites Developer.
+                      Information systems,NOC and Support Specialist, and Applications & Developer.
                     
                 </span>
                 <br/>
