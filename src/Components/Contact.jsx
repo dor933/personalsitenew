@@ -127,7 +127,7 @@ const Contact = () => {
       
 
   
-    <Grid container style={{width:"100%",height:"100%",flexDirection:'row',display:'flex', alignContent:'flex-start',marginTop:"50px"}}>
+    <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
 
     <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom:"30px"}} >
 
@@ -139,6 +139,9 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
+
+      <Grid container>
+
 
   
     <Grid item xs={12} sm={6} style={{lineHeight:1.6}}  >
@@ -250,9 +253,12 @@ const Contact = () => {
             
         </Grid>
 
+        </Grid>
+
+
   
         
-        </Grid>
+        </Box>
 
         <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"80px"}} >
           

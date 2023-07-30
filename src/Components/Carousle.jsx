@@ -27,6 +27,11 @@ const AdvancedCarousel = ({obj}) => {
             marginTop:"20px",
             marginBottom:"20px",
             paddingLeft:12,
+            //make the scroll bar invisible
+        
+
+
+            
 
 
             
