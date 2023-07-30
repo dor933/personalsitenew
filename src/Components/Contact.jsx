@@ -124,7 +124,12 @@ const Contact = () => {
     return (
         <>
 
-            <Grid item xs={12} style={{textAlign:'center' , flexDirection:'row',marginTop:"50px",height:ismobile? "auto":"5px"}} >
+      
+
+  
+    <Grid container style={{width:"100%",height:"100%",flexDirection:'row',display:'flex', alignContent:'flex-start',marginTop:"50px"}}>
+
+    <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom:"30px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
@@ -134,9 +139,6 @@ const Contact = () => {
         Me.
     </span>
     </Grid>
-
-  
-    <Grid container   style={{width:"100%",height:"100%",flexDirection:'row',display:'flex', alignContent:ismobile? 'flex-start': 'center',marginTop:ismobile? "50px" : "10px"}}>
 
   
     <Grid item xs={12} sm={6} style={{lineHeight:1.6}}  >
@@ -252,7 +254,7 @@ const Contact = () => {
         
         </Grid>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"40px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"80px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
