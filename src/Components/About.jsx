@@ -14,6 +14,7 @@ import image4 from '../assets/images/personalimages/4.jpg';
 const About = () => {
 
     const ismobile = useMediaQuery('(max-width:920px)');
+    const max960 = useMediaQuery('(max-width:960px)');
     const smallmobile = useMediaQuery('(max-width:555px)');
     const verysmallmobile = useMediaQuery('(max-width:314px)');
     const theme = useTheme();
@@ -45,10 +46,10 @@ const About = () => {
       md: 'flex' }, 
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft:"90px",
+    paddingLeft:"60px",
     flexDirection:'column',
      }}   xs={4}>
-           <img src= {image4} alt="dorimage" style={{width: "auto", height: issmallscreen? "300px" : "500px", borderRadius:"10%",
+           <img src= {image4} alt="dorimage" style={{width: "auto", height: ismobile? "300px" : "500px", borderRadius:"10%",
     
     
     imageRendering:"auto",
@@ -67,18 +68,21 @@ const About = () => {
 
     </Grid>
 
-    <Grid item xs={12} md={8} style={{ textAlign:"center",paddingLeft: issmallscreen? "20px": "300px", 
+    <Grid item xs={12} md={8} style={{ textAlign:"center",
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
-fontSize:issmallscreen? "15px" : "20px",lineHeight:2
+paddingLeft:issmallscreen? "0px" :"100px",
+    
+
+fontSize:ismobile? "15px" : "20px",lineHeight:2
 }}>
     <Grid item xs={12} style={{textAlign: 'center',paddingBottom:"20px"}} >
 
-<span className="Hometext" style={{fontSize: issmallscreen? "30px" : "60px", color:'#f02e1d'}} >
+<span className="Hometext" style={{fontSize: issmallscreen? "30px" : "40px", color:'#f02e1d'}} >
 
   So, 
    </span>    
-   <span className="Hometext" style={{fontSize: issmallscreen? "30px" : "60px" , marginLeft: "1%" }} >
+   <span className="Hometext" style={{fontSize: issmallscreen? "30px" : "40px" , marginLeft: "1%" }} >
 
   Who I am?
    </span> 
