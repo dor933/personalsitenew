@@ -28,6 +28,7 @@ const About = () => {
 
     return (
   
+      <>
 
     
         <Box style={{height:"100%",marginTop:"30px", width:"90%",flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"5px", height:"100%",
@@ -71,7 +72,7 @@ const About = () => {
     <Grid item xs={12} md={8} style={{ textAlign:"center",
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
-paddingLeft:issmallscreen? "0px" :"100px",
+paddingLeft:issmallscreen? "0px" :"200px",
     
 
 fontSize:ismobile? "15px" : "20px",lineHeight:2
@@ -115,8 +116,8 @@ fontSize:ismobile? "15px" : "20px",lineHeight:2
 
 
 
-        <Grid container style={{flexDirection:'row',justifyContent:'flex-start',alignItems:'flex-start',marginTop: "80px", 
-        paddingTop:"30px",display:'flex'
+        <Grid container style={{flexDirection:'row',marginTop: "40px", 
+        paddingTop:"40px",
         }}>
 
 <Grid item xs={4}>
@@ -137,6 +138,7 @@ fontSize:ismobile? "15px" : "20px",lineHeight:2
     paddingTop:issmallscreen? "0px":"10px", marginBottom:"0px"}} >
             <AdvancedCarousel obj={myobj}/>
             </Grid>
+
             <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:issmallscreen? "200px": '130px'}} >
           
           <div className='footer'>
@@ -144,12 +146,15 @@ fontSize:ismobile? "15px" : "20px",lineHeight:2
       
               </div>
               </Grid>
-   
+        
             </Box>
+
+          
+   
 
 
          
-
+            </>
 
         
     
