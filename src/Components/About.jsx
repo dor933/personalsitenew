@@ -47,7 +47,7 @@ const About = () => {
       md: 'flex' }, 
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft:"60px",
+    paddingLeft:"90px",
     flexDirection:'column',
      }}   xs={4}>
            <img src= {image4} alt="dorimage" style={{width: "auto", height: ismobile? "300px" : "500px", borderRadius:"10%",
@@ -72,7 +72,7 @@ const About = () => {
     <Grid item xs={12} md={8} style={{ textAlign:"center",
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
-paddingLeft:issmallscreen? "0px" :"200px",
+paddingLeft:issmallscreen? "20px" :"200px",
     
 
 fontSize:ismobile? "15px" : "20px",lineHeight:2
