@@ -147,7 +147,7 @@ const Contact = () => {
     <Grid item xs={12} lg={6} style={{lineHeight:1.6}}  >
  
     <div style={{display: "flex", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",paddingBottom:smaller1200? "7%" : "0%",
-     borderRadius:'10px', paddingTop:'3%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: smaller1200? "280px" : "500px",
+     borderRadius:'10px', paddingTop: smaller1200? "4%": '7%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: smaller1200? "280px" : "500px",
      flexDirection:'column', justifyContent:'flex-start' 
     }}>
 
@@ -176,7 +176,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"4%", height: smaller1200? "350px" : "500px",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", height: smaller1200? "350px" : "500px",
               
 
             }}
@@ -256,17 +256,17 @@ const Contact = () => {
         </Grid>
 
 
-  
-        
-        </Box>
-
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"180px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"100px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
               </div>
               </Grid>
+        
+        </Box>
+
+     
 
         
 
