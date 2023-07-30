@@ -82,7 +82,8 @@ const Home = () => {
 
     return (
         <>
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", height:"100%",
+        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", 
+        height:"100%",
         marginBottom:smallmobile? "60px": "0px", padding:"20px"
   //make overflow y
 

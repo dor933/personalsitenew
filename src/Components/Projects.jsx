@@ -79,7 +79,7 @@ const Projects = () => {
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:!ismobile? "20px" : "0px",width:"100%",height:"100%"}}>
+<Grid container justify="center" style={{marginTop:!ismobile? "20px" : "0px",width:"100%"}}>
 
 
 {myprojects.map((project,index) => (
@@ -133,20 +133,20 @@ marginTop: isnotbigscreen? "20px": "50px"
         </Grid>
 
     </Grid>
+   
 
 
 
 ))}
-<Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"250px"}} >
-          
-          <div className='footer' >
+
+
+<Grid item xs={12} style={{textAlign:'center', height:"5%", flexDirection:'row',marginTop:"120px"}} >
+         <div className='footer' >
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
               </div>
-              </Grid>
+                </Grid>
 
-
-    
     </Grid>
  
     

@@ -162,7 +162,7 @@ const Contact = () => {
         </div>
 
         </Grid>
-        <Grid item xs={12} sm={6} style={{marginTop:ismobile? "100px": "0px"}} >
+        <Grid item xs={12} sm={6} style={{marginTop:ismobile? "60px": "0px"}} >
             <Box 
             component="form"
             sx={{
@@ -252,7 +252,7 @@ const Contact = () => {
         
         </Grid>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"80px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"40px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>

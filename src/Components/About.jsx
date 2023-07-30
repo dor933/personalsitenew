@@ -31,7 +31,7 @@ const About = () => {
       <>
 
     
-        <Box style={{height:"100%",marginTop:"30px", width:"90%",flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"5px", height:"100%",
+        <Box style={{height:"100%",marginTop:"30px", width:"90%",flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"5px", 
         marginBottom:ismobile? "30px": "0px", padding:"20px"}}   >
 
 
@@ -139,7 +139,7 @@ fontSize:ismobile? "15px" : "20px",lineHeight:2
             <AdvancedCarousel obj={myobj}/>
             </Grid>
 
-            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:issmallscreen? "200px": '130px'}} >
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:issmallscreen? "120px": '130px'}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
