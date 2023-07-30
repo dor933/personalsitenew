@@ -67,7 +67,7 @@ const About = () => {
 
     </Grid>
 
-    <Grid item xs={12} md={8} style={{ textAlign:"center",paddingLeft: issmallscreen? "20px": "160px", 
+    <Grid item xs={12} md={8} style={{ textAlign:"center",paddingLeft: issmallscreen? "20px": "300px", 
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
 fontSize:issmallscreen? "15px" : "20px",lineHeight:2
