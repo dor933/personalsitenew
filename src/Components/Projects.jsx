@@ -79,7 +79,7 @@ const Projects = () => {
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:!ismobile? "60px" : "0px",width:"100%",height:"100%"}}>
+<Grid container justify="center" style={{marginTop:!ismobile? "20px" : "0px",width:"100%",height:"100%"}}>
 
 
 {myprojects.map((project,index) => (
@@ -118,7 +118,7 @@ marginTop: isnotbigscreen? "20px": "50px"
         
     
     }} >
-        <span style={{textAlign:"center",paddingTop:"20px",paddingBottom:"20px",fontSize: ismobile?"23px": "28px",color:"#f02e1d",fontFamily:"Comfortaa",fontWeight:"bold"}}>
+        <span style={{textAlign:"center",paddingTop:"20px",paddingBottom:"20px",fontSize: ismobile?"23px": "28px",color:"#f02e1d",fontFamily:"Anton",fontWeight:"bold"}}>
 
 
         {project.projectname}'s Photo Gallery

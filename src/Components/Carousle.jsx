@@ -45,7 +45,10 @@ const AdvancedCarousel = ({obj}) => {
               justifyContent: 'center',
               alignItems: 'center',
               scrollSnapAlign: 'start',
-              opacity: activePageIndex === i ? 1 : 0.5,
+              //make the image look sharp
+              imageRendering:"auto",
+              opacity:0.9,
+
             }}
           >
             <img src={url} alt={`Item ${i}`} style={{ width: '100%', height: '100%',borderRadius:"10px" }} />
