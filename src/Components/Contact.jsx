@@ -16,7 +16,7 @@ import AuthContext from './Usecontexts/Maincontext';
 const Contact = () => {
 
     const ismobile = useMediaQuery('(max-width:600px)');
-    const smaller900= useMediaQuery('(max-width:900px');
+    const smaller1200= useMediaQuery('(max-width:1200px');
     const bigscreen = useMediaQuery('(min-width:1700px)');
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
@@ -129,31 +129,31 @@ const Contact = () => {
   
     <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
 
-    <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom:"30px"}} >
+    <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom: smaller1200? "30px":"150px"}} >
 
-<span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
+<span className="Hometext" style={{fontSize: smaller1200? "30px" : "80px", color:'#f02e1d'}} >
 
     Contact
     </span>
-    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "2.4%" : "20px"}} >
+    <span className="Hometext" style={{fontSize: smaller1200? "30px" : "80px" , marginLeft: smaller1200? "10px" : "20px"}} >
         Me.
     </span>
     </Grid>
 
-      <Grid container>
+      <Grid container >
 
 
   
-    <Grid item xs={12} sm={6} style={{lineHeight:1.6}}  >
+    <Grid item xs={12} lg={6} style={{lineHeight:1.6}}  >
  
-    <div style={{display: "flex", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",paddingBottom:ismobile? "7%" : "0%",
-     borderRadius:'10px', paddingTop:'7%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: ismobile? "280px" : "500px",
+    <div style={{display: "flex", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",paddingBottom:smaller1200? "7%" : "0%",
+     borderRadius:'10px', paddingTop:'3%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: smaller1200? "280px" : "500px",
      flexDirection:'column', justifyContent:'flex-start' 
     }}>
 
-     <div style={{fontSize: ismobile? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+     <div style={{fontSize: smaller1200? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
         <span style={{color:'white'}}>Lets</span> 
-        <span style={{color:'#f02e1d',marginLeft:ismobile? 3: 0}}> Connent.</span>
+        <span style={{color:'#f02e1d',marginLeft:smaller1200? 3: 0}}> Connent.</span>
          <br/> <br/>
 
      
@@ -167,7 +167,7 @@ const Contact = () => {
         </div>
 
         </Grid>
-        <Grid item xs={12} sm={6} style={{marginTop:ismobile? "60px": "0px"}} >
+        <Grid item xs={12} lg={6} style={{marginTop:smaller1200? "60px": "0px"}} >
             <Box 
             component="form"
             sx={{
@@ -175,19 +175,19 @@ const Contact = () => {
                 }}
                 noValidate
                 autoComplete="off"
-                style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", height: ismobile? "350px" : "500px",
+                style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"4%", height: smaller1200? "350px" : "500px",
               
 
             }}
             >
-                <div style={{fontSize: ismobile? "20px" : "25px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+                <div style={{fontSize: smaller1200? "20px" : "25px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
 
                     <div style={{margin: "auto"}}>
                     <span style={{color:'#f02e1d'}}>Send</span>
-                    <span style={{color:'white',marginLeft:ismobile? 5: 4}}> Me</span>
-                    <span style={{color:'white',marginLeft:ismobile? 5: 4}}> a</span>
-                    <span style={{color:'white',marginLeft:ismobile? 5: 4}}> Message.</span>
+                    <span style={{color:'white',marginLeft:smaller1200? 5: 4}}> Me</span>
+                    <span style={{color:'white',marginLeft:smaller1200? 5: 4}}> a</span>
+                    <span style={{color:'white',marginLeft:smaller1200? 5: 4}}> Message.</span>
                     </div>
                     <br/> 
                     <ThemeProvider theme={theme}> 
@@ -236,10 +236,10 @@ const Contact = () => {
                     </ThemeProvider>
                     <br/> <br/>
 
-                    <div style={{display: "flex", justifyContent: "center", height:ismobile? "30px":"50px", maxWidth: "600px", width: "100%", margin: "auto"}}>
+                    <div style={{display: "flex", justifyContent: "center", height:smaller1200? "30px":"50px", maxWidth: "600px", width: "100%", margin: "auto"}}>
 
                     <Button variant="contained" onClick={sendmessage}    >
-                        <span className="button" style={{paddingTop:13,fontSize:ismobile?"10px":"20px"}}  >
+                        <span className="button" style={{paddingTop:13,fontSize:smaller1200?"10px":"20px"}}  >
                             Send
                         </span>
                     </Button>
@@ -260,7 +260,7 @@ const Contact = () => {
         
         </Box>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"80px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"180px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
