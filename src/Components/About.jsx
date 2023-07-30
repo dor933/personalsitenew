@@ -37,7 +37,7 @@ const About = () => {
 
 
 
-    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959",marginTop:"80px"}} >
+    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959",marginTop:"40px"}} >
 
 
     <Grid 
