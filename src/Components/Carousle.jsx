@@ -1,15 +1,17 @@
 import React from 'react';
 import { useSnapCarousel } from 'react-snap-carousel';
 import Button from '@mui/material/Button';
-import image1 from '../assets/images/personalimages/1.jpg';
-import image2 from '../assets/images/personalimages/2.jpg';
-import image3 from '../assets/images/personalimages/3.jpg';
+import { useMediaQuery,useTheme } from '@mui/material';
 
-const AdvancedCarousel = () => {
+
+const AdvancedCarousel = ({obj}) => {
   const { scrollRef, pages, activePageIndex, next, prev, goTo } = useSnapCarousel();
 
+  const ismobile = useMediaQuery('(max-width:600px)');
+
   // Replace this with your array of image URLs
-    const imageUrls = [image1, image2, image3];
+    const imageUrls = obj.images;
+    const type= obj.type;
     
   return (
     <>
@@ -19,19 +21,31 @@ const AdvancedCarousel = () => {
           display: 'flex',
           overflow: 'auto',
           scrollSnapType: 'x mandatory',
-          padding:0
+            width: "100%",
+            alignContent:"center",
+            listStyle: 'none',
+            marginTop:"20px",
+            marginBottom:"20px",
+            paddingLeft:12,
+
+
+            
+          
         }}
       >
         {imageUrls.map((url, i) => (
           <li
             style={{
-              width: '250px',
-              height: '250px',
+              width:  '300px',
+              height: '500px',
+              objectFit: 'cover',
               marginRight:"20px",
               flexShrink: 0,
               display: 'flex',
               justifyContent: 'center',
-              alignItems: 'center'
+              alignItems: 'center',
+              scrollSnapAlign: 'start',
+              opacity: activePageIndex === i ? 1 : 0.5,
             }}
           >
             <img src={url} alt={`Item ${i}`} style={{ width: '100%', height: '100%',borderRadius:"10px" }} />
@@ -39,10 +53,10 @@ const AdvancedCarousel = () => {
         ))}
       </ul>
 
-      <div style={{marginRight:"20px"}}> 
+      <div style={{marginRight:"0px"}}> 
     
-      <Button onClick={() => prev()}>Prev</Button>
-        <Button onClick={() => next()}>Next</Button>
+      <Button onClick={() => prev()} style={{color:'#f02e1d',fontFamily:'Anton'}}>Prev</Button>
+        <Button onClick={() => next()} style={{color:'#f02e1d',fontFamily:'Anton'}} >Next</Button>
         </div>
 
   

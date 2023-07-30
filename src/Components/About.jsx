@@ -6,6 +6,10 @@ import { useMediaQuery,useTheme } from "@mui/material";
 import dorimage from '../assets/images/mydor.jpg';
 import { useSnapCarousel } from 'react-snap-carousel';
 import AdvancedCarousel from "./Carousle";
+import image1 from '../assets/images/personalimages/1.jpg';
+import image2 from '../assets/images/personalimages/2.jpg';
+import image3 from '../assets/images/personalimages/3.jpg';
+import image4 from '../assets/images/personalimages/4.jpg';
 
 const About = () => {
 
@@ -14,23 +18,24 @@ const About = () => {
     const verysmallmobile = useMediaQuery('(max-width:314px)');
     const theme = useTheme();
     const issmallscreen= useMediaQuery(theme.breakpoints.down('md'));
-    const isbigscreen= useMediaQuery(theme.breakpoints.up('lg'));
+
+    const myobj={
+      images:[image1,image2,image3,image4],
+      type:"personal"
+    }
 
 
     return (
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"20px", height:"100%",
-        marginBottom:smallmobile? "30px": "0px", padding:"20px"
-  //make overflow y
-
-    }}>
+  
 
     
-        <Box style={{height:"95%",marginTop:"15px", width:"100%"}}   >
+        <Box style={{height:"100%",marginTop:"30px", width:"90%",flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"5px", height:"100%",
+        marginBottom:ismobile? "30px": "0px", padding:"20px"}}   >
 
 
 
 
-    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959"}} >
+    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959",marginTop:"80px"}} >
 
 
     <Grid 
@@ -40,10 +45,10 @@ const About = () => {
       md: 'flex' }, 
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft:"50px",
+    paddingLeft:"90px",
     flexDirection:'column',
      }}   xs={4}>
-           <img src= {dorimage} alt="dorimage" style={{width: "auto", height: issmallscreen? "300px" : "500px", borderRadius:"10%",
+           <img src= {image4} alt="dorimage" style={{width: "auto", height: issmallscreen? "300px" : "500px", borderRadius:"10%",
     
     
     imageRendering:"auto",
@@ -62,7 +67,7 @@ const About = () => {
 
     </Grid>
 
-    <Grid item xs={12} md={8} style={{ textAlign:"center",paddingLeft: issmallscreen? "20px": "120px", 
+    <Grid item xs={12} md={8} style={{ textAlign:"center",paddingLeft: issmallscreen? "20px": "160px", 
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
 fontSize:issmallscreen? "15px" : "20px",lineHeight:2
@@ -116,7 +121,7 @@ fontSize:issmallscreen? "15px" : "20px",lineHeight:2
       Photo 
     </span>
     <span className="Homesecondtext" style={{fontSize: ismobile? "25px" : "50px", color:'#ffffff',
-      marginLeft: issmallscreen? "5px" : "1.6%"}} >
+      marginLeft: issmallscreen? "8px" : "10px"}} >
       Gallery.
     </span>
   </Grid>
@@ -125,10 +130,10 @@ fontSize:issmallscreen? "15px" : "20px",lineHeight:2
         </Grid>
 
         <Grid item xs={12} md={4} style={{textAlign:'center', flexDirection:'row',marginTop:'10px',paddingLeft:issmallscreen? "0px" :"30px",
-    paddingTop:issmallscreen? "0px":"10px"}} >
-            <AdvancedCarousel/>
+    paddingTop:issmallscreen? "0px":"10px", marginBottom:"0px"}} >
+            <AdvancedCarousel obj={myobj}/>
             </Grid>
-            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:'100px'}} >
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:issmallscreen? "200px": '130px'}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
@@ -142,7 +147,6 @@ fontSize:issmallscreen? "15px" : "20px",lineHeight:2
          
 
 
-        </Grid>
         
     
     );

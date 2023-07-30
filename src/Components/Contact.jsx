@@ -123,23 +123,27 @@ const Contact = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center' , height: ismobile? "40px" : "10.4%", flexDirection:'row',marginTop:"20px"}} >
+
+            <Grid item xs={12} style={{textAlign:'center' , flexDirection:'row',marginTop:"50px",height:ismobile? "auto":"5px"}} >
 
 <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px", color:'#f02e1d'}} >
 
     Contact
     </span>
-    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "3%" : "1.5%"}} >
+    <span className="Hometext" style={{fontSize: ismobile? "30px" : "80px" , marginLeft: ismobile? "2.4%" : "20px"}} >
         Me.
     </span>
     </Grid>
-    <Grid container  style={{width:"100%", alignItems:'flex-start',height:"100%"}}>
 
   
-    <Grid item xs={12} sm={6}  >
+    <Grid container   style={{width:"100%",height:"100%",flexDirection:'row',display:'flex', alignContent:ismobile? 'flex-start': 'center',marginTop:ismobile? "50px" : "10px"}}>
+
+  
+    <Grid item xs={12} sm={6} style={{lineHeight:1.6}}  >
  
-    <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",paddingBottom:ismobile? "4%" : "0%",
-     borderRadius:'10px', paddingTop:'7%', marginTop:ismobile? "15px" :"30px",  backgroundColor: 'rgba(0, 0, 0, 0.35)', marginBottom:ismobile? "0px" : "0%", height: ismobile? "280px" : "500px"
+    <div style={{display: "flex", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",paddingBottom:ismobile? "7%" : "0%",
+     borderRadius:'10px', paddingTop:'7%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: ismobile? "280px" : "500px",
+     flexDirection:'column', justifyContent:'flex-start' 
     }}>
 
      <div style={{fontSize: ismobile? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
@@ -158,7 +162,7 @@ const Contact = () => {
         </div>
 
         </Grid>
-        <Grid item xs={12} sm={6} style={{}} >
+        <Grid item xs={12} sm={6} style={{marginTop:ismobile? "100px": "0px"}} >
             <Box 
             component="form"
             sx={{
@@ -167,7 +171,7 @@ const Contact = () => {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: ismobile? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", marginTop: ismobile? "0px" : "30px", height: ismobile? "350px" : "500px",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", height: ismobile? "350px" : "500px",
               
 
             }}
@@ -248,7 +252,7 @@ const Contact = () => {
         
         </Grid>
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',height:"5%"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"80px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
