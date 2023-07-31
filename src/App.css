@@ -17,12 +17,23 @@
 }
 
 .inmobile {
-  background: url('./assets//images/postar.jpg') no-repeat center center;
+  position: relative;
   height: 100vh;
   overflow-y: hidden;
-   
+  z-index: 0;
+}
 
+.inmobile::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: url('./assets//images/postar.jpg') no-repeat center center;
   background-size: cover;
+  filter: blur(2.5px); /* Adjust the pixel value to control the amount of blur */
+  z-index: -1;
 }
 
 .button{

@@ -142,7 +142,7 @@ marginTop: isnotbigscreen? "10px": "140px"
 ))}
 
 
-<Grid item xs={12} style={{textAlign:'center', height:"5%", flexDirection:'row',marginTop:"120px"}} >
+<Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
          <div className='footer' >
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
