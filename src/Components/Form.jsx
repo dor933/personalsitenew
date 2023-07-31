@@ -195,13 +195,16 @@ export default function MyForm({type}) {
                     root: {
                       '& .MuiOutlinedInput-notchedOutline': {
                         borderColor:'#f02e1d',
-                        height:"45px"
+                        //make it expand if needed
+
+
 
 
                       },
                       '& .MuiOutlinedInput-input': {
                         color: '#ffffff', // Change input text color
-                        height:"10px"
+                        lineHeight: 'normal', // This allows the input to expand as needed
+
                       },
                       '&:hover .MuiOutlinedInput-notchedOutline': {
                         borderColor: '#ffffff', // Change border color on hover
@@ -232,14 +235,14 @@ export default function MyForm({type}) {
                 }}
                 noValidate
                 autoComplete="off"
-                style={{justifyContent: "center",display:'flex', width: "180px", margin: "auto",
+                style={{justifyContent: "center",display:'flex', width: "170px", margin: "auto",
                 backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"2%", paddingBottom:"4%"
                 
               
 
             }}
             >
-                <div style={{fontSize:  "13px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+                <div style={{fontSize:  "12px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
 
                     <div style={{margin: "auto"}}>
                     <span style={{color:'#f02e1d'}}>Send</span>
@@ -260,7 +263,7 @@ export default function MyForm({type}) {
 
                     maxRows={4}
                  
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0,marginBottom:15}}
                     />
                     </ThemeProvider>
                     <br/> <br/>
@@ -271,7 +274,7 @@ export default function MyForm({type}) {
                     label="Email"
                     multiline
                     maxRows={4}
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5,marginBottom:15}}
                     onChange={handleemailchange}
                     />
                     </ThemeProvider>
@@ -294,7 +297,8 @@ export default function MyForm({type}) {
                     />
                     </ThemeProvider>
 
-                    <div style={{display: "flex", justifyContent: "center", height:"15px", maxWidth: "600px", width: "50%", margin: "auto"}}>
+                    <div style={{display: "flex", justifyContent: "center", height:"15px", maxWidth: "600px", width: "50%", margin: "auto",
+                  marginTop:15}}>
 
                     <Button variant="contained" onClick={sendmessage}    >
                         <span className="button" style={{paddingTop:13,fontSize:"10px"}}  >

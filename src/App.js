@@ -46,7 +46,7 @@ function App() {
 
           { ishomepage &&
         <div style={{position:'fixed', flexDirection:'row'
-        , zIndex:1, left:"52%",top:"7%",
+        , zIndex:1, left:"52%",top:"5%",
         }}>
 
             <MyForm type="other" />
