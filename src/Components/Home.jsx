@@ -82,6 +82,8 @@ const Home = () => {
 
     return (
         <>
+        <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
+
         <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", 
         height:"100%",
         marginBottom:smallmobile? "60px": "0px", padding:"20px"
@@ -308,7 +310,7 @@ Expected Completion: July 2025
 
 
 
-        
+        </Box>
 
       
 

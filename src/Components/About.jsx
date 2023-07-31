@@ -10,6 +10,7 @@ import image1 from '../assets/images/personalimages/1.jpg';
 import image2 from '../assets/images/personalimages/2.jpg';
 import image3 from '../assets/images/personalimages/3.jpg';
 import image4 from '../assets/images/personalimages/4.jpg';
+import Container from "@mui/material";
 
 const About = () => {
 
@@ -30,9 +31,11 @@ const About = () => {
   
       <>
 
-    
-        <Box style={{height:"100%",marginTop:"30px", width:"90%",flexDirection:'row',justifyContent:'center',alignItems:'center',marginTop:"5px", 
-        marginBottom:ismobile? "30px": "0px", padding:"20px"}}   >
+<Box  style={{width:"95%",height:"100%",flexDirection:'row',marginTop:"50px",
+
+marginLeft:"auto",marginRight:"auto"
+}}>
+
 
 
 
@@ -72,7 +75,7 @@ const About = () => {
     <Grid item xs={12} md={8} style={{ textAlign:"center",
 
 backgroundColor:issmallscreen? "rgba(0, 0, 0, 0.35)" : "transparent", borderRadius:"30px",padding:"40px",
-paddingLeft:issmallscreen? "20px" :"200px",
+paddingLeft:issmallscreen? "20px" :"200px", 
     
 
 fontSize:ismobile? "15px" : "20px",lineHeight:2

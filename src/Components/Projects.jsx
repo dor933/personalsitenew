@@ -66,13 +66,15 @@ const Projects = () => {
 
     return (
         <>
-             <Grid item xs={12} style={{textAlign:'center', height:"10%", flexDirection:'row',marginTop:"50px"}} >
+        <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"70px"}}>
 
-<span className="Hometext" style={{fontSize: ismobile? "50px" : "80px", color:'#f02e1d'}} >
+             <Grid item xs={12} style={{textAlign:'center', height:"7%", flexDirection:'row',marginTop:"30px"}} >
+
+<span className="Hometext" style={{fontSize: isnotbigscreen? "50px" : "80px", color:'#f02e1d'}} >
 
   My 
    </span>    
-   <span className="Hometext" style={{fontSize: ismobile? "50px" : "80px" , marginLeft: ismobile? "14px" : "20px"}} >
+   <span className="Hometext" style={{fontSize: isnotbigscreen? "50px" : "80px" , marginLeft: ismobile? "14px" : "20px"}} >
 
   Projects.
    </span> 
@@ -89,7 +91,7 @@ const Projects = () => {
     <Grid item xs={12} xl={6}    >
 
 <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: "100%", margin: "auto",
-marginTop: isnotbigscreen? "20px": "50px"
+marginTop: isnotbigscreen? "10px": "140px"
 
 }}>
 
@@ -152,7 +154,7 @@ marginTop: isnotbigscreen? "20px": "50px"
     
 
     
-     
+     </Box>
     
         </>
     );

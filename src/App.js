@@ -64,10 +64,7 @@ function App() {
        
 
         </div>
-        <div className='footer' >
-              <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
-      
-              </div>
+       
  
 
         {
