@@ -32,7 +32,7 @@
   left: 0;
   background: url('./assets//images/postar.jpg') no-repeat center center;
   background-size: cover;
-  filter: blur(2.5px); /* Adjust the pixel value to control the amount of blur */
+  filter: blur(1px); /* Adjust the pixel value to control the amount of blur */
   z-index: -1;
 }
 
