@@ -117,7 +117,7 @@ const Home = () => {
                 <br/>
 
                 <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px",zIndex:4}}>
-                      Information systems,NOC and Support Specialist, and Applications & Developer.
+                      Information systems,NOC and Support Specialist, and Applications & Websites Developer.
                     
                 </span>
                 <br/>
