@@ -52,6 +52,8 @@ const Home = () => {
 
     useEffect(() => {
 
+        setIshomepage(true);
+
         setTimeout(() => {
             setIsLoaded(true);
         }, 500);
@@ -77,6 +79,11 @@ const Home = () => {
             setIsLoaded5(true);
         }
         , 4000);
+
+        return () => {
+            setIshomepage(false);
+        }
+        
     }, []);
 
 
