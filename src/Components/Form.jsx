@@ -219,7 +219,7 @@ export default function MyForm({type}) {
                   styleOverrides: {
                     root: {
                       color: '#ffffff', // Change color of placeholder text
-                      fontSize: "12px",
+                      fontSize: "13px",
                       fontWeight: "bold"
                     },
                   },
@@ -263,7 +263,7 @@ export default function MyForm({type}) {
 
                     maxRows={4}
                  
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0,marginBottom:15}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0,marginBottom:20}}
                     />
                     </ThemeProvider>
                     <br/> <br/>
@@ -274,7 +274,7 @@ export default function MyForm({type}) {
                     label="Email"
                     multiline
                     maxRows={4}
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5,marginBottom:15}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5,marginBottom:20}}
                     onChange={handleemailchange}
                     />
                     </ThemeProvider>
