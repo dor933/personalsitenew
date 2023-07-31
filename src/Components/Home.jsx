@@ -36,7 +36,7 @@ const Home = () => {
 
     const download = () => {
         const link= document.createElement('a');
-        link.href="https://storage.googleapis.com/staging.responsive-cab-377615.appspot.com/Resume/CV%20Dor%20ratzabi.docx";
+        link.href="https://storage.googleapis.com/staging.responsive-cab-377615.appspot.com/Resume/CVmostupdated.docx";
         link.download="CV Dor Ratzabi";
         document.body.appendChild(link);
         link.click();
@@ -83,7 +83,7 @@ const Home = () => {
         return () => {
             setIshomepage(false);
         }
-        
+
     }, []);
 
 
