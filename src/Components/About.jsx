@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect,useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -10,21 +10,39 @@ import image1 from '../assets/images/personalimages/1.jpg';
 import image2 from '../assets/images/personalimages/2.jpg';
 import image3 from '../assets/images/personalimages/3.jpg';
 import image4 from '../assets/images/personalimages/4.jpg';
+import Slide from '@mui/material/Slide';
+
+
+import DR from '../assets/images/DR.png';
 import Container from "@mui/material";
 
 const About = () => {
 
-    const ismobile = useMediaQuery('(max-width:920px)');
+    const ismobile = useMediaQuery('(max-width:900px)');
     const max960 = useMediaQuery('(max-width:960px)');
     const smallmobile = useMediaQuery('(max-width:555px)');
     const verysmallmobile = useMediaQuery('(max-width:314px)');
     const theme = useTheme();
     const issmallscreen= useMediaQuery(theme.breakpoints.down('md'));
+    const [element1, setelement1] = useState(false);
+    const [element2, setelement2] = useState(false);
+
 
     const myobj={
       images:[image1,image2,image3,image4],
       type:"personal"
     }
+
+    useEffect(() => {
+        setelement1(true);
+        setelement2(true);
+
+        return () => {
+            setelement1(false);
+            setelement2(false);
+        }
+
+    }, [])
 
 
     return (
@@ -40,37 +58,83 @@ marginLeft:"auto",marginRight:"auto"
 
 
 
-    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959",marginTop:"40px"}} >
+    <Grid container className="Homesecondtext" style={{marginTop:"20px",lineHeight:1.5,color:"#d45959",marginTop:"40px",
+    justifyContent:'space-around',
+    
+  
 
+  }} >
 
+<Slide direction="right" in={element1} mountOnEnter unmountOnExit>
     <Grid 
   item 
   sx={{display: {
-      xs: 'none', 
+      xs: 'flex', 
       md: 'flex' }, 
     alignItems: 'center',
     justifyContent: 'center',
-    paddingLeft:"90px",
+    marginBottom:"20px",
+    paddingLeft: ismobile? "40px": "90px",
     flexDirection:'column',
      }}   xs={4}>
-           <img src= {image4} alt="dorimage" style={{width: "auto", height: ismobile? "300px" : "500px", borderRadius:"10%",
+           <img src= {image4} alt="dorimage" style={{width: "auto", height: ismobile? "200px" : "500px", borderRadius:"10%",
     
     
     imageRendering:"auto",
     //make the image look like a painting
     filter:"grayscale(100%)",
-    filter:"contrast(150%)",
-    filter:"brightness(80%)",
     filter:"saturate(150%)",
     filter:"hue-rotate(10deg)",
     filter:"blur(0.8px)",
     filter:"invert(10%)",
     filter:"drop-shadow(16px 16px 30px #a1b2ff)",
+    zIndex:1,
+    
+
+    
     
     }} />
 
 
     </Grid>
+    </Slide>
+
+    {
+      ismobile &&
+
+      <Slide direction="right" in={element1} mountOnEnter unmountOnExit>
+      
+    <Grid item xs={4} display={{xs:'block', sm:'none'}} style={{flexDirection:'row',display:'flex', justifyContent:'flex-start',
+  
+    alignItems:'center',paddingLeft:"0px",
+    }}>
+  
+      <img src={DR} alt="dorimage" style={{width: "auto", height: ismobile? "150px" : "500px", borderRadius:"10%"
+    
+     //make the image look like a painting
+      ,filter:"grayscale(100%)",
+      filter:"contrast(200%)",
+      filter:"hue-rotate(10deg)",
+      filter:"invert(10%)",
+      filter:"drop-shadow(16px 16px 30px #a1b2ff)",
+      display: ismobile? "block" : "none",
+      zIndex:2,
+
+      
+      
+
+      
+  
+  
+  
+      
+  
+    }}/>
+  
+      </Grid>
+      </Slide>
+    }
+
 
     <Grid item xs={12} md={8} style={{ textAlign:"center",
 

@@ -42,7 +42,7 @@ const AdvancedCarousel = ({obj}) => {
           <li
             style={{
               width:  '300px',
-              height: '600px',
+              height: 'auto',
               objectFit: 'cover',
               marginRight:"20px",
               flexShrink: 0,
