@@ -14,6 +14,7 @@ import AuthContext from './Components/Usecontexts/Maincontext';
 import poster from './/assets/images/postar.jpg';
 import { useMediaQuery } from '@mui/material';
 import Popup from './Components/Popup';
+import MyForm from './Components/Form';
 
 
 function App() {
@@ -42,6 +43,13 @@ function App() {
 
       
         <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
+        <div style={{position:'fixed', flexDirection:'row'
+        , zIndex:1, left:"52%",top:"7%",
+        }}>
+
+            <MyForm type="other" />
+
+            </div>
         <Header/>
         <Routes>
         <Route path="/" element={<Home />} />

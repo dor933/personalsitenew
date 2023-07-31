@@ -14,6 +14,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
 import myimage from '../assets/images/dorpaint.jpg';
 import myimage2 from '../assets/images/dortwo.jpg';
+import MyForm from "./Form";
 
 
 
@@ -82,7 +83,10 @@ const Home = () => {
 
     return (
         <>
+      
         <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
+
+       
 
         <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", 
         height:"100%",

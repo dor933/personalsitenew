@@ -11,7 +11,7 @@ import Socialcomp from "./Socialcomp";
 import TextField from '@mui/material/TextField';
 import { createTheme,ThemeProvider } from "@mui/material";
 import AuthContext from './Usecontexts/Maincontext';
-
+import MyForm from "./Form";
 
 const Contact = () => {
 
@@ -168,7 +168,9 @@ const Contact = () => {
 
         </Grid>
         <Grid item xs={12} lg={6} style={{marginTop:smaller1200? "60px": "0px"}} >
-            <Box 
+
+          <MyForm type={"contact"} />
+            {/* <Box 
             component="form"
             sx={{
                 '& .MuiTextField-root': { m: 1, width: '25ch' },
@@ -245,7 +247,7 @@ const Contact = () => {
                     </Button>
                     </div>
                 </div>
-            </Box>
+            </Box> */}
 
 
 
@@ -256,7 +258,7 @@ const Contact = () => {
         </Grid>
 
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"100px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
