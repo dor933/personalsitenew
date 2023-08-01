@@ -48,7 +48,7 @@ export default function MyForm({type}) {
 
     console.log('this is the data', data)
 
-    const res = await axios.post('http://www.localhost:8000/sendmessage', data);
+    const res = await axios.post('/sendmessage', data);
     if(res.status === 200){
 
       setIssucceeded(true);
@@ -265,7 +265,7 @@ export default function MyForm({type}) {
 
                     maxRows={4}
                  
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0,marginBottom:20}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:0,marginBottom:23}}
                     />
                     </ThemeProvider>
                     <br/> <br/>
@@ -276,7 +276,7 @@ export default function MyForm({type}) {
                     label="Email"
                     multiline
                     maxRows={4}
-                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5,marginBottom:20}}
+                    style={{width:"70%",height:"10px",paddingBottom:"10px",marginTop:5,marginBottom:23}}
                     onChange={handleemailchange}
                     />
                     </ThemeProvider>
