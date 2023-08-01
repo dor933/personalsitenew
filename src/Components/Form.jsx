@@ -48,7 +48,7 @@ export default function MyForm({type}) {
 
     console.log('this is the data', data)
 
-    const res = await axios.post('/sendmessage', data);
+    const res = await axios.post('http://www.localhost:8000/sendmessage', data);
     if(res.status === 200){
 
       setIssucceeded(true);
@@ -204,6 +204,8 @@ export default function MyForm({type}) {
                       '& .MuiOutlinedInput-input': {
                         color: '#ffffff', // Change input text color
                         lineHeight: 'normal', // This allows the input to expand as needed
+                        fontSize: "11px",
+
 
                       },
                       '&:hover .MuiOutlinedInput-notchedOutline': {
