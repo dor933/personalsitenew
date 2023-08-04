@@ -21,7 +21,7 @@ const mg = mailgun.client({
 const sendEmail = async (mailcontent) => {
 
     const mymessage= await mg.messages.create(process.env.MAILGUN_DOMAIN, {
-        from: 'Mailgun Sandbox <mailgun@sandbox15619ee77ce14f0481270e41af4db24f.mailgun.org> ',
+        from: 'Mailgun Sandbox <mailgun@mail.dor-ratzabi.com> ',
         to: ["doratzabi1@gmail.com"],
         subject: 'Message from ' +mailcontent.name,
         text: "Message: " + mailcontent.message + "\n"  + "Email to return: " + mailcontent.email
