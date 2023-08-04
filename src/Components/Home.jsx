@@ -107,7 +107,7 @@ const Home = () => {
         >
 
             <Grid item xs={8} style={{textAlign:'center',paddingRight:"15px"}} >
-                <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:bigscreen? "0px": "20%",
+                <h2 className={`Homesecondtext ${isLoaded? 'fadeIn' : 'hidden'}`} style={{textAlign:'left',paddingLeft:ismobile? "0px": "20%",
             fontSize:bigscreen? "15px":"17px"
             }}>
                     Hello Friends! 👋
@@ -116,18 +116,18 @@ const Home = () => {
                 <br/>
                 <div className={isLoaded2? 'fadeIn' : 'hidden'} style={{lineHeight:2}}>
 
-                <span className="Hometext" style={{fontSize:bigscreen? "30px" : "60px"}}>
+                <span className="Hometext" style={{fontSize:ismobile? "30px" : "60px"}}>
 
                    I'm  
 
                 </span>
                 
-                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"15px", fontSize:bigscreen? "30px" : "60px"}}>
+                <span className="Hometext" style={{color:'#f02e1d', marginLeft:bigscreen? "10px" :"15px", fontSize:ismobile? "30px" : "60px"}}>
                     Dor Ratzabi.
                 </span>
                 <br/>
 
-                <span className="Hometext" style={{marginLeft:"2%",fontSize:bigscreen? "24px" : "50px",zIndex:4}}>
+                <span className="Hometext" style={{marginLeft:"2%",fontSize:ismobile? "24px" : "50px",zIndex:4}}>
                       Information systems,NOC and Support Specialist, and Applications & Websites Developer.
                     
                 </span>
@@ -136,7 +136,7 @@ const Home = () => {
 
 
 
-                <Button variant="contained" onClick={download} style={{width:bigscreen? "140px" : "220px", height:bigscreen? "45px": "60px", padding:"0px"}}    >
+                <Button variant="contained" onClick={download} style={{width:ismobile? "140px" : "220px", height:ismobile? "45px": "60px", padding:"0px"}}    >
                 
                     <span className="button" style={{fontSize:bigscreen? "10px" : "14px", padding:"0px"}}  >
 
@@ -158,7 +158,7 @@ const Home = () => {
               
               className={isLoaded6? "fadeIn" : "hidden"}              >
 
-                <img src={myimage2} style={{width:bigscreen? "100%": "auto", height:bigscreen? "100%" : "400px", borderRadius:"10px",
+                <img src={myimage2} style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
                 //make the image look sharp
                 imageRendering:"auto",
                 imageRendering:"-moz-crisp-edges",
