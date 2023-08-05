@@ -31,7 +31,7 @@ function App() {
   return (
     <AuthContext.Provider value={{menupress,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
-    <div className={`App ${ismobile? "inmobile" : ""}`} style={{height:ismobile? "120vh" : "100vh"}}>
+    <div className={`App ${ismobile? "inmobile" : ""}`} >
 
      
        {
@@ -42,7 +42,7 @@ function App() {
        }
 
       
-        <div className='content' style={{opacity:menupress || popup? "0.2" : "1", height:ismobile? "120vh" : "100vh"}} >
+        <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
 
           { ishomepage &&
         <div style={{position:'fixed', flexDirection:'row'
