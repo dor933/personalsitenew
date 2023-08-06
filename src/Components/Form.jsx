@@ -113,7 +113,7 @@ export default function MyForm({type}) {
                 noValidate
                 autoComplete="off"
                 style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"7%", height: smaller1200? "350px" : "500px",
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:smaller1200? "3%":"7%", height: smaller1200? "350px" : "500px",
               
 
             }}
