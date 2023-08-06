@@ -19,12 +19,6 @@
 
 }
 
-.inmobile {
-  position: relative;
-  height: 100vh;
-  overflow-y: hidden;
-  z-index: 0;
-}
 
 .inmobile::before {
   content: "";
@@ -135,7 +129,11 @@
   align-items: center;
   overflow-x: hidden;
   
-  height: 100vh;
+  height: 92vh;
+  margin-top: 10px;
+
+  text-align: center;
+  overflow-y: auto;
   
 
 

@@ -102,7 +102,10 @@ const Header = () => {
         <>
         <Grid container  direction='row' 
         justifyContent="space-between"
-        style={{height:"5%", 
+        style={{height:"5vh",
+        marginTop:ismobile ? "0px" : "10px",
+
+        position:"sticky"
        
 
         
