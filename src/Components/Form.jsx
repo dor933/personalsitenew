@@ -238,13 +238,17 @@ export default function MyForm({type}) {
                 noValidate
                 autoComplete="off"
                 style={{justifyContent: "center",display:'flex', width: "170px", margin: "auto",
-                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"5%", paddingBottom:"5%"
+                backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'10px', paddingTop:"5%", paddingBottom:"5%",
+                 textAlign:"center", 
                 
               
 
             }}
             >
-                <div style={{fontSize:  "12px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+                <div style={{fontSize:  "12px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold',
+              
+              
+              }} >
 
                     <div style={{margin: "auto"}}>
                     <span style={{color:'#f02e1d'}}>Send</span>

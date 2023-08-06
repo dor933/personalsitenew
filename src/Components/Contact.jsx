@@ -151,7 +151,7 @@ const Contact = () => {
      flexDirection:'column', justifyContent:'flex-start' 
     }}>
 
-     <div style={{fontSize: smaller1200? "18px" : "30px", color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
+     <div style={{fontSize: smaller1200? "18px" : "30px", textAlign:'center', color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
         <span style={{color:'white'}}>Lets</span> 
         <span style={{color:'#f02e1d',marginLeft:smaller1200? 3: 0}}> Connent.</span>
          <br/> <br/>

@@ -36,8 +36,7 @@ const Header = () => {
 
     const ismobile = useMediaQuery('(max-width:600px)');
     const isbigscreen= useMediaQuery('(min-width:1000px)');
-    const [drawerOpen, setDrawerOpen] = useState(false);   
-    const [ispagescrolled, setIspagescrolled] = useState(false);
+    const [drawerOpen, setDrawerOpen] = useState(false);    
 
     const tabStyle = {
         fontFamily: 'Montserrat',
@@ -102,17 +101,10 @@ const Header = () => {
         <>
         <Grid container  direction='row' 
         justifyContent="space-between"
-        style={{height:"5%",
-        marginTop:ismobile ? "0px" : "10px",
-
-
-       
-
+        style={{height:"5%", zIndex:2,
+        marginTop:"10px",
         
-
-        
-        
-        
+        //make box 
     
     }}
 
