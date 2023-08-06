@@ -43,7 +43,6 @@ function App() {
        }
        
 
-       <Header/>
 
 
         <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
@@ -59,6 +58,9 @@ function App() {
 
             </div>
 }
+
+<Header/>
+
 
         <Routes>
         <Route path="/" element={<Home />} />
