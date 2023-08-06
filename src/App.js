@@ -41,8 +41,12 @@ function App() {
       </video>
        }
 
-      
+
+
         <div className='content' style={{opacity:menupress || popup? "0.2" : "1"}} >
+
+        <Header/>
+
 
           { ishomepage &&
         <div style={{position:'fixed', flexDirection:'row'
@@ -53,7 +57,6 @@ function App() {
 
             </div>
 }
-        <Header/>
         <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

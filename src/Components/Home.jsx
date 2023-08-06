@@ -91,7 +91,7 @@ const Home = () => {
     return (
         <>
       
-        <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
+        <Box  style={{width:"100%",height:"150%",flexDirection:'row',marginTop:"50px"}}>
 
        
 

@@ -36,7 +36,8 @@ const Header = () => {
 
     const ismobile = useMediaQuery('(max-width:600px)');
     const isbigscreen= useMediaQuery('(min-width:1000px)');
-    const [drawerOpen, setDrawerOpen] = useState(false);    
+    const [drawerOpen, setDrawerOpen] = useState(false);   
+    const [ispagescrolled, setIspagescrolled] = useState(false);
 
     const tabStyle = {
         fontFamily: 'Montserrat',
@@ -101,8 +102,17 @@ const Header = () => {
         <>
         <Grid container  direction='row' 
         justifyContent="space-between"
-        alignItems="center" marginTop="5px"
-        style={{height:"5%"}}
+        style={{height:"5%", 
+       
+
+        
+
+        // make the header sticky
+        
+        
+        
+    
+    }}
 
         >
             <Grid item xs="4" sm="8"
