@@ -14,7 +14,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 
-const Projcard = ({project}) => {
+const Projcard = ({project,setchosenproject,indexproj, setIsloaded, chosenproject}) => {
 
     const [projectimage,setprojectimage] = useState(project.projectimage);
     const projectname = project.projectname;
@@ -37,6 +37,34 @@ const Projcard = ({project}) => {
         }
     }
 
+
+
+
+
+    const changetofadein = () => {
+        setTimeout(() => {
+            setIsloaded(true);
+            
+        }, 1000);
+
+     
+
+    }
+
+    const changetofadeout = () => {
+        setTimeout(() => {
+            setIsloaded(false);
+
+        }, 1000)
+        ;
+
+        setTimeout(() => {
+            setchosenproject({});
+        }
+        , 2000);
+
+
+    }
 
 
 
@@ -73,8 +101,34 @@ const Projcard = ({project}) => {
                     </span>
                     </Typography>
 
-                    <CardActions style={{paddingTop:7}} >
+                    <CardActions style={{paddingTop:7,paddingBottom:3}} >
                         <Button size="small" style={{ fontSize: nobigscreen? "14px" : "15px",fontFamily:'Montserrat',fontWeight:'bold'}} href={repositorylink} target="_blank">Repository</Button>
+                        
+                    </CardActions>
+                    <CardActions style={{paddingTop:0}} >
+                        <Button size="small" style={{ fontSize: nobigscreen? "14px" : "15px",fontFamily:'Montserrat',fontWeight:'bold'}} onClick={()=> {
+
+                            if(project.index==chosenproject.index){
+
+
+                                changetofadeout()
+                             
+                                    
+                                }
+
+                            
+                            else{
+                                    setchosenproject(project)
+                                    changetofadein()
+                                    
+                            
+                            }
+                        
+                        }}  >
+                            {
+                                project.index== chosenproject.index  ? "Hide Gallery" : "Show Gallery"
+                            }
+                            </Button>
                         
                     </CardActions>
                     

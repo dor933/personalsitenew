@@ -2,7 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import { useState,useContext,useEffect } from 'react';
+import { useContext,useEffect } from 'react';
+import { useState } from 'react';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import axios from 'axios';
@@ -28,20 +29,23 @@ const myobj={
 }
 
 
-
-
 //create new component
 
 const Projects = () => {
 
     const ismobile = useMediaQuery('(max-width:1048px)');
-    const issm= useMediaQuery('(max-width:600px)');
     const isnotbigscreen = useMediaQuery('(max-width:1700px)');
-    const smallmobile = useMediaQuery('(max-width:470px)');
-    const verysmallmobile = useMediaQuery('(max-width:314px)');
     const {isprojectspage,setIsinprojectpage}= useContext(AuthContext);
+    const [chosenproject, setchosenproject] = useState({});
+    const [isloaded,setIsloaded] = useState(false);
+
+
 
     useEffect(() => {
+
+        console.log(isloaded)
+     
+
         setIsinprojectpage(true);
 
         return () => {
@@ -52,12 +56,16 @@ const Projects = () => {
 
     const myprojects = [
         {
+            index:0,
             projectimage:"https://storage.googleapis.com/responsive-cab-377615.appspot.com/Images/SocialKeeper.png",
             projectname:"Social Keeper",
-            projectdescription:"Social Keeper is an app that automates meeting scheduling. It harmonizes personal hobbies, preferred times, and calendar events to devise the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, creating a hassle-free, personalized meet-up experience.",
+            projectdescription:"Social Keeper is an app that automates your meeting scheduling routine. It's considering the users personal hobbies, preferred times, and calendar events to find the ideal meeting for two individuals. Additionally, it uses Google Places for suitable location suggestions, when the goal is to create an optimal meet-up experience.",
             repositorylink:"https://github.com/dor933/socialkeeper2",
-            images: [image1keepr,image2keepr,image3keepr,image4keepr,image5keepr,image6keepr,image7keepr,image8keepr,image9keepr,image10keepr]
+            images: [image1keepr,image2keepr,image3keepr,image4keepr,image5keepr,image6keepr,image7keepr,image8keepr,image9keepr,image10keepr],
+            type:"projects"
+
         },
+
      
    
        
@@ -81,14 +89,14 @@ const Projects = () => {
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:!ismobile? "20px" : "0px",width:"100%"}}>
+<Grid container justify="center" style={{marginTop:!ismobile? "5px" : "5px",width:"100%"}}>
 
 
 {myprojects.map((project,index) => (
 
-    <Grid container justify="center" style={{marginTop:"20px",width:"100%"}}>
+    <Grid container justify="center" style={{marginTop:ismobile? "6px" : "10px",width:"100%"}}>
 
-    <Grid item xs={12} xl={6}    >
+    <Grid item xs={12} xl={12}    >
 
 <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: "100%", margin: "auto",
 marginTop: isnotbigscreen? "10px": "140px"
@@ -96,12 +104,27 @@ marginTop: isnotbigscreen? "10px": "140px"
 }}>
 
 
-    <Projcard project={project} />
+    <Projcard setIsloaded={setIsloaded} project={project} chosenproject={chosenproject} setchosenproject={setchosenproject}  />
     </div>
     </Grid>
 
+
+
+    </Grid>
+
     
-    <Grid container  item xs={12} xl={6}   style={{display: "flex", justifyContent: "center", width: "100%", margin: "auto",
+   
+
+
+
+))}
+
+{
+    chosenproject.index!==undefined &&
+
+  
+    
+    <Grid container item xs={12} xl={6} className={`${ isloaded ? "fadeIn" : "hidden"}`}   style={{display: "flex", justifyContent: "center", width: "100%", margin: "auto",
   borderRadius:'20px',  
   marginTop:  isnotbigscreen? "4px" : "40px",
   maxWidth:"800px",
@@ -123,23 +146,20 @@ marginTop: isnotbigscreen? "10px": "140px"
         <span style={{textAlign:"center",paddingTop:"20px",paddingBottom:"20px",fontSize: ismobile?"23px": "28px",color:"#f02e1d",fontFamily:"Anton",fontWeight:"bold"}}>
 
 
-        {project.projectname}'s Photo Gallery
+        {chosenproject.projectname}'s Photo Gallery
 
         </span>
-        <AdvancedCarousel obj={myobj} />
+        
+            <AdvancedCarousel obj={{images:chosenproject.images, type: chosenproject.type}} />
+
+        
         
 
         </Grid>
 
 
         </Grid>
-
-    </Grid>
-   
-
-
-
-))}
+}
 
 
 <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
