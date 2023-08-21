@@ -162,7 +162,7 @@ fontSize:ismobile? "15px" : "20px",lineHeight:2
                 </Grid>
                 <Grid item xs={12} style={{ flexDirection:'row',marginTop:"20px"}} >
 
-                Bachelor's degree in Information Systems from Ruppin Academic Center.
+                Bachelor of Information Systems from Ruppin Academic Center.
                 </Grid>
                 <Grid item xs={12} style={{ flexDirection:'row',marginTop:"20px"}} >
 

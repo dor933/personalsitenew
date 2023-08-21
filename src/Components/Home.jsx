@@ -201,7 +201,7 @@ const Home = () => {
                             <br/>
 
                             <li>
-                            <span style={{color:'#f02e1d'}}> In progress </span> - Master’s in Information Systems, Infrastructure and Cybersecurity focus in Bar Ilan University
+                            <span style={{color:'#f02e1d'}}> In progress </span> - Master’s of Information Systems, Infrastructure and Cybersecurity focus at Bar Ilan University
 Expected Completion: July 2025
 
                                 
@@ -262,7 +262,7 @@ Expected Completion: July 2025
                 <span className="Homesecondtext" style={{fontSize:bigscreen? "12px" : "20px", color:'#ffffff',paddingLeft:smallmobile?"55px" : "90px",
             lineHeight:'1.6'}} >
 
-                I commit to delivering high-quality work that meets your specific needs.
+                I commit to deliver high-quality work that meets your specific needs.
 
                     </span>
                 </Grid>
