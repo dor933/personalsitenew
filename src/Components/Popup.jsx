@@ -12,9 +12,11 @@ const Popup = () => {
     const issmall = useMediaQuery('(max-width:600px)');
     const {popup,setPopup}= useContext(AuthContext);
     const {issucceeded,setIssucceeded}= useContext(AuthContext);
+    const {isvalidationerror,setIsvalidationerror}= useContext(AuthContext);
 
     const closePopup = () => {
         setIssucceeded(false);
+        setIsvalidationerror(false);
         setPopup(false);
     }
 
@@ -43,7 +45,7 @@ const Popup = () => {
                     <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Comfortaa',fontWeight:'bold'}}>
 
                         {
-                            issucceeded ? "Thank you for sending this message!": "Something went wrong!"
+                            issucceeded ? "Thank you for sending this message!" : isvalidationerror? "Missing or invalid fields!" : "Something went wrong!"
                         }
                         
                         </span>
@@ -51,7 +53,7 @@ const Popup = () => {
                     <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Comfortaa'}}>
                         
                         {
-                            issucceeded ? "I'll contact you back soon as possible.": "Please try again later."
+                            issucceeded ? "I'll contact you back soon as possible.": isvalidationerror? "Please fill all the fields with valid values and try again." : "Please try again later."
                         }
 
                         </span>

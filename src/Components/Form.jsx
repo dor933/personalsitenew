@@ -19,6 +19,8 @@ export default function MyForm({type}) {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const smaller1200= useMediaQuery('(max-width:1200px');
+    const {isvalidationerror,setIsvalidationerror}= useContext(AuthContext);
+
 
 
 
@@ -40,6 +42,19 @@ export default function MyForm({type}) {
     const myname = name;
     const myemail = email;
     const mymessage = message;
+
+    if(myname=="" || myemail=="" || mymessage==""){
+      setIsvalidationerror(true);
+      setPopup(true);
+      return;
+    }
+
+    if(myemail.includes("@")==false || myemail.includes(".")==false){
+      setIsvalidationerror(true);
+      setPopup(true);
+      return;
+    }
+
     const data = {
         name: myname,
         email: myemail,

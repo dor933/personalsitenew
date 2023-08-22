@@ -22,6 +22,7 @@ function App() {
   const [menupress, setMenupress] = useState(false);
   const [popup, setPopup] = useState(false);
   const [issucceeded, setIssucceeded] = useState(false);
+  const [isvalidationerror, setIsvalidationerror] = useState(false);
   const ismobile = useMediaQuery('(max-width:1700px)');
   const [isincontactpage, setIsincontactpage] = useState(false);
   const [ishomepage, setIshomepage] = useState(false);
@@ -29,7 +30,7 @@ function App() {
 
 
   return (
-    <AuthContext.Provider value={{menupress,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
+    <AuthContext.Provider value={{menupress,isvalidationerror,setIsvalidationerror,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
 
     <div className={` ${ismobile? "inmobile" : ""}`} >
