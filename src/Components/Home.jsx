@@ -14,6 +14,7 @@ import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
 import myimage from '../assets/images/dorpaint.jpg';
 import myimage2 from '../assets/images/dortwo.jpg';
+import dora1 from '../assets/images/dora1.jpg';
 import MyForm from "./Form";
 
 
@@ -158,7 +159,7 @@ const Home = () => {
               
               className={isLoaded6? "fadeIn" : "hidden"}              >
 
-                <img src={myimage2} style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
+                <img src={dora1} style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
                 //make the image look sharp
                 imageRendering:"auto",
                 imageRendering:"-moz-crisp-edges",
