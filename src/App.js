@@ -11,7 +11,7 @@ import About from './Components/About';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
 import AuthContext from './Components/Usecontexts/Maincontext';
-import poster from './/assets/images/postar.jpg';
+import poster from './/assets/images/postar_compressed.jpg';
 import { useMediaQuery } from '@mui/material';
 import Popup from './Components/Popup';
 import MyForm from './Components/Form';
