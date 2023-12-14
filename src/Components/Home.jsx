@@ -299,7 +299,7 @@ Expected Completion: July 2025
             </Grid>
 
            
-            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop:smallmobile?"80px" : "110px"
+            <Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop:smallmobile?"80px" : "300px"
                         
                     }} >
       

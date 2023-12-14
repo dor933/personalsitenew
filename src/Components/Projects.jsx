@@ -76,7 +76,7 @@ const Projects = () => {
         <>
         <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"70px"}}>
 
-             <Grid item xs={12} style={{textAlign:'center', height:"7%", flexDirection:'row',marginTop:"30px"}} >
+             <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"30px"}} >
 
 <span className="Hometext" style={{fontSize: isnotbigscreen? "50px" : "80px", color:'#f02e1d'}} >
 
@@ -99,7 +99,7 @@ const Projects = () => {
     <Grid item xs={12} xl={12}    >
 
 <div style={{display: "flex", justifyContent: "center", maxWidth: "600px", width: "100%", margin: "auto",
-marginTop: isnotbigscreen? "10px": "140px"
+marginTop: isnotbigscreen? "20px": "50px"
 
 }}>
 
