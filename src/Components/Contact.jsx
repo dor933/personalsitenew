@@ -127,7 +127,7 @@ const Contact = () => {
       
 
   
-    <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
+    <Box  style={{width:"100%",height:"80%",flexDirection:'row',marginTop:"50px"}}>
 
     <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom: smaller1200? "30px":"150px"}} >
 
@@ -258,7 +258,7 @@ const Contact = () => {
         </Grid>
 
 
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
+        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"300px"}} >
           
           <div className='footer'>
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>

@@ -76,7 +76,7 @@ const Projects = () => {
         <>
         <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"70px"}}>
 
-             <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"30px"}} >
+             <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"30px", height:"10%"}} >
 
 <span className="Hometext" style={{fontSize: isnotbigscreen? "50px" : "80px", color:'#f02e1d'}} >
 
@@ -89,7 +89,7 @@ const Projects = () => {
      <br/>
      </Grid>
 
-<Grid container justify="center" style={{marginTop:!ismobile? "5px" : "5px",width:"100%"}}>
+<Grid container justify="center" style={{marginTop:!ismobile? "5px" : "5px",width:"100%", height:"90%"}}>
 
 
 {myprojects.map((project,index) => (
@@ -162,7 +162,7 @@ marginTop: isnotbigscreen? "20px": "50px"
 }
 
 
-<Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
+<Grid item xs={12} style={{textAlign:'center', flexDirection:'row', marginTop: chosenproject.index? "300px" : "250px"}} >
          <div className='footer' >
               <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
       
