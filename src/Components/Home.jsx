@@ -1,5 +1,4 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
@@ -7,15 +6,12 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import axios from 'axios';
 import AuthContext from "./Usecontexts/Maincontext";
 import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
-import myimage from '../assets/images/dorpaint.jpg';
-import myimage2 from '../assets/images/dortwo.jpg';
+
 import dora1 from '../assets/images/dora1.jpg';
-import MyForm from "./Form";
 
 
 
@@ -92,14 +88,18 @@ const Home = () => {
     return (
         <>
       
-        <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
 
        
 
-        <Grid container style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start',marginTop:"50px", 
-        height:"100%",
-        marginBottom:smallmobile? "60px": "0px", padding:"20px"
-  //make overflow y
+        <Grid container style={{flexDirection:'row',alignItems:'center',
+       display:'flex',
+       paddingTop:"133.333",
+         paddingBottom:"133.333",
+         paddingRight:"83.333",
+            paddingLeft:"83.333",
+            background: 'var(--BG-Shade, #F5FCFF)',
+            boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+
 
     }}>
 
@@ -159,21 +159,10 @@ const Home = () => {
               
               className={isLoaded6? "fadeIn" : "hidden"}              >
 
-                <img src={dora1} style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
-                //make the image look sharp
-                imageRendering:"auto",
-                imageRendering:"-moz-crisp-edges",
+                <img src={dora1} alt="Imageofmy" style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
                 imageRendering:"pixelated",
-                //make the image look like a painting
-                filter:"grayscale(100%)",
-                filter:"contrast(150%)",
-                filter:"brightness(80%)",
-                filter:"saturate(150%)",
-                filter:"hue-rotate(10deg)",
-                filter:"blur(0.8px)",
-                filter:"invert(10%)",
-                filter:"sepia(50%)",
-                //make the image fill the container
+                filter:"grayscale(30%)",
+
 
             
             }}/>
@@ -322,7 +311,6 @@ Expected Completion: July 2025
 
 
 
-        </Box>
 
       
 

@@ -19,6 +19,8 @@ import { Button } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from './Usecontexts/Maincontext';
+import drimage from '../assets/images/DR.png'
+
 
 
 
@@ -40,11 +42,20 @@ const Header = () => {
 
     const tabStyle = {
         fontFamily: 'Montserrat',
-        fontSize: ismobile ? '1rem' : '1.25rem',
+        fontSize: '1rem',
         fontWeight: 'bold',
         textTransform: 'none',
-        color: '#ffffff',
+        color: 'black',
         zindex: 1,
+      };
+
+      const tabStyleselected = {
+        fontFamily: 'Montserrat',
+        fontSize: '1rem',
+        textTransform: 'none',
+        color: "#fa617b",
+        zindex: 1,
+        fontWeight:400
       };
 
       useEffect(() => {
@@ -56,8 +67,9 @@ const Header = () => {
         }
     }, [drawerOpen])
 
-      const tabs= (  <Tabs centered={!ismobile} indicatorColor='primary'
+      const tabs= (  <Tabs centered={!ismobile} indicatorColor='none'
       value={value} 
+
       onChange={(event, newValue) => {
           setValue(newValue);
           if(ismobile){
@@ -66,8 +78,7 @@ const Header = () => {
           }
       }}
 
-      style={{paddingRight: !isbigscreen ? '0px' : '240px'}}
-
+      style={{paddingRight: !isbigscreen ? '0px' : '120px'}}
 
       
 
@@ -75,7 +86,8 @@ const Header = () => {
       >
           <Tab label="Home" component={Link} to="/" 
 
-          style={tabStyle}
+          style={ value !== 0 ? tabStyle: tabStyleselected }
+          
 
           
           
@@ -101,19 +113,35 @@ const Header = () => {
         <>
         <Grid container  direction='row' 
         justifyContent="space-between"
-        style={{height:"5%", zIndex:2,
-        marginTop:"10px",
+        style={{ zIndex:2,
+        boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
+        padding:'0px 30px',
+        display:'flex',
+        paddingBottom: '10px',
+        borderBottom: '1px solid #e0e0e0',
+        
         
         //make box 
     
     }}
 
         >
-            <Grid item xs="4" sm="8"
+            <Grid container item xs="4" sm="8"
             
-            style={{textAlign:'center'}}
+            style={{display:'flex',justifyContent:'space-around',alignItems:'center', 
+        
+        }}
 
             >
+
+                <Grid item xs="2" style={{display:'flex',justifyContent:'center'}}>
+                <img src={drimage} style={{width:"60px"}}/>
+                </Grid>
+
+                <Grid item xs="10" style={{display:'flex',justifyContent:'flex-end'}}>
+
+                        
+
                 {
                     ismobile ? (
                         <>
@@ -177,6 +205,8 @@ const Header = () => {
                     )
 
                 }
+
+</Grid>
        
         </Grid>
 
@@ -189,7 +219,7 @@ const Header = () => {
       <a href="https://github.com/dor933" style={{marginRight:'10%'}} >
 
          
-        <AiFillGithub size={!isbigscreen? "25px": "35px"} color="#ffffff" 
+        <AiFillGithub size={!isbigscreen? "25px": "35px"} color="black" 
         
          
 
@@ -197,17 +227,18 @@ const Header = () => {
         </a>
 
         <a href="https://www.facebook.com/kushi101" style={{marginRight:'10%'}}>
-        <BsFacebook size={!isbigscreen? "25px": "35px"} color="#ffffff"
+        <BsFacebook size={!isbigscreen? "25px": "35px"} color="black"
         
         style={{marginRight:'10%'}}
         />
         </a>
             <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/" >
 
-        <FaLinkedin size={!isbigscreen? "25px": "35px"} color="#ffffff"
+        <FaLinkedin size={!isbigscreen? "25px": "35px"} color="black"
         />
                 </a>
 
+        
      
 
      

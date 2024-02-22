@@ -36,12 +36,7 @@ function App() {
     <div className={` ${ismobile? "inmobile" : ""}`}  >
 
      
-       {
-        !ismobile &&   <video autoPlay loop muted className='video' poster={poster}   >
-
-        <source src={video} type='video/mp4' />
-      </video>
-       }
+     
        
 
 
