@@ -10,6 +10,7 @@ import AuthContext from "./Usecontexts/Maincontext";
 import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
+import Achivments from "./Achivments";
 
 import dora1 from '../assets/images/dora1.jpg';
 
@@ -93,16 +94,20 @@ const Home = () => {
 
         <Grid container style={{flexDirection:'row',alignItems:'center',
        display:'flex',
-       paddingTop:"133.333",
-         paddingBottom:"133.333",
-         paddingRight:"83.333",
-            paddingLeft:"83.333",
+       paddingTop:"133.333px",
+         paddingBottom:"85.333px",
+         alignItems:'center',
+
             background: 'var(--BG-Shade, #F5FCFF)',
-            boxShadow: '0px 4px 4px 0px rgba(0, 0, 0, 0.25)',
+            height:'40%'
 
 
     }}>
 
+        </Grid>
+
+        <Achivments />
+{/* 
         <Grid container item xs={12} style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start', 
         marginBottom:smallmobile? "60px": "30px"}}
         >
@@ -157,21 +162,18 @@ const Home = () => {
 
               <Grid item xs={4} style={{textAlign:'center',marginTop:smallmobile? "0px" : "10px", alignSelf:'center'}} 
               
-              className={isLoaded6? "fadeIn" : "hidden"}              >
+              className={isLoaded6? "fadeIn" : "hidden"}              > */}
 
-                <img src={dora1} alt="Imageofmy" style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
+                {/* <img src={dora1} alt="Imageofmy" style={{width:ismobile? "100%": "auto", height:ismobile? "100%" : "400px", borderRadius:"10px",
                 imageRendering:"pixelated",
-                filter:"grayscale(30%)",
+                filter:"grayscale(30%)",            
+            }}/> */}
+              {/* </Grid> */}
 
-
-            
-            }}/>
-              </Grid>
-
-            </Grid>
+            {/* </Grid> */}
         
 
-            <Grid item xs={10} style={{backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px',padding:"40px",marginTop:"30px",marginBottom:"20px"}} className={isLoaded3? 'fadeIn' : 'hidden'}>
+            {/* <Grid item xs={10} style={{backgroundColor: 'rgba(0, 0, 0, 0.35)', borderRadius:'15px',padding:"40px",marginTop:"30px",marginBottom:"20px"}} className={isLoaded3? 'fadeIn' : 'hidden'}>
             <h1 className="Hometext" style={{color:'#f02e1d',fontSize:bigscreen? "30px" : "50px",textAlign:'center',marginTop:"0px"}}>
 
                Achivements.
@@ -296,9 +298,12 @@ Expected Completion: July 2025
           <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
   
           </div>
-          </Grid>
+          </Grid> */}
 
-        </Grid>
+        </>
+    )
+}
+
 
        
 
@@ -315,9 +320,8 @@ Expected Completion: July 2025
       
 
    
-        </>
-    );
-    };
+        
+          
 
 
 export default Home;

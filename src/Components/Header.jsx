@@ -78,7 +78,14 @@ const Header = () => {
           }
       }}
 
-      style={{paddingRight: !isbigscreen ? '0px' : '120px'}}
+      style={{//align to center 
+
+        display:'flex',
+        justifyContent:'center',
+        alignItems:'center',
+        width:'85%',
+    
+    }}
 
       
 
