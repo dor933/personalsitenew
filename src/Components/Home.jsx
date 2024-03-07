@@ -11,8 +11,11 @@ import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
 import Achivments from "./Achivments";
-
+import Lefthome from "./Lefthome";
 import dora1 from '../assets/images/dora1.jpg';
+import Righthome from "./RightHome";
+import Footer from "./Footer";
+
 
 
 
@@ -99,14 +102,20 @@ const Home = () => {
          alignItems:'center',
 
             background: 'var(--BG-Shade, #F5FCFF)',
-            height:'40%'
+            height:'60%'
 
 
     }}>
 
+            <Lefthome />
+            <Righthome />
+
+
         </Grid>
 
         <Achivments />
+        <Footer />
+
 {/* 
         <Grid container item xs={12} style={{flexDirection:'row',justifyContent:'center',alignItems:'flex-start', 
         marginBottom:smallmobile? "60px": "30px"}}
