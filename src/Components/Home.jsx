@@ -97,12 +97,12 @@ const Home = () => {
 
         <Grid container style={{flexDirection:'row',alignItems:'center',
        display:'flex',
-       paddingTop:"133.333px",
+       paddingTop:"40.333px",
          paddingBottom:"85.333px",
          alignItems:'center',
 
             background: 'var(--BG-Shade, #F5FCFF)',
-            height:'60%'
+            height:'70%'
 
 
     }}>

@@ -6,6 +6,7 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import image from '../assets/images/imagewebs.webp'
 
 
 
@@ -22,7 +23,9 @@ const Righthome = () => {
             padding:'30px'
 
         }}>
-sadsa
+
+            <img src={image} style={{width:'80%',height:'80%',objectFit:'cover', borderRadius:'10%',padding:"20px"}}/>
+
             </Grid>
 
     );
