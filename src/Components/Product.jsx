@@ -12,9 +12,9 @@ const Product = ({name,image,description}) => {
 
     return (
 
-        <Grid xs={3} style={{
+        <Grid xs={3} container style={{
             display:'flex',
-            padding:'32px',
+            padding:'22px',
             flexDirection:'column',
             alignItems:'flex-start',
             gap:'32px',
@@ -36,7 +36,22 @@ const Product = ({name,image,description}) => {
 
             >
 
-                
+                <div style={{
+                    display:'flex',
+                    padding:'14px',
+                    justifyContent:'center',
+                    alignItems:'center',
+                    gap:'14px',
+                    borderRadius:'10px',
+                    backgroundColor:"#FFF",
+                    boxShadow:"0px 0px 16px 0px rgba(0, 0, 0, 0.10)",
+                    alignSelf:'stretch'
+                }}>
+
+
+                </div>
+
+
             </div>
 
 
