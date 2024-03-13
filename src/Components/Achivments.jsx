@@ -10,12 +10,43 @@ import AuthContext from "./Usecontexts/Maincontext";
 import CheckIcon from '@mui/icons-material/Check';
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import SupportIcon from '@mui/icons-material/Support';
-
 import dora1 from '../assets/images/dora1.jpg';
 import Product from "./Product";
+import prod_chain1 from '../assets/images/prod_chain1.png';
+import tag1 from '../assets/images/tag1.png';
+import web_pen from '../assets/images/web_pen.png';
+import feather_pen from '../assets/images/feather_pen.png';
 
 
 export default function Achivments() {
+
+    const firstskill={
+        title:"Fast Delivery",
+        description:"We deliver",
+        image:tag1
+    }
+
+    const secondskill={
+        title:"Quality",
+        description:"We deliver",
+        image:web_pen
+    }
+
+    const thirdskill={
+        title:"Support",
+        description:"We deliver",
+        image:feather_pen
+    }
+
+    const fourthskill={
+        title:"Support",
+        description:"We deliver",
+        image:prod_chain1
+    }
+
+    const skills=[firstskill,secondskill,thirdskill,fourthskill]
+
+
 
     return (
         <Grid container style={{
@@ -102,9 +133,9 @@ export default function Achivments() {
 
                     //write a for loop to display the products
                     //for now we are going to display the same product 3 times
-                    [1,2,3,4].map((item) => {
+                    skills.map((item) => {
                         return (
-                            <Product name="sads" image="bb" description="aaa"/>
+                            <Product name= {item.title} image= {item.image} description={item.description}/>
                         )
                     })
                 }

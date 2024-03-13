@@ -53,7 +53,7 @@ const Header = () => {
         fontFamily: 'Montserrat',
         fontSize: '1rem',
         textTransform: 'none',
-        color: "#fa617b",
+        color: "#5E3BEE",
         zindex: 1,
         fontWeight:400
       };
