@@ -53,9 +53,23 @@ const Product = ({name,image,description}) => {
 
                 </Grid>
 
-                <Grid xs={12} >
+                <Grid xs={12} style={{display:'flex', flexDirection:'column', alignItems:'flex-start', alignSelf:'stretch', gap:'21px'}} >
+
+                    <div style={{fontFamily:'Roboto', color:'#282938', fontSize:'32px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
 
                     {name}
+                    </div>
+
+                    <div style={{fontFamily:'Roboto', color:'#282938', fontSize:'21px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+
+                        
+                    {description}
+
+                    </div>
+                    
+                    
+
+                  
                 </Grid>
 
 

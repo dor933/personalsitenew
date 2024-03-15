@@ -22,25 +22,25 @@ export default function Achivments() {
 
     const firstskill={
         title:"Fast Delivery",
-        description:"We deliver",
+        description:"We deliver test test test test test test test test test",
         image:tag1
     }
 
     const secondskill={
         title:"Quality",
-        description:"We deliver",
+        description:"We deliver test test test test test test test test test",
         image:web_pen
     }
 
     const thirdskill={
         title:"Support",
-        description:"We deliver",
+        description:"We deliver test test test test test test test test test",
         image:feather_pen
     }
 
     const fourthskill={
         title:"Support",
-        description:"We deliver",
+        description:"We deliver test test test test test test test test test",
         image:prod_chain1
     }
 
@@ -59,7 +59,7 @@ export default function Achivments() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems:'flex-start',
-            height:"30%"
+            height:"50%"
 
         }}>
 

@@ -14,6 +14,7 @@ import Achivments from "./Achivments";
 import Lefthome from "./Lefthome";
 import dora1 from '../assets/images/dora1.jpg';
 import Righthome from "./RightHome";
+import Contact from "./Contact";
 import Footer from "./Footer";
 
 
@@ -113,7 +114,10 @@ const Home = () => {
 
         </Grid>
 
+     
+
         <Achivments />
+        <Contact />
         <Footer />
 
 {/* 

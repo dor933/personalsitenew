@@ -89,80 +89,23 @@ const Contact = () => {
 
 
     return (
-        <>
 
+      <Grid container xs={12} style={{
+        display:'flex',
+        paddingTop:'150px',
+        paddingBottom:'150px',
+        paddingLeft:'83px',
+        paddingRight:'83px',
+        flexDirection:'column',
+        justifyContent:'center',
+        background: 'var(--BG-Shade, #F5FCFF)',
+        height:"50%",
 
+        gap:'64px'}}>
 
-  
-    <Box  style={{width:"100%",height:"100%",flexDirection:'row',marginTop:"50px"}}>
-
-    <Grid item xs={12} style={{textAlign:'center' ,marginTop:"0px",marginBottom: smaller1200? "30px":"150px"}} >
-
-<span className="Hometext" style={{fontSize: smaller1200? "30px" : "80px", color:'#f02e1d'}} >
-
-    Contact
-    </span>
-    <span className="Hometext" style={{fontSize: smaller1200? "30px" : "80px" , marginLeft: smaller1200? "10px" : "20px"}} >
-        Me.
-    </span>
-    </Grid>
-
-      <Grid container >
-
-
-  
-    <Grid item xs={12} lg={6} style={{lineHeight:1.6}}  >
- 
-    <div style={{display: "flex", maxWidth: "600px", width: smaller1200? "300px" : "350px", margin: "auto",paddingBottom:smaller1200? "7%" : "0%",
-     borderRadius:'10px', paddingTop: smaller1200? "4%": '7%',  backgroundColor: 'rgba(0, 0, 0, 0.35)', height: smaller1200? "280px" : "500px",
-     flexDirection:'column', justifyContent:'flex-start' 
-    }}>
-
-     <div style={{fontSize: smaller1200? "18px" : "30px", textAlign:'center', color:'#f02e1d', fontFamily:'Comfortaa', fontWeight:'bold'}} >
-        <span style={{color:'white'}}>Lets</span> 
-        <span style={{color:'#f02e1d',marginLeft:smaller1200? 3: 0}}> Connent.</span>
-         <br/> <br/>
-
-     
-        <Socialcomp />
-
-
-    </div>
-    
-
+          test
+        </Grid>
        
-        </div>
-
-        </Grid>
-        <Grid item xs={12} lg={6} style={{marginTop:smaller1200? "60px": "0px"}} >
-
-          <MyForm type={"contact"} />
-          
-
-            
-        </Grid>
-
-        </Grid>
-
-
-        <Grid item xs={12} style={{textAlign:'center', flexDirection:'row',marginTop:"120px"}} >
-          
-          <div className='footer'>
-              <p>© 2023 by <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/">Dor Ratzabi</a></p>
-      
-              </div>
-              </Grid>
-        
-        </Box>
-
-     
-
-        
-
-      
-      
-        </>
-
     )
 }
 

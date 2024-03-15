@@ -17,7 +17,7 @@ const Footer = () => {
             display: 'inline-flex',
             flexDirection: 'column',
             alignItems:'flex-start',
-            height:"10%",
+            height:"20%",
             paddingTop:"106.667px",
             paddingBottom:"106.667px",
             paddingLeft:"85.333px",
