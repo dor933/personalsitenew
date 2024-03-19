@@ -92,18 +92,245 @@ const Contact = () => {
 
       <Grid container xs={12} style={{
         display:'flex',
-        paddingTop:'150px',
-        paddingBottom:'150px',
+        paddingTop:'120px',
+        paddingBottom:'120px',
         paddingLeft:'83px',
         paddingRight:'83px',
-        flexDirection:'column',
-        justifyContent:'center',
+        flexDirection:'row',
+        justifyContent:'flex-start',
+        alignItems:'flex-start',
         background: 'var(--BG-Shade, #F5FCFF)',
-        height:"50%",
+        height:"85%",
 
-        gap:'64px'}}>
+        gap:'30px'}}>
 
-          test
+          <Grid container xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'center',
+            justifyContent:'center',
+            gap:'25px',
+            height:"30%"
+        }}>
+
+          <Grid xs={12} style={{
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center',
+            gap:'21px',
+        }}>
+
+            <div style={{
+              fontFamily:'Roboto',
+              color:'var(--Heading-color, #282938)',
+              fontSize:'18px',
+              fontWeight:600,
+              fontStyle:'normal',
+              lineHeight:"150%",
+          }}>let's be in touch!</div>
+
+          </Grid>
+
+          <Grid xs={12} style={{
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'center',
+            gap:'20px',
+        }}>
+          <div style={{
+            fontFamily:'Roboto',
+            color:'var(--Heading-color, #282938)',
+            fontSize:'48px',
+            fontWeight:700,
+            fontStyle:'normal',
+            lineHeight:"150%",
+        }}>Contact me</div>
+
+        </Grid>
+
+        <Grid xs={12} style={{
+          display:'flex',
+          flexDirection:'column',
+          alignItems:'center',
+          gap:'30px',
+      }}>
+
+        <div style={{
+          fontFamily:'Roboto',
+          color:'var(--Heading-color, #282938)',
+          fontSize:'24px',
+          fontWeight:400,
+          fontStyle:'normal',
+          lineHeight:"150%",
+      }}>I'll make your dreams come true!</div>
+
+      </Grid>
+
+          </Grid>
+
+          <Grid container xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'flex-start',
+            gap:'30px',
+            height:"70%",
+            justifyContent:'center',
+            // center the form
+
+
+
+
+        }}>
+
+          <Grid container xs={8} style={{
+            display:'flex',
+            flexDirection:'column',
+            alignItems:'flex-start',
+            gap:'30px',
+            justifyContent:'flex-start',
+        }}>
+
+          <Grid container xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'flex-start',
+            
+            gap:'10px',
+            justifyContent:'center',
+          }}>
+
+            <Grid container xs={6} style={{
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'flex-start',
+              gap:'10px',
+              justifyContent:'center',
+              flex:'1 1 0',
+          }}>
+
+            <Grid xs={12} style={{
+              display:'flex',
+              flexDirection:'row',
+              alignItems:'flex-start',
+              gap:'10px',
+              justifyContent:'center',
+              flex:'1 1 0',
+              alignSelf:'stretch',
+          }}>
+
+            <span style={{
+              fontFamily:'Roboto',
+              color:'var(--Heading-color, #282938)',
+              fontSize:'18px',
+              fontWeight:400,
+              fontStyle:'normal',
+              lineHeight:"150%",
+          }}>First Name</span>
+
+            </Grid>
+
+<Grid xs={12} style={{
+              display:'flex',
+              flexDirection:'row',
+              alignItems:'center',
+              gap:'10px',
+              justifyContent:'center',
+              alignSelf:'stretch',
+              flex:'1 1 0',
+          }}>
+            <input type="text" style={{
+              padding:'6px',
+              borderRadius:'8px',
+              border: "1.333px solid var(--Primary, #5E3BEE)",
+              background: 'var(--White, #FFF)',
+              lineHeight:"150%",
+              width:'50%',
+              
+            }}>
+              
+            </input>
+
+            </Grid>
+            
+
+            </Grid>
+
+            <Grid container xs={6} style={{
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'flex-start',
+              gap:'10px',
+              justifyContent:'center',
+              flex:'1 1 0',
+          }}>
+
+<Grid xs={12} style={{
+              display:'flex',
+              flexDirection:'row',
+              alignItems:'center',
+              gap:'10px',
+              justifyContent:'center',
+              alignSelf:'center',
+              flex:'1 1 0',
+          }}>
+
+            <span style={{
+              fontFamily:'Roboto',
+              color:'var(--Heading-color, #282938)',
+              fontSize:'18px',
+              fontWeight:400,
+              fontStyle:'normal',
+              
+              lineHeight:"150%",
+          }}>Last Name</span>
+
+            </Grid>
+
+            <Grid xs={12} style={{
+              display:'flex',
+              flexDirection:'row',
+              alignItems:'center',
+              gap:'10px',
+              justifyContent:'center',
+              alignSelf:'stretch',
+              flex:'1 1 0',
+          }}>
+            <input type="text" style={{
+              padding:'6px',
+              borderRadius:'8px',
+              border: "1.333px solid var(--Primary, #5E3BEE)",
+              background: 'var(--White, #FFF)',
+              lineHeight:"150%",
+              width:'50%',
+              
+            }}>
+              
+            </input>
+
+            </Grid>
+
+            </Grid>
+
+
+            </Grid>
+
+          </Grid>
+
+          </Grid>
+
+
+       
+
+          
+          
+
+              
+
+              
+      
+
+
+
         </Grid>
        
     )
