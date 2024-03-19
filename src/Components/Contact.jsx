@@ -11,6 +11,8 @@ import Socialcomp from "./Socialcomp";
 import { createTheme,ThemeProvider } from "@mui/material";
 import AuthContext from './Usecontexts/Maincontext';
 import MyForm from "./Form";
+import Fieldcomp from "./fieldcomp";
+
 
 const Contact = () => {
 
@@ -188,9 +190,34 @@ const Contact = () => {
             alignItems:'flex-start',
             gap:'30px',
             justifyContent:'flex-start',
+            
+            // make
+            
         }}>
 
           <Grid container xs={12} style={{
+            flexDirection:'row',
+            alignItems:'flex-start',
+            
+            gap:'10px',
+            justifyContent:'center',
+          }}>
+
+        
+          
+
+            <Fieldcomp fieldname="First Name" />
+            
+          
+            <Fieldcomp fieldname="Last Name" />
+
+
+
+
+
+            </Grid>
+
+            <Grid container xs={12} style={{
             display:'flex',
             flexDirection:'row',
             alignItems:'flex-start',
@@ -199,120 +226,27 @@ const Contact = () => {
             justifyContent:'center',
           }}>
 
-            <Grid container xs={6} style={{
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'flex-start',
-              gap:'10px',
-              justifyContent:'center',
-              flex:'1 1 0',
-          }}>
+            <Fieldcomp fieldname="Email" />
 
-            <Grid xs={12} style={{
-              display:'flex',
-              flexDirection:'row',
-              alignItems:'flex-start',
-              gap:'10px',
-              justifyContent:'center',
-              flex:'1 1 0',
-              alignSelf:'stretch',
-          }}>
+            <Fieldcomp fieldname="Phone" />
 
-            <span style={{
-              fontFamily:'Roboto',
-              color:'var(--Heading-color, #282938)',
-              fontSize:'18px',
-              fontWeight:400,
-              fontStyle:'normal',
-              lineHeight:"150%",
-          }}>First Name</span>
 
             </Grid>
 
-<Grid xs={12} style={{
-              display:'flex',
-              flexDirection:'row',
-              alignItems:'center',
-              gap:'10px',
-              justifyContent:'center',
-              alignSelf:'stretch',
-              flex:'1 1 0',
-          }}>
-            <input type="text" style={{
-              padding:'6px',
-              borderRadius:'8px',
-              border: "1.333px solid var(--Primary, #5E3BEE)",
-              background: 'var(--White, #FFF)',
-              lineHeight:"150%",
-              width:'50%',
-              
-            }}>
-              
-            </input>
-
-            </Grid>
+            <Grid container xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'flex-start',
             
-
-            </Grid>
-
-            <Grid container xs={6} style={{
-              display:'flex',
-              flexDirection:'column',
-              alignItems:'flex-start',
-              gap:'10px',
-              justifyContent:'center',
-              flex:'1 1 0',
+            gap:'10px',
+            justifyContent:'center',
           }}>
 
-<Grid xs={12} style={{
-              display:'flex',
-              flexDirection:'row',
-              alignItems:'center',
-              gap:'10px',
-              justifyContent:'center',
-              alignSelf:'center',
-              flex:'1 1 0',
-          }}>
-
-            <span style={{
-              fontFamily:'Roboto',
-              color:'var(--Heading-color, #282938)',
-              fontSize:'18px',
-              fontWeight:400,
-              fontStyle:'normal',
-              
-              lineHeight:"150%",
-          }}>Last Name</span>
+            <Fieldcomp fieldname="Message" iswide={true} />
 
             </Grid>
 
-            <Grid xs={12} style={{
-              display:'flex',
-              flexDirection:'row',
-              alignItems:'center',
-              gap:'10px',
-              justifyContent:'center',
-              alignSelf:'stretch',
-              flex:'1 1 0',
-          }}>
-            <input type="text" style={{
-              padding:'6px',
-              borderRadius:'8px',
-              border: "1.333px solid var(--Primary, #5E3BEE)",
-              background: 'var(--White, #FFF)',
-              lineHeight:"150%",
-              width:'50%',
-              
-            }}>
-              
-            </input>
-
-            </Grid>
-
-            </Grid>
-
-
-            </Grid>
+         
 
           </Grid>
 
