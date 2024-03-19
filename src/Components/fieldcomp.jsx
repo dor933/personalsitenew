@@ -10,7 +10,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
     return (
         <>
 
-<Grid container xs={iswide? 12 : 6} style={{
+<Grid container xs={iswide? 12 : 4} style={{
               display:'flex',
               flexDirection:'column',
               alignItems:'flex-start',
@@ -66,7 +66,8 @@ const Fieldcomp = ({fieldname,iswide}) => {
             border: "1.333px solid var(--Primary, #5E3BEE)",
             background: 'var(--White, #FFF)',
             lineHeight:"150%",
-            width:'70%',
+            width:'90%',
+            alignSelf:'flex-end',
             fontFamily:'Roboto',
             height:'33px',
            
