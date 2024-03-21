@@ -10,7 +10,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
     return (
         <>
 
-<Grid container xs={iswide? 12 : 4} style={{
+<Grid container xs={iswide? 12 : 6} style={{
               display:'flex',
               flexDirection:'column',
               alignItems:'flex-start',
@@ -24,9 +24,10 @@ const Fieldcomp = ({fieldname,iswide}) => {
             display:'flex',
             flexDirection:'row',
             alignItems:'center',
-            justifyContent:'center',
+            justifyContent: 'flex-start',
             flex:'1 1 0',
             alignSelf:'stretch',
+            paddingLeft:'15px',
         }}>
 
           <span style={{
@@ -55,8 +56,8 @@ const Fieldcomp = ({fieldname,iswide}) => {
                 border: "1.333px solid var(--Primary, #5E3BEE)",
                 background: 'var(--White, #FFF)',
                 lineHeight:"150%",
-                width:'50%',
-                height:'150px',
+                width:'96%',
+                height:'250px',
                 fontFamily:'Roboto',
             }}>
 
@@ -69,7 +70,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
             width:'90%',
             alignSelf:'flex-end',
             fontFamily:'Roboto',
-            height:'33px',
+            height:'35px',
            
             
           }}>

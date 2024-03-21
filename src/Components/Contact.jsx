@@ -244,9 +244,23 @@ const Contact = () => {
 
             <Fieldcomp fieldname="Message" iswide={true} />
 
+          
+
             </Grid>
 
-         
+            <Grid container xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'flex-start',
+            
+            gap:'10px',
+            justifyContent:'center',
+          }}>
+
+
+          
+
+            </Grid>
 
           </Grid>
 
