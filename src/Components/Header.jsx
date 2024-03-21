@@ -45,8 +45,9 @@ const Header = () => {
         fontSize: '1rem',
         fontWeight: 'bold',
         textTransform: 'none',
-        color: 'black',
+        color: 'black', 
         zindex: 1,
+        
       };
 
       const tabStyleselected = {
@@ -69,6 +70,12 @@ const Header = () => {
 
       const tabs= (  <Tabs centered={!ismobile} indicatorColor='none'
       value={value} 
+      //create space between the tabs
+
+
+
+
+
 
       onChange={(event, newValue) => {
           setValue(newValue);
@@ -81,9 +88,11 @@ const Header = () => {
       style={{//align to center 
 
         display:'flex',
-        justifyContent:'center',
+        justifyContent:'space-between',
         alignItems:'center',
         width:'85%',
+
+       
     
     }}
 
@@ -133,7 +142,7 @@ const Header = () => {
     }}
 
         >
-            <Grid container item xs="4" sm="8"
+            <Grid container item xs="4" sm="9"
             
             style={{display:'flex',justifyContent:'space-around',alignItems:'center', 
         
@@ -218,15 +227,15 @@ const Header = () => {
         </Grid>
 
   
-        <Grid item xs="8" sm="4"
+        <Grid item xs="8" sm="3"
         
-        style={{flexDirection:'row',display:'flex',justifyContent:'center',paddingTop:6}}
+        style={{flexDirection:'row',display:'flex',justifyContent:'center',paddingTop:16}}
         >
 
       <a href="https://github.com/dor933" style={{marginRight:'10%'}} >
 
          
-        <AiFillGithub size={!isbigscreen? "25px": "35px"} color="black" 
+        <AiFillGithub size={!isbigscreen? "25px": "30px"} color="black" 
         
          
 
@@ -234,14 +243,14 @@ const Header = () => {
         </a>
 
         <a href="https://www.facebook.com/kushi101" style={{marginRight:'10%'}}>
-        <BsFacebook size={!isbigscreen? "25px": "35px"} color="black"
+        <BsFacebook size={!isbigscreen? "25px": "30px"} color="#3b5998"
         
         style={{marginRight:'10%'}}
         />
         </a>
             <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/" >
 
-        <FaLinkedin size={!isbigscreen? "25px": "35px"} color="black"
+        <FaLinkedin size={!isbigscreen? "25px": "30px"} color="#0A66C2"
         />
                 </a>
 

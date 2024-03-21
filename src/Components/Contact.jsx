@@ -102,7 +102,7 @@ const Contact = () => {
         justifyContent:'flex-start',
         alignItems:'flex-start',
         background: 'var(--BG-Shade, #F5FCFF)',
-        height:"85%",
+        height:"110%",
 
         gap:'30px'}}>
 
@@ -248,14 +248,40 @@ const Contact = () => {
 
             </Grid>
 
-            <Grid container xs={12} style={{
+            <Grid item xs={12} style={{
             display:'flex',
             flexDirection:'row',
             alignItems:'flex-start',
-            
             gap:'10px',
             justifyContent:'center',
+            width:'100%',
+
           }}>
+
+            <div style={{
+              display:'flex',
+              borderRadius:'8px',
+              backgroundColor:'var(--Primary, #5E3BEE)',
+              width:'7%',
+              paddingTop:'18.667px',
+              paddingBottom:'18.667px',
+              paddingLeft:'40px',
+              paddingRight:'40px',
+              gap:'10px',
+              justifyContent:'center',
+
+            }}>
+
+              <span style={{
+                fontSize:'21.33px',
+                fontFamily:'Roboto',
+                fontWeight:400,
+                lineHeight:'150%',
+                color:'var(--White, #FFF)',
+                fontStyle:'normal',
+              }}>Submit</span>
+              
+            </div>
 
 
           

@@ -56,7 +56,15 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         alignItems:'flex-end',
                     }}>
-                        Home
+                           <span style={{
+                            fontFamily:'Roboto',
+                            fontSize:'16px',
+                            fontWeight:400,
+                            fontStyle:'normal',
+                            lineHeight:"150%",
+                        }}
+                        >Home</span>
+                        
 
                         </Grid>
 
@@ -66,7 +74,16 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         alignItems:'flex-end',
                     }}>
-                        Portfolio
+
+                        <span style={{
+                            fontFamily:'Roboto',
+                            fontSize:'16px',
+                            fontWeight:400,
+                            fontStyle:'normal',
+                            lineHeight:"150%",
+                        }}
+                        >Portfolio</span>
+                        
 
                         </Grid>
 
@@ -76,7 +93,14 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         alignItems:'flex-end',
                     }}>
-                        About
+                           <span style={{
+                            fontFamily:'Roboto',
+                            fontSize:'16px',
+                            fontWeight:400,
+                            fontStyle:'normal',
+                            lineHeight:"150%",
+                        }}
+                        >About</span>
 
                         </Grid>
 
@@ -86,7 +110,14 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         alignItems:'flex-end',
                     }}>
-                        Contact
+                          <span style={{
+                            fontFamily:'Roboto',
+                            fontSize:'16px',
+                            fontWeight:400,
+                            fontStyle:'normal',
+                            lineHeight:"150%",
+                        }}
+                        >Contact</span>
 
                         </Grid>
                     
