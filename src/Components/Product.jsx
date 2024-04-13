@@ -16,10 +16,9 @@ const Product = ({name,image,description}) => {
         <Grid xs={3} container style={{
             display:'flex',
             padding:'22px',
-            flexDirection:'column',
             alignItems:'flex-start',
-            gap:'22px',
-            flex:"1 1 0",
+            gap:'10px',
+            height:'420px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
@@ -30,14 +29,14 @@ const Product = ({name,image,description}) => {
 
                 display:'flex',
                 alignItems:'flex-start',
-                flexDirection:'column',
+                flexDirection:'row',
                 gap:'22px',
-                alignSelf:'stretch',
+                
             }}
 
             >
 
-                <Grid xs={12} style={{
+                <Grid xs={3} style={{
                     display:'flex',
                     padding:'14px',
                     justifyContent:'center',
@@ -46,21 +45,24 @@ const Product = ({name,image,description}) => {
                     borderRadius:'10px',
                     backgroundColor:"#FFF",
                     boxShadow:"0px 0px 16px 0px rgba(0, 0, 0, 0.10)",
+                    
                 }}>
 
-                    <img src={image} style={{width:'50px',height:'50px',objectFit:'cover'}}/>
+                    <img src={image} alt="symbol" style={{width:'50px',height:'50px',objectFit:'cover'}}/>
 
 
                 </Grid>
 
-                <Grid xs={12} style={{display:'flex', flexDirection:'column', alignItems:'flex-start', alignSelf:'stretch', gap:'21px'}} >
+                </Grid>
 
-                    <div style={{fontFamily:'Roboto', color:'#282938', fontSize:'32px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
+                <Grid xs={12} style={{ flexDirection:'column', justifyContent:'flex-start' ,alignItems:'flex-start', alignSelf:'stretch', gap:'21px', height:"100%",display:'flex'}} >
+
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'32px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
 
                     {name}
                     </div>
 
-                    <div style={{fontFamily:'Roboto', color:'#282938', fontSize:'21px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'21px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
 
                         
                     {description}
@@ -71,12 +73,12 @@ const Product = ({name,image,description}) => {
 
                   
                 </Grid>
+                
 
 
             </Grid>
 
 
-        </Grid>
       
 
 

@@ -27,11 +27,11 @@ const Fieldcomp = ({fieldname,iswide}) => {
             justifyContent: 'flex-start',
             flex:'1 1 0',
             alignSelf:'stretch',
-            paddingLeft:'15px',
+            paddingRight:'18px',
         }}>
 
           <span style={{
-            fontFamily:'Roboto',
+            fontFamily:'Assistant',
             color:'var(--Heading-color, #282938)',
             fontSize:'18px',
             fontWeight:400,

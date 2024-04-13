@@ -20,6 +20,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from './Usecontexts/Maincontext';
 import drimage from '../assets/images/DR.png'
+import mylogo from '../assets/images/my_logo.png'
 
 
 
@@ -41,17 +42,17 @@ const Header = () => {
     const [drawerOpen, setDrawerOpen] = useState(false);    
 
     const tabStyle = {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Assistant',
         fontSize: '1rem',
-        fontWeight: 'bold',
         textTransform: 'none',
         color: 'black', 
         zindex: 1,
+        fontWeight:400
         
       };
 
       const tabStyleselected = {
-        fontFamily: 'Montserrat',
+        fontFamily: 'Assistant',
         fontSize: '1rem',
         textTransform: 'none',
         color: "#5E3BEE",
@@ -91,6 +92,7 @@ const Header = () => {
         justifyContent:'space-between',
         alignItems:'center',
         width:'85%',
+        marginTop:'12px',
 
        
     
@@ -100,7 +102,7 @@ const Header = () => {
 
       
       >
-          <Tab label="Home" component={Link} to="/" 
+          <Tab label="בית" component={Link} to="/" 
 
           style={ value !== 0 ? tabStyle: tabStyleselected }
           
@@ -109,16 +111,16 @@ const Header = () => {
           
 
           />
-          <Tab label="About" component={Link} to="/about" 
+          <Tab label="אודות" component={Link} to="/about" 
           style={tabStyle}
           
           />
-          <Tab label="Projects" component={Link} to="/projects"
+          <Tab label="שירותים" component={Link} to="/projects"
           style={tabStyle}
 
           
           />
-          <Tab label="Contact" component={Link} to="/contact"
+          <Tab label="צור קשר" component={Link} to="/contact"
           style={tabStyle}
 
           />
@@ -133,7 +135,7 @@ const Header = () => {
         boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
         padding:'0px 30px',
         display:'flex',
-        paddingBottom: '10px',
+        paddingBottom: '22px',
         borderBottom: '1px solid #e0e0e0',
         
         
@@ -151,10 +153,15 @@ const Header = () => {
             >
 
                 <Grid item xs="2" style={{display:'flex',justifyContent:'center'}}>
-                <img src={drimage} style={{width:"60px"}}/>
+                <img src={mylogo} alt='logo' style={{width:"140px",position:'absolute', 
+                
+            
+            marginTop:'-61px',
+
+            }}/>
                 </Grid>
 
-                <Grid item xs="10" style={{display:'flex',justifyContent:'flex-end'}}>
+                <Grid item xs="10" style={{display:'flex',justifyContent:'flex-end',}}>
 
                         
 
@@ -227,37 +234,23 @@ const Header = () => {
         </Grid>
 
   
-        <Grid item xs="8" sm="3"
+        <Grid container item xs="8" sm="3"
         
-        style={{flexDirection:'row',display:'flex',justifyContent:'center',paddingTop:16}}
+        style={{flexDirection:'row',display:'flex',justifyContent:'flex-end',
+    alignSelf:'center', marginTop:'12px',
+    }}
+    
         >
 
-      <a href="https://github.com/dor933" style={{marginRight:'10%'}} >
+            <Grid item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
+        fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px'
+        }}>
 
-         
-        <AiFillGithub size={!isbigscreen? "25px": "30px"} color="black" 
-        
-         
+       צור/י קשר
 
-        />
-        </a>
+                </Grid>
 
-        <a href="https://www.facebook.com/kushi101" style={{marginRight:'10%'}}>
-        <BsFacebook size={!isbigscreen? "25px": "30px"} color="#3b5998"
-        
-        style={{marginRight:'10%'}}
-        />
-        </a>
-            <a href="https://www.linkedin.com/in/dor-ratzabi-3900b2248/" >
-
-        <FaLinkedin size={!isbigscreen? "25px": "30px"} color="#0A66C2"
-        />
-                </a>
-
-        
-     
-
-     
+      
 
      
    

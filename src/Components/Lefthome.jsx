@@ -24,7 +24,7 @@ const Lefthome = () => {
             flexDirection: 'column',
             alignItems:'flex-start',
             flexShrink: 0,
-            paddingLeft:'100px'
+            paddingRight:'100px'
 
         }}>
 
@@ -37,28 +37,29 @@ const Lefthome = () => {
             }}>
 
                 <div
-                style={{fontFamily:'Roboto',fontSize:'21.333px',fontWeight:600,marginBottom:'20px', color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.15px'}}
+                style={{fontFamily:'Assistant',fontSize:'21.333px',fontWeight:600,marginBottom:'10px', color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.15px'}}
                 
                 >
 
-                    Hey, I'm Dor
+                   הגיע הזמן להפסיק לשלם הון תועפות על פלטפורמה דיגיטלית
+                    
                     
                 </div>
                 <div style={{alignSelf:'stretch'}} >
 
-                    <span style={{fontFamily:'Roboto', fontSize:'74.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
+                    <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
 
-                    I'm a 
+                     אני דור. אני מאמין 
 
 
                     </span>
-                    <span style={{fontFamily:'Roboto', fontSize:'74.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%',color:'#5E3BEE',paddingLeft:'20px', paddingRight:'20px'}}>
+                    <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%',color:'#5E3BEE',paddingLeft:'20px', paddingRight:'20px'}}>
 
-                        Website Builder
+                        שפלטפורמה דיגיטלית
                         </span>
-                        <span style={{fontFamily:'Roboto', fontSize:'74.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
+                        <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
 
-                    and system engineer
+                     במחיר הוגן זו זכות בסיסית של כל בעל עסק.
 
 
                     </span>
@@ -78,8 +79,8 @@ const Lefthome = () => {
                 paddingBottom:'40px',
             }}>
               
-              <Button variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'21.333px',fontWeight:600,fontFamily:'Roboto',lineHeight:'150%',letterSpacing:'0.15px'}}>
-                Get in touch
+              <Button variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'17.333px',fontWeight:600,fontFamily:'Assistant',lineHeight:'150%',letterSpacing:'0.15px'}}>
+                צור/י קשר ונצא לדרך.
                 </Button>
                 </Grid>
 

@@ -102,7 +102,6 @@ const Contact = () => {
         justifyContent:'flex-start',
         alignItems:'flex-start',
         background: 'var(--BG-Shade, #F5FCFF)',
-        height:"110%",
 
         gap:'30px'}}>
 
@@ -111,7 +110,7 @@ const Contact = () => {
             flexDirection:'row',
             alignItems:'center',
             justifyContent:'center',
-            gap:'25px',
+            gap:'19px',
             height:"30%"
         }}>
 
@@ -123,13 +122,13 @@ const Contact = () => {
         }}>
 
             <div style={{
-              fontFamily:'Roboto',
+              fontFamily:'Assistant',
               color:'var(--Heading-color, #282938)',
               fontSize:'18px',
               fontWeight:600,
               fontStyle:'normal',
-              lineHeight:"150%",
-          }}>let's be in touch!</div>
+              lineHeight:"100%",
+          }}>בוא נדבר</div>
 
           </Grid>
 
@@ -137,16 +136,16 @@ const Contact = () => {
             display:'flex',
             flexDirection:'column',
             alignItems:'center',
-            gap:'20px',
+            gap:'10px',
         }}>
           <div style={{
-            fontFamily:'Roboto',
+            fontFamily:'Assistant',
             color:'var(--Heading-color, #282938)',
             fontSize:'48px',
             fontWeight:700,
             fontStyle:'normal',
             lineHeight:"150%",
-        }}>Contact me</div>
+        }}>צור קשר</div>
 
         </Grid>
 
@@ -158,13 +157,13 @@ const Contact = () => {
       }}>
 
         <div style={{
-          fontFamily:'Roboto',
+          fontFamily:'Assistant',
           color:'var(--Heading-color, #282938)',
           fontSize:'24px',
           fontWeight:400,
           fontStyle:'normal',
           lineHeight:"150%",
-      }}>I'll make your dreams come true!</div>
+      }}>ונהפוך את החלומות של העסק שלך למציאות!</div>
 
       </Grid>
 
@@ -206,10 +205,10 @@ const Contact = () => {
         
           
 
-            <Fieldcomp fieldname="First Name" />
+            <Fieldcomp fieldname="שם פרטי" />
             
           
-            <Fieldcomp fieldname="Last Name" />
+            <Fieldcomp fieldname="שם משפחה" />
 
 
 
@@ -226,9 +225,9 @@ const Contact = () => {
             justifyContent:'center',
           }}>
 
-            <Fieldcomp fieldname="Email" />
+            <Fieldcomp fieldname="מייל" />
 
-            <Fieldcomp fieldname="Phone" />
+            <Fieldcomp fieldname="טלפון" />
 
 
             </Grid>
@@ -242,7 +241,7 @@ const Contact = () => {
             justifyContent:'center',
           }}>
 
-            <Fieldcomp fieldname="Message" iswide={true} />
+            <Fieldcomp fieldname="שלח הודעה" iswide={true} />
 
           
 

@@ -21,26 +21,27 @@ import feather_pen from '../assets/images/feather_pen.png';
 export default function Achivments() {
 
     const firstskill={
-        title:"Fast Delivery",
-        description:"We deliver test test test test test test test test test",
+        title:"תיבת תוכן",
+        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
         image:tag1
     }
 
     const secondskill={
-        title:"Quality",
-        description:"We deliver test test test test test test test test test",
+        title:"בניית אתר",
+        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
         image:web_pen
     }
 
     const thirdskill={
-        title:"Support",
-        description:"We deliver test test test test test test test test test",
+        title:"כתיבת תוכן",
+        description:"על מנת למשוך מבקרים לאתר ולשפר את דירוג האתר במנועי החיפוש, על האתר להכיל תוכן איכותי ורלוונטי. כתיבת תוכן היא חלק בלתי נפרד מבניית פתרון דיגיטלי, ובתחום זה אנו מציעים שירות חדשני המשלב את יכולות הבינה המלאכותית בכתיבת תוכן לדפי האתר ולרשתות החברתיות."
+        ,
         image:feather_pen
     }
 
     const fourthskill={
-        title:"Support",
-        description:"We deliver test test test test test test test test test",
+        title:"תיבת תוכן",
+        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
         image:prod_chain1
     }
 
@@ -59,7 +60,6 @@ export default function Achivments() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems:'flex-start',
-            height:"50%"
 
         }}>
 
@@ -84,12 +84,12 @@ export default function Achivments() {
                 }}>
                     <div style={{
                         textAlign:'center',
-                        fontFamily:'Roboto',
+                        fontFamily:'Assistant',
                         fontWeight:600,
                         lineHeight:"150%",
                         color:"#282938"
                     }}>
-                      This is what you going to get
+                        לבנות אתר לבד זה לא מספיק. 
                     </div>
 
                     </Grid>
@@ -106,7 +106,7 @@ export default function Achivments() {
                 <div style={{
                    
 
-                    fontFamily:'Roboto',
+                    fontFamily:'Assistant',
                     fontWeight:700,
                     lineHeight:"120%",
                     color:"#282938",
@@ -114,17 +114,16 @@ export default function Achivments() {
                     fontStyle: "normal",
                 }}>
 
-                     My products
+                     השירותים הכלולים בחבילה.
                 </div>
 
                 </Grid>
 
-                <Grid container item xs={12} style={{
+                <Grid item xs={12} style={{
                 display: 'flex',
                 justifyContent: 'flex-start',
                 alignItems:'center',
-                gap:"30px",
-                alignSelf:'stretch',
+                gap:"20px",
                 flexDirection: 'row',
 
             }} >

@@ -6,8 +6,8 @@ import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import image from '../assets/images/imagewebs.webp'
-
+import dorimg from '../assets/images/dorimg.png';
+import meetme from '../assets/images/meetme.mp4';
 
 
 const Righthome = () => {
@@ -17,14 +17,26 @@ const Righthome = () => {
 
             display: 'flex',
             flexDirection: 'column',
-            alignItems:'flex-start',
+            alignItems:'center',
             flexShrink: 0,
-            height:"100%",
-            padding:'30px'
+            padding:'30px',
+            
 
         }}>
 
-            <img src={image} style={{width:'80%',height:'80%',objectFit:'cover', borderRadius:'10%',padding:"20px"}}/>
+         <video autoPlay loop muted style={{
+                width:'100%',
+                height:'100%',
+                objectFit:'cover',
+            }}>
+
+                <source src={meetme} type="video/mp4" />
+
+            </video>
+
+             
+
+
 
             </Grid>
 

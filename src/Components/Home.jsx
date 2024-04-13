@@ -103,7 +103,6 @@ const Home = () => {
          alignItems:'center',
 
             background: 'var(--BG-Shade, #F5FCFF)',
-            height:'70%'
 
 
     }}>

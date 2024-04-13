@@ -7,6 +7,7 @@ import Faceicon from '../assets/images/social_media/Facebook.png';
 import Instagram from '../assets/images/social_media/Instagram.png';
 import Twitter from '../assets/images/social_media/Twitter.png';
 import LinkedIn from '../assets/images/social_media/LinkedIn.png';
+import mylogo from '../assets/images/my_logo.png';
 
 
 
@@ -18,9 +19,9 @@ const Footer = () => {
             display: 'inline-flex',
             flexDirection: 'column',
             alignItems:'flex-start',
-            height:"40%",
+            height:"35%",
             paddingTop:"106.667px",
-            paddingBottom:"106.667px",
+            paddingBottom:"36.667px",
             paddingLeft:"85.333px",
             paddingRight:"85.333px",
 
@@ -39,7 +40,13 @@ const Footer = () => {
                     justifyContent:'flex-start',
                     alignItems:'flex-start',
                 }}>
-                    test
+                    <img src={mylogo}
+                    alt='mylogo'
+                    style={{
+                        width:"200px",
+                        height:"200px",
+
+                    }} />
                 </Grid>
 
                 <Grid container item xs={6} style={{
@@ -57,13 +64,13 @@ const Footer = () => {
                         alignItems:'flex-end',
                     }}>
                            <span style={{
-                            fontFamily:'Roboto',
+                            fontFamily:'Assistant',
                             fontSize:'16px',
-                            fontWeight:400,
+                            fontWeight:600,
                             fontStyle:'normal',
                             lineHeight:"150%",
                         }}
-                        >Home</span>
+                        >בית</span>
                         
 
                         </Grid>
@@ -76,13 +83,13 @@ const Footer = () => {
                     }}>
 
                         <span style={{
-                            fontFamily:'Roboto',
+                            fontFamily:'Assistant',
                             fontSize:'16px',
-                            fontWeight:400,
+                            fontWeight:600,
                             fontStyle:'normal',
                             lineHeight:"150%",
                         }}
-                        >Portfolio</span>
+                        >שירותים</span>
                         
 
                         </Grid>
@@ -94,13 +101,13 @@ const Footer = () => {
                         alignItems:'flex-end',
                     }}>
                            <span style={{
-                            fontFamily:'Roboto',
+                            fontFamily:'Assistant',
                             fontSize:'16px',
-                            fontWeight:400,
+                            fontWeight:600,
                             fontStyle:'normal',
                             lineHeight:"150%",
                         }}
-                        >About</span>
+                        >אודות</span>
 
                         </Grid>
 
@@ -111,13 +118,13 @@ const Footer = () => {
                         alignItems:'flex-end',
                     }}>
                           <span style={{
-                            fontFamily:'Roboto',
+                            fontFamily:'Assistant',
                             fontSize:'16px',
-                            fontWeight:400,
+                            fontWeight:600,
                             fontStyle:'normal',
                             lineHeight:"150%",
                         }}
-                        >Contact</span>
+                        >צור קשר</span>
 
                         </Grid>
                     
