@@ -62,7 +62,7 @@ const Product = ({name,image,description}) => {
                     {name}
                     </div>
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'21px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'18px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
 
                         
                     {description}

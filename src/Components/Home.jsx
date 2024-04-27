@@ -1,26 +1,18 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import AuthContext from "./Usecontexts/Maincontext";
-import CheckIcon from '@mui/icons-material/Check';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import SupportIcon from '@mui/icons-material/Support';
-import Achivments from "./Achivments";
+import Package from "./Package";
 import Lefthome from "./Lefthome";
-import dora1 from '../assets/images/dora1.jpg';
 import Righthome from "./RightHome";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import About from "./About";
+import Services from "./Services";
+import Projects from "./Projects";
 
 
-
-
-//create new component
 
 
 const Home = () => {
@@ -34,61 +26,7 @@ const Home = () => {
 
 
 
-
-
-    const download = () => {
-        const link= document.createElement('a');
-        link.href="https://storage.googleapis.com/responsive-cab-377615.appspot.com/CVNEW.docx";
-        link.download="CV Dor Ratzabi";
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-    }
-
-    const [isLoaded, setIsLoaded] = useState(false);
-    const [isLoaded2, setIsLoaded2] = useState(false);
-    const [isLoaded3, setIsLoaded3] = useState(false);
-    const [isLoaded4, setIsLoaded4] = useState(false);
-    const [isLoaded5, setIsLoaded5] = useState(false);
-    const [isLoaded6, setIsLoaded6] = useState(false);
-
-    useEffect(() => {
-
-        setIshomepage(true);
-
-        setTimeout(() => {
-            setIsLoaded(true);
-        }, 500);
-        setTimeout(() => {
-            setIsLoaded2(true);
-        }
-        , 1400);
-
-        setTimeout(() => {
-            setIsLoaded6(true);
-        }
-        , 1600);
-        setTimeout(() => {
-            setIsLoaded3(true);
-        }
-        , 2000);
-
-        setTimeout(() => {
-            setIsLoaded4(true);
-        }
-        , 3000);
-        setTimeout(() => {
-            setIsLoaded5(true);
-        }
-        , 4000);
-
-        return () => {
-            setIshomepage(false);
-        }
-
-    }, []);
-
-
+  
 
     return (
         <>
@@ -96,11 +34,11 @@ const Home = () => {
 
        
 
-        <Grid container style={{flexDirection:'row',alignItems:'center',
+        <Grid id="home" container style={{flexDirection:'row',alignItems:'center',
        display:'flex',
        paddingTop:"40.333px",
          paddingBottom:"85.333px",
-         alignItems:'center',
+        
 
             background: 'var(--BG-Shade, #F5FCFF)',
 
@@ -113,9 +51,13 @@ const Home = () => {
 
         </Grid>
 
+        <Services />
+        <Projects />
+
      
 
-        <Achivments />
+        <Package />
+        <About />
         <Contact />
         <Footer />
 

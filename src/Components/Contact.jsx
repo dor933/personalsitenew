@@ -92,7 +92,7 @@ const Contact = () => {
 
     return (
 
-      <Grid container xs={12} style={{
+      <Grid id="contact" container xs={12} style={{
         display:'flex',
         paddingTop:'120px',
         paddingBottom:'120px',
@@ -101,7 +101,6 @@ const Contact = () => {
         flexDirection:'row',
         justifyContent:'flex-start',
         alignItems:'flex-start',
-        background: 'var(--BG-Shade, #F5FCFF)',
 
         gap:'30px'}}>
 
@@ -257,7 +256,10 @@ const Contact = () => {
 
           }}>
 
-            <div style={{
+            <div 
+         
+
+             style={{
               display:'flex',
               borderRadius:'8px',
               backgroundColor:'var(--Primary, #5E3BEE)',
@@ -268,6 +270,8 @@ const Contact = () => {
               paddingRight:'40px',
               gap:'10px',
               justifyContent:'center',
+
+              
 
             }}>
 

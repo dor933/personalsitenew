@@ -3,140 +3,89 @@ import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import axios from 'axios';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
 
 
-const Projcard = ({project,setchosenproject,indexproj, setIsloaded, chosenproject}) => {
 
-    const [projectimage,setprojectimage] = useState(project.projectimage);
-    const projectname = project.projectname;
-    const projectdescription= project.projectdescription;
-    const repositorylink = project.repositorylink;
+const Projcard = ({image,description,Zindex,rotate}) => {
 
-    const nobigscreen = useMediaQuery('(max-width:1700px)');
-    const ismobile = useMediaQuery('(max-width:600px)');
-    const smallmobile = useMediaQuery('(max-width:470px)');
-    const verysmallmobile = useMediaQuery('(max-width:314px)');
 
-    //replace project image with the next one in the array 
-    const changeimage = () => {
-        const index = project.images.indexOf(projectimage);
-        if(index === project.images.length-1){
-            setprojectimage(project.images[0]);
+
+     const [transition]=useState('transform 2s');
+       const [transform,setTransform]=useState(`0`);
+     
+       const handleScroll= ()=> {
+
+        if(window.scrollY>290){
+            setTransform(`rotate(${rotate}deg)`);
+
         }
         else{
-            setprojectimage(project.images[index+1]);
+            setTransform(`rotate(0deg)`);
         }
-    }
 
-
-
-
-
-    const changetofadein = () => {
-        setTimeout(() => {
-            setIsloaded(true);
-            
-        }, 1000);
-
+       }
      
 
-    }
+    useEffect(() => {
 
-    const changetofadeout = () => {
-        setTimeout(() => {
-            setIsloaded(false);
-
-        }, 1000)
-        ;
-
-        setTimeout(() => {
-            setchosenproject({});
-        }
-        , 2000);
+        window.addEventListener('scroll',handleScroll)
 
 
-    }
+    }, [])
 
+  
 
-
-
-
-    
  
 
+ 
+   
 
-
-
+    
 
     return (
         <>
-        <Card sx={{ width:ismobile? 300 : 400, marginBottom:5,marginLeft:ismobile? "5px":"10px" }}>
-                    <CardMedia
-                    component="img"
-                    sx={{ height: ismobile? "250px" : "300px",width:"100%"}}
-                    image={projectimage}
-                    alt="socialkeeper"
-                    />
-                    <CardContent style={{backgroundColor:"#3a3d3b",paddingBottom:0}}>
+         <Grid container item xs={2} style={{
 
-                  <Typography gutterBottom variant="h5" component="div" style={{ color:"#3a3d3b",textAlign:'left'}}>
-                    <span className="Homesecondtext" style={{fontSize: nobigscreen? "20px" : "25px", color:'#f02e1d',fontWeight:'bold',
-                    paddingLeft:"5px"
-                }} >
-                {projectname}
-                </span>
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" style={{ color:"#ffffff",paddingTop:"1.3%",marginTop:"8px"}}>
-                    <span className="Homesecondtext" style={{fontSize: nobigscreen? "16px": "18px", color:'#ffffff'}} >
-                    {projectdescription}
-                    </span>
-                    </Typography>
-
-                    <CardActions style={{paddingTop:7,paddingBottom:3}} >
-                        <Button size="small" style={{ fontSize: nobigscreen? "14px" : "15px",fontFamily:'Montserrat',fontWeight:'bold'}} href={repositorylink} target="_blank">Repository</Button>
-                        
-                    </CardActions>
-                    <CardActions style={{paddingTop:0}} >
-                        <Button size="small" style={{ fontSize: nobigscreen? "14px" : "15px",fontFamily:'Montserrat',fontWeight:'bold'}} onClick={()=> {
-
-                            if(project.index==chosenproject.index){
+display: 'flex',
+flexDirection: 'column',
+justifyContent: 'flex-start',
+alignItems:'center',
+position:'relative',
+marginRight:'-10px',
+zIndex:Zindex,
+//rotate the image
+paddingTop:-rotate,
+transition: transition,
+transform: transform,
 
 
-                                changetofadeout()
-                             
-                                    
-                                }
 
-                            
-                            else{
-                                    setchosenproject(project)
-                                    changetofadein()
-                                    
-                            
-                            }
-                        
-                        }}  >
-                            {
-                                project.index== chosenproject.index  ? "Hide Gallery" : "Show Gallery"
-                            }
-                            </Button>
-                        
-                    </CardActions>
-                    
 
-                    </CardContent>
-                    
-              
-                </Card>
+
+   }}>
+<Box item xs={12} style={{
+display:'flex',
+flexDirection:'column',
+justifyContent:'flex-start',
+alignItems:'flex-start',
+
+
+ }}>
+<img src={image} alt={description} style={{width:'100%',height:'100%',objectFit:'cover',
+borderRadius:'10px',
+boxShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)',
+
+
+
+
+}}/>
+
+</Box>
+
+
+</Grid>
+        
+      
         </>
     )
 }

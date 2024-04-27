@@ -1,16 +1,5 @@
 import React from "react";
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import { useState,useContext,useEffect } from 'react';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
-import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import AuthContext from "./Usecontexts/Maincontext";
-import CheckIcon from '@mui/icons-material/Check';
-import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import SupportIcon from '@mui/icons-material/Support';
-import dora1 from '../assets/images/dora1.jpg';
 import Product from "./Product";
 import prod_chain1 from '../assets/images/prod_chain1.png';
 import tag1 from '../assets/images/tag1.png';
@@ -18,7 +7,7 @@ import web_pen from '../assets/images/web_pen.png';
 import feather_pen from '../assets/images/feather_pen.png';
 
 
-export default function Achivments() {
+export default function Package() {
 
     const firstskill={
         title:"תיבת תוכן",
@@ -50,7 +39,7 @@ export default function Achivments() {
 
 
     return (
-        <Grid container style={{
+        <Grid id="package" container style={{
 
             display: 'flex',
             paddingTop:'150px',

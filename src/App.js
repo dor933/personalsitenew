@@ -1,20 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import Header from './Components/Header';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes,Route } from 'react-router-dom';
-import video from './videos/Videomy.mp4';
 import Home from './Components/Home';
-import About from './Components/About';
-import Projects from './Components/Projects';
-import Contact from './Components/Contact';
 import AuthContext from './Components/Usecontexts/Maincontext';
-import poster from './/assets/images/postar_compressed.jpg';
 import { useMediaQuery } from '@mui/material';
 import Popup from './Components/Popup';
-import MyForm from './Components/Form';
 
 
 function App() {
@@ -27,6 +19,10 @@ function App() {
   const [isincontactpage, setIsincontactpage] = useState(false);
   const [ishomepage, setIshomepage] = useState(false);
   const [isinprojectpage, setIsinprojectpage] = useState(false);
+
+
+
+  
 
 
   return (
@@ -45,25 +41,14 @@ function App() {
 
 
 
-          { ishomepage &&
-        <div style={{position:'fixed', flexDirection:'row'
-        , zIndex:10, left:"52%",top:"6%",
-        }}>
-
-            <MyForm type="other" />
-
-            </div>
-}
+          
 
 <Header/>
 
 
         <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/contact" element={<Contact />} />
-
+      
         </Routes>
 
          

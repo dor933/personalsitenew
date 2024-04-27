@@ -1,8 +1,5 @@
 import React from 'react';
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
-import { useState,useContext,useEffect } from 'react';
-import Button from '@mui/material/Button';
 import Faceicon from '../assets/images/social_media/Facebook.png';
 import Instagram from '../assets/images/social_media/Instagram.png';
 import Twitter from '../assets/images/social_media/Twitter.png';
@@ -19,11 +16,13 @@ const Footer = () => {
             display: 'inline-flex',
             flexDirection: 'column',
             alignItems:'flex-start',
-            height:"35%",
-            paddingTop:"106.667px",
+            paddingTop:"30.667px",
             paddingBottom:"36.667px",
             paddingLeft:"85.333px",
-            paddingRight:"85.333px",
+            paddingRight:"85.333px", 
+            background: 'var(--BG-Shade, #F5FCFF)',
+
+            
 
         }}>
 

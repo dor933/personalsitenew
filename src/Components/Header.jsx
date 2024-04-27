@@ -33,13 +33,11 @@ const Header = () => {
   
 
     const [value, setValue] = useState(0);
-    const {menupress,setMenupress}= useContext(AuthContext);
-
-    const navigator = useNavigate();
-
+    const {menupress,setMenupress}= useContext(AuthContext)
     const ismobile = useMediaQuery('(max-width:600px)');
-    const isbigscreen= useMediaQuery('(min-width:1000px)');
     const [drawerOpen, setDrawerOpen] = useState(false);    
+
+    
 
     const tabStyle = {
         fontFamily: 'Assistant',
@@ -71,22 +69,32 @@ const Header = () => {
 
       const tabs= (  <Tabs centered={!ismobile} indicatorColor='none'
       value={value} 
-      //create space between the tabs
-
-
-
-
-
 
       onChange={(event, newValue) => {
+        console.log(newValue);
           setValue(newValue);
           if(ismobile){
               setDrawerOpen(false);
               
           }
+
+          const section= ['home','partners','package','about','contact'][newValue];
+            const sectionelement = document.getElementById(`${section}`);
+            if(sectionelement){
+          console.log(sectionelement);
+          sectionelement.scrollIntoView({behavior:'smooth', //add more 20 px to the top of the section
+        
+        block:'center'})
+            }
+
+            setTimeout(() => {
+                console.log(window.scrollY)
+                setValue(0)
+            }
+            , 1000)
       }}
 
-      style={{//align to center 
+      style={{
 
         display:'flex',
         justifyContent:'space-between',
@@ -102,7 +110,7 @@ const Header = () => {
 
       
       >
-          <Tab label="בית" component={Link} to="/" 
+          <Tab label="בית"
 
           style={ value !== 0 ? tabStyle: tabStyleselected }
           
@@ -111,17 +119,27 @@ const Header = () => {
           
 
           />
-          <Tab label="אודות" component={Link} to="/about" 
-          style={tabStyle}
-          
-          />
-          <Tab label="שירותים" component={Link} to="/projects"
-          style={tabStyle}
+           <Tab label="שותפים"
+
+style={ value !== 1 ? tabStyle: tabStyleselected }
+
+
+
+
+
+/>
+             <Tab label="שירותים" 
+          style={ value !== 2 ? tabStyle: tabStyleselected }
 
           
           />
-          <Tab label="צור קשר" component={Link} to="/contact"
-          style={tabStyle}
+          <Tab label="אודות"
+          style={ value !== 3 ? tabStyle: tabStyleselected }
+          
+          />
+       
+          <Tab label="צור קשר"
+          style={ value !== 4 ? tabStyle: tabStyleselected }
 
           />
       </Tabs>
