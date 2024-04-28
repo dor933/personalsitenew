@@ -15,6 +15,7 @@ const Footer = () => {
     const theme = useTheme();
     const ismd = useMediaQuery(theme.breakpoints.up('md'));
     const isxs = useMediaQuery(theme.breakpoints.down('sm'));
+    const issm = useMediaQuery(theme.breakpoints.down('md'));
 
     return (
         <Grid container item xs={12} style={{
@@ -42,7 +43,7 @@ const Footer = () => {
                 <Grid item xs={2} style={{
                     display:'flex',
                     flexDirection:'column',
-                    justifyContent:'flex-start',
+                    justifyContent:'center',
                     alignItems:'flex-end',
                 }}>
                     <img src={mylogo}
@@ -54,11 +55,11 @@ const Footer = () => {
                     }} />
                 </Grid>
 
-                <Grid container item xs={6} style={{
+                <Grid container item xs={8} style={{
                     display:'flex',
-                    justifyContent:'flex-start',
-                    alignItems:'flex-start',
                     flexDirection:'row',
+                    alignItems:'center',
+                    justifyContent:'flex-end',
                     fontFamily:'Assistant',
                     fontSize:ismd? '16px' : '14px',
                     fontWeight:600,
@@ -91,7 +92,6 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:isxs? 'center':'flex-start'
                     }}>
                            <span>אודות</span>
 
@@ -109,12 +109,12 @@ const Footer = () => {
                     
                     </Grid>
 
-                    <Grid container item xs={4} style={{
+                    <Grid container item xs={2} style={{
                     display:'flex',
                     flexDirection:'row',
                     justifyContent:'flex-end',
-                    alignItems:'flex-start',
-                    gap:'5px'
+                    alignItems:'center',
+                    gap: issm?'5px' : '10px'
                 }}>
                     <Grid item xs={2} style={{
                         display:'flex',
@@ -125,8 +125,8 @@ const Footer = () => {
                         
                         <img src={Faceicon}
                         style={{
-                            width: ismd? "32px" : "24px",
-                            height:ismd? "32px" : "24px",
+                            width: ismd? "32px" : "16px",
+                            height:ismd? "32px" : "16px",
 
                         }} />
 
@@ -140,8 +140,8 @@ const Footer = () => {
                         
                         <img src={Instagram}
                         style={{
-                            width: ismd? "32px" : "24px",
-                            height:ismd? "32px" : "24px",
+                            width: ismd? "32px" : "16px",
+                            height:ismd? "32px" : "16px",
 
                         }} />
 
@@ -155,8 +155,8 @@ const Footer = () => {
                         
                         <img src={Twitter}
                         style={{
-                            width: ismd? "32px" : "24px",
-                            height:ismd? "32px" : "24px",
+                            width: ismd? "32px" : "16px",
+                            height:ismd? "32px" : "16px",
 
                         }} />
 
@@ -170,8 +170,8 @@ const Footer = () => {
                         
                         <img src={LinkedIn}
                         style={{
-                            width: ismd? "32px" : "24px",
-                            height:ismd? "32px" : "24px",
+                            width: ismd? "32px" : "16px",
+                            height:ismd? "32px" : "16px",
 
                         }} />
 
