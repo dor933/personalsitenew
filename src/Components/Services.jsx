@@ -51,10 +51,11 @@ const Services = () => {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems:'flex-start',
+    gap:"80px",
 
 }}>
 
-    <Grid container item xs={6} style={{
+    <Grid container item xs={12} lg={6} style={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
@@ -97,7 +98,7 @@ const Services = () => {
 
     </Grid>
 
-    <Grid container item xs={6} style={{
+    <Grid container item xs={12} lg={6} style={{
         display: 'flex',
         flexDirection: 'row',
         justifyContent: 'center',

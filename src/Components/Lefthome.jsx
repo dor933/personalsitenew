@@ -16,7 +16,7 @@ import Button from '@mui/material/Button';
 const Lefthome = () => {
 
     return (
-        <Grid container item xs={6} style={{
+        <Grid container item xs={12} lg={6} style={{
 
             display: 'flex',
             flexDirection: 'column',

@@ -7,10 +7,6 @@ import dor_new_about from '../assets/images/dor_new_about.png';
 const About = () => {
 
 
-
-    
-
-
     return (
   
  

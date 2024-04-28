@@ -8,7 +8,7 @@ const Partners = ({name,image,description}) => {
 
     return (
 
-        <Grid xs={3} container style={{
+        <Grid xs={12} sm={8} md={5} lg={3} container style={{
             display:'flex',
             paddingBottom:'22px',
             gap:'10px',

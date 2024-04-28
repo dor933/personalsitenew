@@ -8,7 +8,7 @@ import meetme from '../assets/images/meetme.mp4';
 const Righthome = () => {
 
     return (
-        <Grid container item xs={6} style={{
+        <Grid container item xs={12} lg={6} style={{
 
             display: 'flex',
             flexDirection: 'column',

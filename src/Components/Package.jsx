@@ -5,9 +5,13 @@ import prod_chain1 from '../assets/images/prod_chain1.png';
 import tag1 from '../assets/images/tag1.png';
 import web_pen from '../assets/images/web_pen.png';
 import feather_pen from '../assets/images/feather_pen.png';
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 
 export default function Package() {
+
+    const theme = useTheme();
 
     const firstskill={
         title:"תיבת תוכן",
@@ -35,7 +39,8 @@ export default function Package() {
     }
 
     const skills=[firstskill,secondskill,thirdskill,fourthskill]
-
+//create a variable that will represent lg screen
+const isLg = useMediaQuery(theme.breakpoints.up('lg'));
 
 
     return (
@@ -44,8 +49,8 @@ export default function Package() {
             display: 'flex',
             paddingTop:'150px',
             paddingBottom:'150px',
-            paddingLeft:'83px',
-            paddingRight:'83px',
+            paddingLeft:'50px',
+            paddingRight:'50px',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems:'flex-start',
@@ -108,26 +113,62 @@ export default function Package() {
 
                 </Grid>
 
-                <Grid item xs={12} style={{
+                {
+                    isLg?    <Grid item xs={12} style={{
+                        display: 'flex',
+                        justifyContent: 'flex-start',
+                        alignItems:'center',
+                        gap:"20px",
+                        flexDirection: 'row',
+        
+                    }} >
+        
+                        {
+        
+                          
+                            skills.map((item) => {
+                                return (
+                                    <Product name= {item.title} image= {item.image} description={item.description}/>
+                                )
+                            })
+                        }
+                    </Grid> :  <Grid container style={{
                 display: 'flex',
-                justifyContent: 'flex-start',
                 alignItems:'center',
-                gap:"20px",
                 flexDirection: 'row',
+
 
             }} >
 
+
+
                 {
 
-                    //write a for loop to display the products
-                    //for now we are going to display the same product 3 times
+                    
+
+                  
                     skills.map((item) => {
                         return (
+                            //הוספת השורה הבודדת שבה תהיה קומפוננטת השירות צריכה להיות רק מתחת לגודל md
+                            // <Grid item xs={12} style={{
+                            //     display: 'flex',
+                            //     justifyContent: 'flex-start',
+                            //     alignItems:'center',
+                            //     gap:"20px",
+                            //     flexDirection: 'row',
+                            //     paddingRight:'30px'
+                    
+                            // }} >
                             <Product name= {item.title} image= {item.image} description={item.description}/>
+                            // </Grid>
                         )
                     })
                 }
-            </Grid>
+
+                </Grid>
+                }
+
+               
                     
 
 

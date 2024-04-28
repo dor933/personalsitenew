@@ -5,24 +5,33 @@ import { useState,useContext,useEffect } from 'react';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import prod_chain1 from '../assets/images/prod_chain1.png';
-
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 
 const Product = ({name,image,description}) => {
 
+    const theme= useTheme()
+
+    const islg= useMediaQuery(theme.breakpoints.up('lg'))
 
     return (
 
-        <Grid xs={3} container style={{
+       
+
+        <Grid xs={12} sm={6} md={5} container style={{
             display:'flex',
-            padding:'22px',
+            padding:'20px',
             alignItems:'flex-start',
             gap:'10px',
-            height:'420px',
+            height:!islg? 'auto':'420px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
-            boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)"
+            boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)",
+            margin:'10px',
+            
+            
         }}>
 
             <Grid xs={12} container style={{
@@ -77,6 +86,7 @@ const Product = ({name,image,description}) => {
 
 
             </Grid>
+
 
 
       
