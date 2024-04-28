@@ -10,13 +10,12 @@ const Fieldcomp = ({fieldname,iswide}) => {
     return (
         <>
 
-<Grid container xs={iswide? 12 : 6} style={{
+<Grid item xs={12} lg={iswide? 8:3.5} style={{
               display:'flex',
               flexDirection:'column',
-              alignItems:'flex-start',
-              gap:'10px',
-              justifyContent:'center',
-              flex:'1 1 0',
+              alignItems:'center',
+              justifyContent:'flex-start',
+              gap:'20px',
               //make the contects closer
           }}>
 
@@ -25,9 +24,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
             flexDirection:'row',
             alignItems:'center',
             justifyContent: 'flex-start',
-            flex:'1 1 0',
-            alignSelf:'stretch',
-            paddingRight:'18px',
+
         }}>
 
           <span style={{
@@ -47,18 +44,17 @@ const Fieldcomp = ({fieldname,iswide}) => {
             alignItems:'center',
             justifyContent:'center',
             alignSelf:'stretch',
-            flex:'1 1 0',
         }}>
 
             {
-                iswide?  <textarea placeholder='type your message...' style={{   padding:'6px',
+                iswide?  <textarea placeholder='הקלד את ההודעה שלך...' style={{   padding:'6px',
                 borderRadius:'8px',
                 border: "1.333px solid var(--Primary, #5E3BEE)",
                 background: 'var(--White, #FFF)',
                 lineHeight:"150%",
                 width:'96%',
                 height:'250px',
-                fontFamily:'Roboto',
+                fontFamily:'Assistant',
             }}>
 
             </textarea>  :     <input type="text" style={{

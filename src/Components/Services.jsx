@@ -12,31 +12,20 @@ import social4 from '../assets/images/projects/socialkeeper/4.jpg';
 import social5 from '../assets/images/projects/socialkeeper/5.jpg';
 import social6 from '../assets/images/projects/socialkeeper/6.jpg';
 import { useState,useContext,useEffect} from 'react';
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 const Services = () => {
+
+    const theme = useTheme();
+
+    const ismd = useMediaQuery(theme.breakpoints.up('md'));
 
     const applicationsimages=[social1,social2,social3,social4,social5,social6];
     let Zindex= 0;
     let rotate=-80;
 
-    const [scrollY, setScrollY] = useState(window.scrollY);
-
-    const handleScroll = () => {
-        console.log('scrolling');
-        setScrollY(window.scrollY);
-      };
-    
-      useEffect(() => {
-
-        window.addEventListener('scroll', ()=> {
-            console.log('scrolled')
-        });
-    
-        // Cleanup function to remove the event listener
-        return () => {
-          window.removeEventListener('scroll', handleScroll);
-        };
-      }, []);
+   
 
 
     return (
@@ -46,8 +35,8 @@ const Services = () => {
     display: 'flex',
     paddingTop:'80px',
     paddingBottom:'50px',
-    paddingLeft:'83px',
-    paddingRight:'83px',
+    paddingLeft:'40px',
+    paddingRight:'40px',
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems:'flex-start',
@@ -55,11 +44,12 @@ const Services = () => {
 
 }}>
 
-    <Grid container item xs={12} lg={6} style={{
+    <Grid container item xs={12} lg={4} style={{
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'flex-start',
         alignItems:'center',
+       
         gap:"21px",}}
     >
 
@@ -75,19 +65,20 @@ const Services = () => {
                 padding:0,
                 margin:0,
                 letterSpacing:'0.7px',
+                fontFamily:'Assistant',fontWeight:600,fontSize:ismd?'24px':'18px',color:'#282938'
             }}>
-                <li style={{paddingBottom:'10px'}}> <span style={{fontFamily:'Assistant',fontWeight:600,fontSize:'24px',color:'#282938',lineHeight:'150%'}}> חיבור ל- WhatsApp</span>
+                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}> חיבור ל- WhatsApp</span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
                 </li>
-                <li style={{paddingBottom:'10px'}}> <span style={{fontFamily:'Assistant',fontWeight:600,fontSize:'24px',color:'#282938',lineHeight:'150%'}}>בניית אתר כולל פיצ'רי בינה מלאכותית </span>
-                <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
-
-                </li>
-                <li style={{paddingBottom:'10px'}}> <span style={{fontFamily:'Assistant',fontWeight:600,fontSize:'24px',color:'#282938',lineHeight:'150%'}}>קידום אורגני וממומן של העסק</span>
+                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>בניית אתר כולל פיצ'רי בינה מלאכותית </span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
 
                 </li>
-                <li> <span style={{fontFamily:'Assistant',fontWeight:600,fontSize:'24px',color:'#282938',lineHeight:'150%'}}>תחזוק חשבונות ברשתות החברתיות </span>
+                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>קידום אורגני וממומן של העסק</span>
+                <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
+
+                </li>
+                <li> <span style={{lineHeight:'150%'}}>תחזוק חשבונות ברשתות החברתיות </span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
 
                 </li>

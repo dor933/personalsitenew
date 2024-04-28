@@ -5,6 +5,8 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
 import Button from '@mui/material/Button';
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 
 
@@ -15,6 +17,12 @@ import Button from '@mui/material/Button';
 
 const Lefthome = () => {
 
+    const theme = useTheme();
+
+    const ismd = useMediaQuery(theme.breakpoints.up('md'));
+
+
+
     return (
         <Grid container item xs={12} lg={6} style={{
 
@@ -22,7 +30,7 @@ const Lefthome = () => {
             flexDirection: 'column',
             alignItems:'flex-start',
             flexShrink: 0,
-            paddingRight:'100px'
+            paddingRight:ismd?'100px' : '50px'
 
         }}>
 
@@ -45,17 +53,17 @@ const Lefthome = () => {
                 </div>
                 <div style={{alignSelf:'stretch'}} >
 
-                    <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
+                    <span style={{fontFamily:'Assistant', fontSize: ismd?'55.667px' : '40px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
 
                      אני דור. אני מאמין 
 
 
                     </span>
-                    <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%',color:'#5E3BEE',paddingLeft:'20px', paddingRight:'20px'}}>
+                    <span style={{fontFamily:'Assistant', fontSize: ismd? '55.667px' : '40px', fontStyle:'normal', fontWeight:700,lineHeight:'120%',color:'#5E3BEE',paddingLeft:ismd?'20px':'10px', paddingRight:ismd?'20px':'10px'}}>
 
                         שפלטפורמה דיגיטלית
                         </span>
-                        <span style={{fontFamily:'Assistant', fontSize:'55.667px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
+                        <span style={{fontFamily:'Assistant', fontSize:ismd?'55.667px' : '40px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
 
                      במחיר הוגן זו זכות בסיסית של כל בעל עסק.
 

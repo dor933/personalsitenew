@@ -162,17 +162,17 @@ const Contact = () => {
           fontWeight:400,
           fontStyle:'normal',
           lineHeight:"150%",
+          textAlign:'center',
       }}>ונהפוך את החלומות של העסק שלך למציאות!</div>
 
       </Grid>
 
           </Grid>
 
-          <Grid container xs={12} style={{
+          <Grid container style={{
             display:'flex',
             flexDirection:'row',
             alignItems:'flex-start',
-            gap:'30px',
             height:"70%",
             justifyContent:'center',
             // center the form
@@ -182,23 +182,25 @@ const Contact = () => {
 
         }}>
 
-          <Grid container xs={8} style={{
+          <Grid container  style={{
             display:'flex',
             flexDirection:'column',
             alignItems:'flex-start',
-            gap:'30px',
             justifyContent:'flex-start',
             
             // make
             
         }}>
 
-          <Grid container xs={12} style={{
+          <Grid container  style={{
             flexDirection:'row',
             alignItems:'flex-start',
-            
-            gap:'10px',
+            display:'flex',
             justifyContent:'center',
+            gap:'10px',
+            
+            marginBottom:'20px'
+
           }}>
 
         
@@ -215,13 +217,14 @@ const Contact = () => {
 
             </Grid>
 
-            <Grid container xs={12} style={{
+            <Grid container style={{
             display:'flex',
             flexDirection:'row',
             alignItems:'flex-start',
-            
             gap:'10px',
+
             justifyContent:'center',
+            marginBottom:'30px'
           }}>
 
             <Fieldcomp fieldname="מייל" />
@@ -235,8 +238,8 @@ const Contact = () => {
             display:'flex',
             flexDirection:'row',
             alignItems:'flex-start',
+            marginBottom:'30px',
             
-            gap:'10px',
             justifyContent:'center',
           }}>
 

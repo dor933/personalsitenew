@@ -3,11 +3,14 @@ import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
-
+import { useMediaQuery } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 
 const Projcard = ({image,description,Zindex,rotate}) => {
 
+    const theme = useTheme();
+    const ismd = useMediaQuery(theme.breakpoints.up('md'));
 
 
      const [transition]=useState('transform 2s');
@@ -28,7 +31,15 @@ const Projcard = ({image,description,Zindex,rotate}) => {
 
     useEffect(() => {
 
+        
+        if(ismd){
+
         window.addEventListener('scroll',handleScroll)
+        }
+        else{
+            setTransform(`rotate(${rotate}deg)`);
+
+        }
 
 
     }, [])

@@ -4,8 +4,16 @@ import Box from '@mui/material/Box';
 import { useMediaQuery,useTheme } from "@mui/material";
 import dor_new_about from '../assets/images/dor_new_about.png';
 
+
+
 const About = () => {
 
+  const theme = useTheme();
+  const islg = useMediaQuery(theme.breakpoints.up('lg'));
+  const issm= useMediaQuery(theme.breakpoints.up('sm'));
+//check if smaller than sm
+  const isxs= useMediaQuery(theme.breakpoints.down('sm'));
+  const ismd= useMediaQuery(theme.breakpoints.up('md'));
 
     return (
   
@@ -17,6 +25,7 @@ const About = () => {
          justifyContent:'flex-start',
          paddingLeft:'50px',
           paddingRight:'50px',
+          gap:issm? '0px' : isxs? '130px': '50px',
          
         
 
@@ -25,12 +34,13 @@ const About = () => {
 
     }}>
 
-        <Grid item xs={6} style={{
+        <Grid item xs={12} lg={6} style={{
           display:'flex',
           justifyContent:'flex-start',
           alignItems:'flex-start',
           height:'450px',
-          paddingRight:'100px',
+          paddingRight: islg?'100px': '30px',
+          marginBottom:issm? '0px' : isxs? '50px': '0px',
           
         }}>
 
@@ -39,6 +49,7 @@ const About = () => {
                 flexDirection: 'column',
                 alignItems:'flex-start',
                 alignSelf:'stretch',
+                gap:'5px',
             }}>
 
           <div
@@ -50,20 +61,20 @@ const About = () => {
         
 
           <div
-                style={{fontFamily:'Assistant',fontSize:'62.333px',fontWeight:700,marginBottom:'10px', color:'#282938',lineHeight:"120%", fontStyle:'normal',letterSpacing:'0.15px'}}>
+                style={{fontFamily:'Assistant',fontSize:ismd?'62.333px':'40px',fontWeight:700,marginBottom:'10px', color:'#282938',lineHeight:"120%", fontStyle:'normal',letterSpacing:'0.15px'}}>
                   קצת עליי.
 
 
                 </div>
                 <div
-                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.15px',marginBottom:'10px'}}>
-                  אני דור, בן 30 מהישוב קדימה שבשרון. אני מאמין שבעידן החדש של הבינה המלאכותית, לכל בעל עסק מגיע פתרון מקיף וכולל במחיר {<span style={{color:'#5E3BEE',fontWeight:'700',fontSize:'29px'}}> שפוי. </span>}. 
+                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px',marginBottom:'10px'}}>
+                  אני דור, בן 30 מהישוב קדימה שבשרון. אני מאמין שבעידן החדש של הבינה המלאכותית, לכל בעל עסק מגיע פתרון מקיף וכולל במחיר {<span style={{color:'#5E3BEE',fontWeight:'700',fontSize:'29px'}}> שפוי. </span>} 
 
 
                 </div>
 
                 <div
-                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.15px', 
+                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', 
 
                 }}>
 אני מציע חבילת "הכל כלול" שכוללת בניית אתר,קידומו, קישורו לחשבונות ברשתות החברתיות ותחזוקן, ועוד דברים שלא חלמתם שיכולים להיות לעסק שלכם.
@@ -80,14 +91,14 @@ const About = () => {
 
         </Grid>
 
-        <Grid item xs={6} style={{
+        <Grid item xs={12} lg={6} style={{
           display:'flex',
           justifyContent:'center',
           alignItems:'flex-start',
         }}>
        
           
-          <img src={dor_new_about} alt="dor" style={{width:'80%',height:'80%',objectFit:'cover'}}/>
+          <img src={dor_new_about} alt="dor" style={{width: isxs?'100%': issm? "80%" : "80%" ,height:isxs?'100%': issm? "80%" : "80%",objectFit:'cover'}}/>
 
           </Grid>
 
