@@ -71,7 +71,8 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:'center'
+                        alignItems:'center',
+                        paddingLeft:'10px',
                     }}>
                            <span>בית</span>                   
 

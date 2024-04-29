@@ -17,6 +17,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Drawer from '@mui/material/Drawer';
 import { Button } from '@mui/material';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+//bring hamburger icon from material ui
+import MenuIcon from '@mui/icons-material/Menu';
 import { useNavigate } from 'react-router-dom';
 import AuthContext from './Usecontexts/Maincontext';
 import drimage from '../assets/images/DR.png'
@@ -37,15 +39,25 @@ const Header = () => {
     const ismobile = useMediaQuery('(max-width:600px)');
     const [drawerOpen, setDrawerOpen] = useState(false);    
 
-    
+
+    const handleclick= (value) => {
+        const section= ['home','partners','package','about','contact'][value];
+            const sectionelement = document.getElementById(`${section}`);
+            if(sectionelement){
+          console.log(sectionelement);
+          sectionelement.scrollIntoView({behavior:'smooth',
+        
+        block:ismobile? 'start':'center'})
+            }
+    }
 
     const tabStyle = {
         fontFamily: 'Assistant',
-        fontSize: '1rem',
+        fontSize: ismobile? '1.1rem': '1rem',
         textTransform: 'none',
         color: 'black', 
-        zindex: 1,
-        fontWeight:400
+        zindex:ismobile? 2: 1,
+        fontWeight:ismobile? 600:400
         
       };
 
@@ -78,14 +90,7 @@ const Header = () => {
               
           }
 
-          const section= ['home','partners','package','about','contact'][newValue];
-            const sectionelement = document.getElementById(`${section}`);
-            if(sectionelement){
-          console.log(sectionelement);
-          sectionelement.scrollIntoView({behavior:'smooth', //add more 20 px to the top of the section
-        
-        block:'center'})
-            }
+            handleclick(newValue);
 
             setTimeout(() => {
                 console.log(window.scrollY)
@@ -153,7 +158,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
         padding:'0px 30px',
         display:'flex',
-        paddingBottom: '22px',
+        paddingBottom: ismobile? '48px': '22px',
         borderBottom: '1px solid #e0e0e0',
         
         
@@ -162,7 +167,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
     }}
 
         >
-            <Grid container item xs="4" sm="9"
+            <Grid container item xs="12" sm="9"
             
             style={{display:'flex',justifyContent:'space-around',alignItems:'center', 
         
@@ -171,10 +176,10 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
             >
 
                 <Grid item xs="2" style={{display:'flex',justifyContent:'center'}}>
-                <img src={mylogo} alt='logo' style={{width:"140px",position:'absolute', 
+                <img src={mylogo} alt='logo' style={{width:ismobile? "100px":"140px",position:'absolute', 
                 
             
-            marginTop:'-61px',
+            marginTop:ismobile? "-25px":'-61px',
 
             }}/>
                 </Grid>
@@ -188,11 +193,15 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                         <>
                         
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => setDrawerOpen(!drawerOpen)}>
-                            <MoreVertIcon style={{color:"#ffffff", width:"90%"}}  />
+                            <MenuIcon style={{color:"#000000", width:"100%",
+                            position:'absolute', left:'10', top:'20', fontSize:'2rem', zIndex:1,
+                            transform: 'scale(1.5)'
+                        }}  />
                         </IconButton>
                         <Menu 
                         anchorEl={drawerOpen}
                         open={drawerOpen}
+                   
                         
                     
                         //make the background transparent   
@@ -213,29 +222,49 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                         >
                             <MenuItem
                             
-                            onClick={() => {setDrawerOpen(false); setValue(0) 
-                            
-                                //navigate to the home page
+                            onClick={() => {setDrawerOpen(false); setValue(0);
 
-                                navigator("/")
+                                handleclick(0);
+                            
+                              
+
 
 
                             
                             }}
                             style={tabStyle}
-                            >Home</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(1); navigator("/about")}}
+                            >בית</MenuItem>
+                            <MenuItem onClick={() => {
+                                
+                                setDrawerOpen(false); setValue(1); 
+                                handleclick(1);
+                            
+                            }}
                             
                             style={tabStyle}
 
-                            >About</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(2); navigator("/projects")}}
+                            >שותפים</MenuItem>
+                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(2); 
+
+                            const section= ['home','partners','package','about','contact'][2];
+                            const sectionelement = document.getElementById(`${section}`);
+                            if(sectionelement){
+                            console.log(sectionelement);
+                            sectionelement.scrollIntoView({behavior:'smooth', //add more 20 px to the top of the section
+                            block:'center'})
+                            
+                        }}
+                    }
                             style={tabStyle}
-                            >Projects</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); navigator("/contact")}}
+                            >שירותים</MenuItem>
+                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); handleclick(3)}}
                              style={tabStyle}
 
-                            >Contact</MenuItem>
+                            >אודות</MenuItem>
+                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); handleclick(4)}}
+                             style={tabStyle}
+
+                            >צור קשר</MenuItem>
                         </Menu>
                         
                     
@@ -254,14 +283,17 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
   
         <Grid container item xs="8" sm="3"
         
-        style={{flexDirection:'row',display:'flex',justifyContent:'flex-end',
+        style={{flexDirection:'row',display:ismobile? 'none' :'flex',justifyContent:'flex-end',
     alignSelf:'center', marginTop:'12px',
+    
     }}
     
         >
 
-            <Grid item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
-        fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px'
+            <Grid onClick={()=>{
+                handleclick(4);
+            }} item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
+        fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px', cursor:'pointer'
         }}>
 
        צור/י קשר
