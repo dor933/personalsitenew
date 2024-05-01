@@ -11,17 +11,17 @@ import Footer from "./Footer";
 import About from "./About";
 import Services from "./Services";
 import Projects from "./Projects";
-
+//import whatsapp icon
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { useTheme } from '@mui/material/styles';
 
 
 
 const Home = () => {
 
-    const bigscreen = useMediaQuery('(max-width:1700px)');
-    const ismobile = useMediaQuery('(max-width:920px)');
-    const smallmobile = useMediaQuery('(max-width:470px)');
-    const verysmallmobile = useMediaQuery('(max-width:314px)');
+    const theme = useTheme();
     const {ishomepage,setIshomepage}= useContext(AuthContext);
+    const ismd = useMediaQuery(theme.breakpoints.up('md'));
 
 
 
@@ -44,6 +44,10 @@ const Home = () => {
 
 
     }}>
+
+        <WhatsAppIcon style={{position:'fixed',bottom:'20px',right:'20px',color:'#25d366',fontSize:ismd? '60px' : '45px',zIndex:'1000'}} onClick={()=> {
+            window.open("https://wa.me/972544474788")
+        }} />
 
             <Lefthome />
             <Righthome />

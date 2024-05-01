@@ -246,14 +246,10 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >שותפים</MenuItem>
                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(2); 
 
-                            const section= ['home','partners','package','about','contact'][2];
-                            const sectionelement = document.getElementById(`${section}`);
-                            if(sectionelement){
-                            console.log(sectionelement);
-                            sectionelement.scrollIntoView({behavior:'smooth', //add more 20 px to the top of the section
-                            block:'center'})
+                                handleclick(2);
+
                             
-                        }}
+                        }
                     }
                             style={tabStyle}
                             >שירותים</MenuItem>

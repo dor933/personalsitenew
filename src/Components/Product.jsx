@@ -24,12 +24,13 @@ const Product = ({name,image,description}) => {
             padding:'20px',
             alignItems:'flex-start',
             gap:'10px',
-            height:!islg? 'auto':'420px',
+            height:!islg? 'auto':'440px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
             boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)",
             margin:'10px',
+            
             
             
         }}>
@@ -47,7 +48,7 @@ const Product = ({name,image,description}) => {
 
                 <Grid xs={3} style={{
                     display:'flex',
-                    padding:'14px',
+                    padding:'10px',
                     justifyContent:'center',
                     alignItems:'center',
                     gap:'14px',

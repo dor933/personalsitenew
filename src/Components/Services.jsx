@@ -67,14 +67,21 @@ const Services = () => {
                 letterSpacing:'0.7px',
                 fontFamily:'Assistant',fontWeight:600,fontSize:ismd?'24px':'18px',color:'#282938'
             }}>
+                   <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>  אתר מותאם למחשב ולטלפונים ניידים</span>
+                <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
+                </li>
                 <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}> חיבור ל- WhatsApp</span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
                 </li>
-                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>בניית אתר כולל פיצ'רי בינה מלאכותית </span>
+                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}> כולל פיצ'רי בינה מלאכותית </span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
 
                 </li>
                 <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>קידום אורגני וממומן של העסק</span>
+                <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
+
+                </li>
+                <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}> בניית צ'אטבוט מבוסס בינה מלאכותית</span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
 
                 </li>

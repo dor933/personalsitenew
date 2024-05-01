@@ -1,11 +1,6 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import { useContext,useEffect } from 'react';
-import { useState } from 'react';
-import useMediaQuery from '@mui/material/useMediaQuery';
-import AuthContext from './Usecontexts/Maincontext';
 import Partners from "./Partners";
 import hodayaimg from '../assets/images/hodayaimg.png';
 
@@ -14,11 +9,7 @@ import hodayaimg from '../assets/images/hodayaimg.png';
 
 const Projects = () => {
 
-    const ismobile = useMediaQuery('(max-width:1048px)');
-    const isnotbigscreen = useMediaQuery('(max-width:1700px)');
-    const {isprojectspage,setIsinprojectpage}= useContext(AuthContext);
-    const [chosenproject, setchosenproject] = useState({});
-    const [isloaded,setIsloaded] = useState(false);
+    
 
 
 
@@ -31,7 +22,7 @@ const Projects = () => {
     const myprojects = [
         {
           name:"הודיה וקנין שמלות כלה",
-            description:"הודיה היא מעצבת שמלות כלה שעשתה לעצמה שם באיזור השרון. היא חיפשה פתרון מקצה לקצה שיכניס אותה לעולם הדיגיטלי. צעד אחר צעד בנינו לה מערך שלם ומדהים",
+            description:"הודיה היא מעצבת שמלות כלה שעשתה לעצמה שם באיזור השרון. היא חיפשה פתרון מקצה לקצה שיכניס אותה לעולם הדיגיטלי. צעד אחר צעד בנינו לה מערך דיגיטלי שלם ומדהים.",
             image:hodayaimg
 
         }

@@ -7,6 +7,7 @@ import web_pen from '../assets/images/web_pen.png';
 import feather_pen from '../assets/images/feather_pen.png';
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import {content_writing,website_building,maintainece,organic_promotion} from '../text'
 
 
 export default function Package() {
@@ -14,27 +15,26 @@ export default function Package() {
     const theme = useTheme();
 
     const firstskill={
-        title:"תיבת תוכן",
-        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
+        title:"כתיבת תוכן",
+        description:content_writing,
         image:tag1
     }
 
     const secondskill={
         title:"בניית אתר",
-        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
+        description:website_building,
         image:web_pen
     }
 
     const thirdskill={
-        title:"כתיבת תוכן",
-        description:"על מנת למשוך מבקרים לאתר ולשפר את דירוג האתר במנועי החיפוש, על האתר להכיל תוכן איכותי ורלוונטי. כתיבת תוכן היא חלק בלתי נפרד מבניית פתרון דיגיטלי, ובתחום זה אנו מציעים שירות חדשני המשלב את יכולות הבינה המלאכותית בכתיבת תוכן לדפי האתר ולרשתות החברתיות."
-        ,
+        title:"קידום במנועי החיפוש",
+        description:organic_promotion,
         image:feather_pen
     }
 
     const fourthskill={
-        title:"תיבת תוכן",
-        description:"בניית אתר מודרני ומתקדם בטכנולוגיות החדישות ביותר. בנוסף לעיצוב הויזואלי שייעשה בהתאם לדרישות הלקוח ותוך כדי שיתוף פעולה לאורך כל הדרך, הרחבות כגון שליחת הודעות למייל ולטלפון ואפשרות לקביעת פגישות דרך יומן גוגל, כלולות במחיר.",
+        title:"תחזוקה שוטפת" ,
+        description:maintainece,
         image:prod_chain1
     }
 

@@ -10,7 +10,7 @@ import { useTheme } from '@mui/material/styles';
 const Projcard = ({image,description,Zindex,rotate}) => {
 
     const theme = useTheme();
-    const ismd = useMediaQuery(theme.breakpoints.up('md'));
+    const islg= useMediaQuery(theme.breakpoints.up('lg'));
 
 
      const [transition]=useState('transform 2s');
@@ -32,7 +32,7 @@ const Projcard = ({image,description,Zindex,rotate}) => {
     useEffect(() => {
 
         
-        if(ismd){
+        if(islg){
 
         window.addEventListener('scroll',handleScroll)
         }

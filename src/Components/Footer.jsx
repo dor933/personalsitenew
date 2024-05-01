@@ -14,8 +14,20 @@ const Footer = () => {
 
     const theme = useTheme();
     const ismd = useMediaQuery(theme.breakpoints.up('md'));
-    const isxs = useMediaQuery(theme.breakpoints.down('sm'));
     const issm = useMediaQuery(theme.breakpoints.down('md'));
+    const ismobile = useMediaQuery('(max-width:600px)');
+
+
+    const handleclick= (value) => {
+        const section= ['home','partners','package','about','contact'][value];
+            const sectionelement = document.getElementById(`${section}`);
+            if(sectionelement){
+          console.log(sectionelement);
+          sectionelement.scrollIntoView({behavior:'smooth',
+        
+        block:ismobile? 'start':'center'})
+            }
+    }
 
     return (
         <Grid container item xs={12} style={{
@@ -67,24 +79,31 @@ const Footer = () => {
                     lineHeight:"150%",
                 }}>
 
-                    <Grid item xs={3} style={{
+                    <Grid item xs={3}  style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
                         alignItems:'center',
-                        paddingLeft:'10px',
+                        paddingLeft:'20px',
                     }}>
-                           <span>בית</span>                   
+                           <span onClick={()=> {handleclick(0)}}  style={{
+                           cursor:'pointer',
+
+                           }}>בית</span>                   
 
                         </Grid>
 
-                        <Grid item xs={3} style={{
+                        <Grid  item xs={3} style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
+
                     }}>
 
-                        <span>שירותים</span>
+                        <span onClick={()=> {handleclick(2)}}  style={{
+                           cursor:'pointer',
+
+                           }}>שירותים</span>
                         
 
                         </Grid>
@@ -93,8 +112,12 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
+
                     }}>
-                           <span>אודות</span>
+                           <span onClick={()=> {handleclick(3)}}  style={{
+                           cursor:'pointer',
+
+                           }}>אודות</span>
 
                         </Grid>
 
@@ -102,8 +125,12 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
+
                     }}>
-                          <span>צור קשר</span>
+                          <span  onClick={()=> {handleclick(4)}}  style={{
+                           cursor:'pointer',
+
+                           }}>צור קשר</span>
 
                         </Grid>
                     
