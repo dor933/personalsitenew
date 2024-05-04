@@ -34,7 +34,7 @@ function App() {
   console.log(sectionelement);
   sectionelement.scrollIntoView({behavior:'smooth',
 
-block:'center'})
+block:'start'})
 
 
     }
