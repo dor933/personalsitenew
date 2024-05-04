@@ -65,7 +65,7 @@ const Services = () => {
                 padding:0,
                 margin:0,
                 letterSpacing:'0.7px',
-                fontFamily:'Assistant',fontWeight:600,fontSize:ismd?'24px':'18px',color:'#282938'
+                fontFamily:'Assistant',fontWeight:600,fontSize:ismd?'24px':'16px',color:'#282938'
             }}>
                    <li style={{paddingBottom:'10px'}}> <span style={{lineHeight:'150%'}}>  אתר מותאם למחשב ולטלפונים ניידים</span>
                 <CheckSharpIcon style={{color:'#5E3BEE',fontSize:'20px',paddingRight:'20px'}}/>
