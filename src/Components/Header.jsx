@@ -257,7 +257,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                              style={tabStyle}
 
                             >אודות</MenuItem>
-                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); handleclick(4)}}
+                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(4); handleclick(4)}}
                              style={tabStyle}
 
                             >צור קשר</MenuItem>

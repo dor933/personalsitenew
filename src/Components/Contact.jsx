@@ -9,7 +9,6 @@ import Fieldcomp from "./fieldcomp";
 
 const Contact = () => {
 
-    const smaller1200= useMediaQuery('(max-width:1200px');
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
