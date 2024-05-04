@@ -49,14 +49,14 @@ const Footer = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 alignItems: 'center',
-                justifyContent:'space-between'
+                justifyContent: 'space-between',
             }}>
 
                 <Grid item xs={2} style={{
                     display:'flex',
                     flexDirection:'column',
                     justifyContent:'center',
-                    alignItems:'flex-end',
+                    alignItems:'center',
                 }}>
                     <img src={mylogo}
                     alt='mylogo'
@@ -71,20 +71,19 @@ const Footer = () => {
                     display:'flex',
                     flexDirection:'row',
                     alignItems:'center',
-                    justifyContent:'flex-end',
+                    justifyContent:'space-around',
                     fontFamily:'Assistant',
-                    fontSize:ismd? '16px' : '14px',
+                    fontSize:ismd? '16px' : '12px',
                     fontWeight:600,
                     fontStyle:'normal',
                     lineHeight:"150%",
                 }}>
 
-                    <Grid item xs={3}  style={{
+                    <Grid item xs={2}  style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:'center',
-                        paddingLeft:'20px',
+                        paddingRight:'20px',
                     }}>
                            <span onClick={()=> {handleclick(0)}}  style={{
                            cursor:'pointer',
@@ -92,8 +91,20 @@ const Footer = () => {
                            }}>בית</span>                   
 
                         </Grid>
+                        <Grid item xs={2}  style={{
+                        display:'flex',
+                        flexDirection:'column',
+                        justifyContent:'flex-start',
+                        paddingLeft:'20px',
+                    }}>
+                           <span onClick={()=> {handleclick(1)}}  style={{
+                           cursor:'pointer',
 
-                        <Grid  item xs={3} style={{
+                           }}>שותפים</span>                   
+
+                        </Grid>
+
+                        <Grid  item xs={2} style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
@@ -108,7 +119,7 @@ const Footer = () => {
 
                         </Grid>
 
-                        <Grid item xs={3} style={{
+                        <Grid item xs={2} style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
@@ -121,7 +132,7 @@ const Footer = () => {
 
                         </Grid>
 
-                        <Grid item xs={3} style={{
+                        <Grid item xs={2} style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
@@ -140,7 +151,7 @@ const Footer = () => {
                     <Grid container item xs={2} style={{
                     display:'flex',
                     flexDirection:'row',
-                    justifyContent:'flex-end',
+                    justifyContent:'space-around',
                     alignItems:'center',
                     gap: issm?'5px' : '10px'
                 }}>
@@ -148,10 +159,11 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:'flex-end',
                     }}>
                         
-                        <img src={Faceicon}
+                        <img onClick={()=> {
+                            window.open('https://www.facebook.com/profile.php?id=61558860754768')
+                        }} src={Faceicon}
                         style={{
                             width: ismd? "32px" : "16px",
                             height:ismd? "32px" : "16px",
@@ -163,10 +175,11 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:'flex-end',
                     }}>
                         
-                        <img src={Instagram}
+                        <img onClick={()=> {
+                            window.open('https://www.instagram.com/dr_web_development/')
+                        }} src={Instagram}
                         style={{
                             width: ismd? "32px" : "16px",
                             height:ismd? "32px" : "16px",
@@ -174,29 +187,16 @@ const Footer = () => {
                         }} />
 
                         </Grid>
+             
                         <Grid item xs={2} style={{
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        alignItems:'flex-end',
                     }}>
                         
-                        <img src={Twitter}
-                        style={{
-                            width: ismd? "32px" : "16px",
-                            height:ismd? "32px" : "16px",
-
-                        }} />
-
-                        </Grid>
-                        <Grid item xs={2} style={{
-                        display:'flex',
-                        flexDirection:'column',
-                        justifyContent:'flex-start',
-                        alignItems:'flex-end',
-                    }}>
-                        
-                        <img src={LinkedIn}
+                        <img onClick={()=> {
+                            window.open('https://www.linkedin.com/in/dor-ratzabi-3900b2248/')
+                        }} src={LinkedIn}
                         style={{
                             width: ismd? "32px" : "16px",
                             height:ismd? "32px" : "16px",

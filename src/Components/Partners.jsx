@@ -15,7 +15,7 @@ const Partners = ({name,image,description}) => {
             borderRadius:"10px",
             borderBottom:"4px solid #F5FCFF",
             backgroundColor:"#F5FCFF",
-            height:'550px',
+            height:'560px',
             boxShadow:"0px 0px 32px 0px rgba(0, 0, 0, 0.15)"
 
 
@@ -45,7 +45,7 @@ const Partners = ({name,image,description}) => {
 
                 </Grid>
 
-                <Grid xs={12} style={{ flexDirection:'column', justifyContent:'flex-start' ,alignItems:'flex-start', alignSelf:'stretch', gap:'21px',paddingRight:'20px', height:"100%",display:'flex'}} >
+                <Grid xs={12} style={{ flexDirection:'column', justifyContent:'flex-start' ,alignItems:'flex-start', alignSelf:'stretch', gap:'21px',paddingRight:'20px',paddingLeft:'20px', height:"100%",display:'flex'}} >
 
                     <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'28px', fontWeight:600, fontStyle:'normal',lineHeight:"140%"}}>
 

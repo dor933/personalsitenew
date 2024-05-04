@@ -13,18 +13,22 @@ const Product = ({name,image,description}) => {
 
     const theme= useTheme()
 
-    const islg= useMediaQuery(theme.breakpoints.up('lg'))
-
+    const islg= useMediaQuery(theme.breakpoints.down('lg'))
+    const isxl= useMediaQuery(theme.breakpoints.up('xl'))
+    const ismd= useMediaQuery(theme.breakpoints.down('md'))
+    const issm= useMediaQuery(theme.breakpoints.down('sm'))
+//create variable of media query that will represent min 500 and max 900
+    const specialsize= useMediaQuery('(min-width:500px) and (max-width:900px)')
     return (
 
        
 
-        <Grid xs={12} sm={6} md={5} container style={{
+        <Grid xs={12} md={5} container style={{
             display:'flex',
             padding:'20px',
             alignItems:'flex-start',
             gap:'10px',
-            height:!islg? 'auto':'440px',
+            height:specialsize? '350px':'440px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
@@ -67,12 +71,12 @@ const Product = ({name,image,description}) => {
 
                 <Grid xs={12} style={{ flexDirection:'column', justifyContent:'flex-start' ,alignItems:'flex-start', alignSelf:'stretch', gap:'21px', height:"100%",display:'flex'}} >
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'32px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'32px':'25px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
 
                     {name}
                     </div>
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:'18px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'18px': islg? '18px': '16px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
 
                         
                     {description}

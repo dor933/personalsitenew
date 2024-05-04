@@ -5,7 +5,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 
 
-const Fieldcomp = ({fieldname,iswide}) => {
+const Fieldcomp = ({fieldname,iswide,handlechange}) => {
 
     return (
         <>
@@ -47,7 +47,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
         }}>
 
             {
-                iswide?  <textarea placeholder='הקלד את ההודעה שלך...' style={{   padding:'6px',
+                iswide?  <textarea onChange={handlechange} placeholder='הקלד את ההודעה שלך...' style={{   padding:'6px',
                 borderRadius:'8px',
                 border: "1.333px solid var(--Primary, #5E3BEE)",
                 background: 'var(--White, #FFF)',
@@ -57,7 +57,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
                 fontFamily:'Assistant',
             }}>
 
-            </textarea>  :     <input type="text" style={{
+            </textarea>  :     <input onChange={handlechange} type="text" style={{
             padding:'6px',
             borderRadius:'8px',
             border: "1.333px solid var(--Primary, #5E3BEE)",
@@ -65,7 +65,7 @@ const Fieldcomp = ({fieldname,iswide}) => {
             lineHeight:"150%",
             width:'90%',
             alignSelf:'flex-end',
-            fontFamily:'Roboto',
+            fontFamily:'Assistant',
             height:'35px',
            
             

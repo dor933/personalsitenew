@@ -25,7 +25,6 @@ const About = () => {
          justifyContent:'flex-start',
          paddingLeft:'50px',
           paddingRight:'50px',
-          gap:issm? '0px' : isxs? '130px': '50px',
          
         
 
@@ -38,7 +37,6 @@ const About = () => {
           display:'flex',
           justifyContent:'flex-start',
           alignItems:'flex-start',
-          height:'450px',
           paddingRight: islg?'100px': '30px',
           marginBottom:issm? '0px' : isxs? '50px': '0px',
           
@@ -66,15 +64,26 @@ const About = () => {
 
 
                 </div>
+          
+                 {
+                  !islg &&
+                  
+
+<img src={dor_new_about} alt="dor" style={{width: isxs?'100%': issm? "100%" : "80%" ,height:isxs?'100%': issm? "80%" : "80%",objectFit:'cover',marginRight:'-20px'}}/>
+
+                  
+
+                 }
+
                 <div
-                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px',marginBottom:'10px'}}>
+                style={{fontFamily:'Assistant',fontSize:isxs? '20px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px',marginBottom:'10px',marginTop:'10px'}}>
                   אני דור, בן 30 מהישוב קדימה שבשרון. אני מאמין שבעידן החדש של הבינה המלאכותית, לכל בעל עסק מגיע פתרון מקיף וכולל במחיר {<span style={{color:'#5E3BEE',fontWeight:'700',fontSize:'29px'}}> שפוי. </span>} 
 
 
                 </div>
 
                 <div
-                style={{fontFamily:'Assistant',fontSize:'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', 
+                style={{fontFamily:'Assistant',fontSize:isxs? '20px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', 
 
                 }}>
 אני מציע חבילת "הכל כלול" שכוללת בניית אתר,קידומו, קישורו לחשבונות ברשתות החברתיות ותחזוקן, ועוד דברים שלא חלמתם שיכולים להיות לעסק שלכם.
@@ -91,16 +100,19 @@ const About = () => {
 
         </Grid>
 
-        <Grid item xs={12} lg={6} style={{
-          display:'flex',
-          justifyContent:'center',
-          alignItems:'flex-start',
-        }}>
+          {
+            islg&&  <Grid item xs={12} lg={6} style={{
+              display:'flex',
+              justifyContent:'center',
+              alignItems:'flex-start',
+            }}>
+           
+              
+              <img src={dor_new_about} alt="dor" style={{width: isxs?'80%': issm? "80%" : "80%" ,height:isxs?'80%': issm? "80%" : "80%",objectFit:'cover'}}/>
+    
+              </Grid>
+          }
        
-          
-          <img src={dor_new_about} alt="dor" style={{width: isxs?'100%': issm? "80%" : "80%" ,height:isxs?'100%': issm? "80%" : "80%",objectFit:'cover'}}/>
-
-          </Grid>
 
 
 

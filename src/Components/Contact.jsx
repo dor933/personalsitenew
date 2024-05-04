@@ -1,16 +1,9 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
 import Grid from '@mui/material/Grid';
-import Box from '@mui/material/Box';
 import { useState,useContext,useEffect } from 'react';
-import Button from '@mui/material/Button';
-import IconButton from '@mui/material/IconButton';
 import axios from 'axios';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import Socialcomp from "./Socialcomp";
-import { createTheme,ThemeProvider } from "@mui/material";
 import AuthContext from './Usecontexts/Maincontext';
-import MyForm from "./Form";
 import Fieldcomp from "./fieldcomp";
 
 
@@ -20,6 +13,7 @@ const Contact = () => {
     const [message, setMessage] = useState('')
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const [businessname, setBusinessname] = useState('')
     const {setIsincontactpage}= useContext(AuthContext);
     const {setIssucceeded}= useContext(AuthContext);
     const {setPopup}= useContext(AuthContext);
@@ -41,11 +35,19 @@ const Contact = () => {
 
     const handlemessagechange = (e) => {
         setMessage(e.target.value)
+        console.log('this is the message', message)
+    }
+
+    const handlebusinessnamechange = (e) => {
+        setBusinessname(e.target.value)
     }
 
     const handlenamechange = (e) => {
 
       setName(e.target.value)
+
+
+      
     }
 
     const handleemailchange = (e) => {
@@ -60,15 +62,18 @@ const Contact = () => {
         const myname = name;
         const myemail = email;
         const mymessage = message;
+        const mybusinessname = businessname;
+
         const data = {
             name: myname,
             email: myemail,
-            message: mymessage
+            message: mymessage,
+            businessname: mybusinessname
         }
 
         console.log('this is the data', data)
 
-        const res = await axios.post('/sendmessage', data);
+        const res = await axios.post('http://localhost:8000/sendmessage', data);
         if(res.status === 200){
 
           setIssucceeded(true);
@@ -206,10 +211,10 @@ const Contact = () => {
         
           
 
-            <Fieldcomp fieldname="שם פרטי" />
+            <Fieldcomp fieldname="שם" handlechange={handlenamechange} />
             
           
-            <Fieldcomp fieldname="שם משפחה" />
+            <Fieldcomp fieldname="שם עסק" handlechange={handlebusinessnamechange}/>
 
 
 
@@ -227,7 +232,7 @@ const Contact = () => {
             marginBottom:'30px'
           }}>
 
-            <Fieldcomp fieldname="מייל" />
+            <Fieldcomp fieldname="מייל" handlechange={handleemailchange} />
 
             <Fieldcomp fieldname="טלפון" />
 
@@ -243,7 +248,7 @@ const Contact = () => {
             justifyContent:'center',
           }}>
 
-            <Fieldcomp fieldname="שלח הודעה" iswide={true} />
+            <Fieldcomp fieldname="שלח הודעה" iswide={true} handlechange={handlemessagechange} />
 
           
 
@@ -260,7 +265,7 @@ const Contact = () => {
           }}>
 
             <div 
-         
+            onClick={sendmessage}
 
              style={{
               display:'flex',
@@ -273,6 +278,7 @@ const Contact = () => {
               paddingRight:'40px',
               gap:'10px',
               justifyContent:'center',
+              cursor:'pointer',
 
               
 
@@ -280,12 +286,12 @@ const Contact = () => {
 
               <span style={{
                 fontSize:'21.33px',
-                fontFamily:'Roboto',
+                fontFamily:'Assistant',
                 fontWeight:400,
                 lineHeight:'150%',
                 color:'var(--White, #FFF)',
                 fontStyle:'normal',
-              }}>Submit</span>
+              }}>שלח</span>
               
             </div>
 

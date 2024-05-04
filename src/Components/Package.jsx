@@ -12,7 +12,10 @@ import {content_writing,website_building,maintainece,organic_promotion} from '..
 
 export default function Package() {
 
+    
+
     const theme = useTheme();
+    const islg= useMediaQuery(theme.breakpoints.up('lg'));
 
     const firstskill={
         title:"כתיבת תוכן",
@@ -81,7 +84,8 @@ const isLg = useMediaQuery(theme.breakpoints.up('lg'));
                         fontFamily:'Assistant',
                         fontWeight:600,
                         lineHeight:"150%",
-                        color:"#282938"
+                        color:"#282938",
+                        fontSize:'21.333px'
                     }}>
                         לבנות אתר לבד זה לא מספיק. 
                     </div>

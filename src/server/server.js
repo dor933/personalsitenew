@@ -26,7 +26,7 @@ const sendEmail = async (mailcontent) => {
         from: 'Dor Ratzabi <mailgun@mail.dor-ratzabi.com> ',
         to: ["doratzabi1@gmail.com"],
         subject: 'Message from ' +mailcontent.name,
-        text: "Message: " + mailcontent.message + "\n"  + "Email to return: " + mailcontent.email
+        text: "Business Name:" + mailcontent.businessname+".\n Message: " + mailcontent.message + "\n"  + "Email to return: " + mailcontent.email
     })
 
     if(mymessage.status===200){
@@ -57,9 +57,7 @@ app.get('/', (req, res) => {
 
 app.post('/sendmessage', async (req, res) => {
     const mailcontent= req.body;
-    const text= "Message: "+mailcontent.message;
-    const name= mailcontent.name;
-    // const combinedtext= "From:"+name+"\n"+ "Email:"+ mailcontent.email +"\n"+text;
+
 
    const ifsuccess= await sendEmail(mailcontent);
 

@@ -18,9 +18,20 @@ import { useTheme } from '@mui/material/styles';
 const Lefthome = () => {
 
     const theme = useTheme();
+    const ismobile = useMediaQuery('(max-width:600px)');
 
     const ismd = useMediaQuery(theme.breakpoints.up('md'));
 
+    const handleclick= (value) => {
+        const section= ['home','partners','package','about','contact'][value];
+            const sectionelement = document.getElementById(`${section}`);
+            if(sectionelement){
+          console.log(sectionelement);
+          sectionelement.scrollIntoView({behavior:'smooth',
+        
+        block:ismobile? 'start':'center'})
+            }
+    }
 
 
     return (
@@ -55,8 +66,7 @@ const Lefthome = () => {
 
                     <span style={{fontFamily:'Assistant', fontSize: ismd?'55.667px' : '40px', fontStyle:'normal', fontWeight:700,lineHeight:'120%'}}>
 
-                     אני דור. אני מאמין 
-
+היי,אני דור. אני מאמין
 
                     </span>
                     <span style={{fontFamily:'Assistant', fontSize: ismd? '55.667px' : '40px', fontStyle:'normal', fontWeight:700,lineHeight:'120%',color:'#5E3BEE',paddingLeft:ismd?'20px':'10px', paddingRight:ismd?'20px':'10px'}}>
@@ -85,7 +95,7 @@ const Lefthome = () => {
                 paddingBottom:'40px',
             }}>
               
-              <Button variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'17.333px',fontWeight:600,fontFamily:'Assistant',lineHeight:'150%',letterSpacing:'0.15px'}}>
+              <Button onClick={()=> {handleclick(4)}} variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'17.333px',fontWeight:600,fontFamily:'Assistant',lineHeight:'150%',letterSpacing:'0.15px'}}>
                 צור/י קשר ונצא לדרך.
                 </Button>
                 </Grid>

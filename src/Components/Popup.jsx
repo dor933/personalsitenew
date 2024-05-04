@@ -23,7 +23,7 @@ const Popup = () => {
 
 
     return (
-            <div className="rectengal" style={{width:issmall? "300px" : "400px", padding: "20px" , height:issmall? "180px" : "250px"}}>
+            <div className="rectengal" style={{width:issmall? "300px" : "400px", padding: "20px" , height:issmall? "180px" : "250px",position:'fixed'}}>
                 {
                     issucceeded &&                <svg xmlns="http://www.w3.org/2000/svg" width={ issmall? "30": "50"} height={issmall? "30":"50"} viewBox="0 0 390 389" fill="none">
                     <path d="M368.455 215.212C354.558 284.699 302.165 350.128 228.647 364.749C192.792 371.889 155.597 367.535 122.36 352.307C89.1226 337.079 61.5369 311.753 43.5307 279.935C25.5245 248.117 18.0157 211.429 22.0735 175.095C26.1313 138.761 41.5488 104.634 66.1308 77.5722C116.551 22.0382 201.686 6.75099 271.173 34.5458" stroke="#20AE5C" stroke-width="41.6923" stroke-linecap="round" stroke-linejoin="round"/>
@@ -37,29 +37,29 @@ const Popup = () => {
                   }
 
                 <div style={{justifyContent:'center',alignItems:'center', textAlign:'center',marginTop: issucceeded? 0 : 30}}>
-                    <h1 style={{fontSize:issmall? '15px':'25px',paddingTop:issmall? 0:10,fontFamily: 'Comfortaa',color:issucceeded? 'green' : 'red'}}>
-                         { issucceeded ? "SUCCESS": "ERROR"
+                    <h1 style={{fontSize:issmall? '15px':'25px',paddingTop:issmall? 0:10,fontFamily: 'Assistant',color:issucceeded? 'green' : 'red'}}>
+                         { issucceeded ? "הודעה נשלחה!": "שגיאה"
                          
                          }
                         </h1>
-                    <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Comfortaa',fontWeight:'bold'}}>
+                    <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Assistant',fontWeight:'bold'}}>
 
                         {
-                            issucceeded ? "Thank you for sending this message!" : isvalidationerror? "Missing or invalid fields!" : "Something went wrong!"
+                            issucceeded ? "איזה כיף! ההודעה נשלחה בהצלחה" : isvalidationerror? "נראה שהטופס מולא באופן חלקי או שגוי" : "נראה שמשהו השתבש"
                         }
                         
                         </span>
                     <br/>
-                    <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Comfortaa'}}>
+                    <span style={{fontSize:issmall? '12px':'15px',fontFamily: 'Assistant'}}>
                         
                         {
-                            issucceeded ? "I'll contact you back soon as possible.": isvalidationerror? "Please fill all the fields with valid values and try again." : "Please try again later."
+                            issucceeded ? "אצור איתך קשר ב-24 השעות הקרובות.": isvalidationerror? "בבקשה מלא את השדות בערכים תקינים ונסה שוב" : "נסה שוב מאוחר יותר, מבטיח שיסתדר!"
                         }
 
                         </span>
                     <br/>
 
-                    <Button variant="contained" style={{height:"30px",width:"150px", marginTop:"30px",backgroundColor:issucceeded?'green': 'red', color:'#ffffff', fontFamily:'Comfortaa',fontWeight:'bold'}} onClick={closePopup}>Continue</Button>
+                    <Button variant="contained" style={{height:"30px",width:"150px", marginTop:"30px",backgroundColor:issucceeded?'green': 'red', color:'#ffffff', fontFamily:'Assistant',fontWeight:'bold'}} onClick={closePopup}>אישור</Button>
 
 
 
