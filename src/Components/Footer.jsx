@@ -22,9 +22,8 @@ const Footer = () => {
     const {value, setValue} = useContext(AuthContext);
 
 
-
     const handleclick= (value) => {
-        const section= ['home','partners','package','about','contact'][value];
+        const section= ['header','partners','package','about','contact'][value];
             const sectionelement = document.getElementById(`${section}`);
             if(sectionelement){
           console.log(sectionelement);
@@ -33,6 +32,7 @@ const Footer = () => {
         block:ismobile? 'start':'center'})
             }
     }
+  
 
     return (
         <Grid container item xs={12} style={{
@@ -90,7 +90,14 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         paddingRight:'20px',
                     }}>
-                           <span onClick={()=> {setValue(0)}}  style={{
+                           <span onClick={()=> {
+                               if(value===0){
+                                handleclick(0);
+                            }
+                            else{
+                            setValue(0)
+                            }
+                        }}  style={{
                            cursor:'pointer',
 
                            }}>בית</span>                   
@@ -102,7 +109,15 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         paddingLeft:'20px',
                     }}>
-                           <span onClick={()=> {setValue(1)}}  style={{
+                           <span onClick={()=> {
+
+if(value===1){
+    handleclick(1);
+}
+else{
+setValue(1)
+}
+                           }}  style={{
                            cursor:'pointer',
 
                            }}>שותפים</span>                   
@@ -116,7 +131,15 @@ const Footer = () => {
 
                     }}>
 
-                        <span onClick={()=> {setValue(2)}}  style={{
+                        <span onClick={()=> {
+
+if(value===2){
+    handleclick(2);
+}
+else{
+setValue(2)
+}
+                        }}  style={{
                            cursor:'pointer',
 
                            }}>שירותים</span>
@@ -130,7 +153,16 @@ const Footer = () => {
                         justifyContent:'flex-start',
 
                     }}>
-                           <span onClick={()=> {setValue(3)}}  style={{
+                           <span onClick={()=> {
+
+if(value===3){
+    handleclick(3);
+}
+else{
+setValue(3)
+}
+
+                           }}  style={{
                            cursor:'pointer',
 
                            }}>אודות</span>
@@ -143,7 +175,17 @@ const Footer = () => {
                         justifyContent:'flex-start',
 
                     }}>
-                          <span  onClick={()=> {setValue(4)}}  style={{
+                          <span  onClick={()=> {
+
+
+if(value===4){
+    handleclick(4);
+}
+else{
+setValue(4)
+}
+
+                          }}  style={{
                            cursor:'pointer',
 
                            }}>צור קשר</span>

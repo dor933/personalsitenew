@@ -7,6 +7,7 @@ import Home from './Components/Home';
 import AuthContext from './Components/Usecontexts/Maincontext';
 import { useMediaQuery } from '@mui/material';
 import Popup from './Components/Popup';
+import { useEffect } from 'react';
 
 
 function App() {
@@ -22,7 +23,20 @@ function App() {
   const [value, setValue] = useState(0);
 
 
+  useEffect(() => {
+    const section= ['header','partners','package','about','contact'][value];
+  
 
+    const sectionelement = document.getElementById(`${section}`);
+    if(sectionelement){
+  console.log(sectionelement);
+  sectionelement.scrollIntoView({behavior:'smooth',
+
+block:ismobile? 'start':'center'})
+
+
+    }
+}, [value])
   
 
 

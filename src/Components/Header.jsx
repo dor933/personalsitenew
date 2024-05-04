@@ -41,7 +41,7 @@ const Header = () => {
 
 
     const handleclick= (value) => {
-        const section= ['home','partners','package','about','contact'][value];
+        const section= ['header','partners','package','about','contact'][value];
             const sectionelement = document.getElementById(`${section}`);
             if(sectionelement){
           console.log(sectionelement);
@@ -51,16 +51,7 @@ const Header = () => {
             }
     }
 
-    useEffect(() => {
-        const section= ['home','partners','package','about','contact'][value];
-        const sectionelement = document.getElementById(`${section}`);
-        if(sectionelement){
-      console.log(sectionelement);
-      sectionelement.scrollIntoView({behavior:'smooth',
-    
-    block:ismobile? 'start':'center'})
-        }
-    }, [value])
+ 
 
         
 
@@ -98,16 +89,13 @@ const Header = () => {
       onChange={(event, newValue) => {
         console.log(newValue);
           setValue(newValue);
+
+          
          
-
-            handleclick(newValue);
-
-            setTimeout(() => {
-                console.log(window.scrollY)
-                setValue(0)
-            }
-            , 1000)
+           
       }}
+
+
 
       style={{
 
@@ -162,7 +150,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
 
     return (
         <>
-        <Grid container  direction='row' 
+        <Grid id="header" container  direction='row' 
         justifyContent="space-between"
         style={{ zIndex:2,
         boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
@@ -232,11 +220,20 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                         >
                             <MenuItem
                             
-                            onClick={() => {setDrawerOpen(false); setValue(0);
+                            onClick={() => {setDrawerOpen(false); 
+                                
+                                if(value===0){
+                                    handleclick(0);
+                                }
+                                else {
+                                    setValue(0);
+
+                                }
+                                
+
 
                             
-                              
-
+                
 
 
                             
@@ -245,26 +242,61 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >בית</MenuItem>
                             <MenuItem onClick={() => {
                                 
-                                setDrawerOpen(false); setValue(1); 
+                                setDrawerOpen(false);
+                                if(value===1){
+                                    handleclick(1);
+                                }
+                                else {
+                                    setValue(1);
+
+                                }
                             
                             }}
                             
                             style={tabStyle}
 
                             >שותפים</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(2); 
+                            <MenuItem onClick={() => {setDrawerOpen(false); 
+                            
+                            
+                            if(value===2){
+                                handleclick(2);
+                            }
+                            else {
+                                setValue(2);
 
+                            }
 
                             
                         }
                     }
                             style={tabStyle}
                             >שירותים</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); }}
+                            <MenuItem onClick={() => {setDrawerOpen(false); 
+
+                                    if(value===3){
+                                    handleclick(3);
+                                }
+                                else {
+                                    setValue(3);
+
+                                }
+                             }}
                              style={tabStyle}
 
                             >אודות</MenuItem>
-                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(4); }}
+                             <MenuItem onClick={() => {setDrawerOpen(false); 
+
+                              if(value===4){
+                               handleclick(4);
+                                            }
+                                     else {
+                                    setValue(4);
+
+                                           } 
+
+
+                              }}
                              style={tabStyle}
 
                             >צור קשר</MenuItem>
