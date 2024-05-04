@@ -19,6 +19,7 @@ function App() {
   const [isincontactpage, setIsincontactpage] = useState(false);
   const [ishomepage, setIshomepage] = useState(false);
   const [isinprojectpage, setIsinprojectpage] = useState(false);
+  const [value, setValue] = useState(0);
 
 
 
@@ -26,7 +27,7 @@ function App() {
 
 
   return (
-    <AuthContext.Provider value={{menupress,isvalidationerror,setIsvalidationerror,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
+    <AuthContext.Provider value={{menupress,value,setValue,isvalidationerror,setIsvalidationerror,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
 
     <div className={` ${ismobile? "inmobile" : ""}`}  >

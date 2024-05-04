@@ -34,7 +34,7 @@ const Header = () => {
 
   
 
-    const [value, setValue] = useState(0);
+    const {value, setValue} = useContext(AuthContext);
     const {menupress,setMenupress}= useContext(AuthContext)
     const ismobile = useMediaQuery('(max-width:600px)');
     const [drawerOpen, setDrawerOpen] = useState(false);    
@@ -50,6 +50,19 @@ const Header = () => {
         block:ismobile? 'start':'center'})
             }
     }
+
+    useEffect(() => {
+        const section= ['home','partners','package','about','contact'][value];
+        const sectionelement = document.getElementById(`${section}`);
+        if(sectionelement){
+      console.log(sectionelement);
+      sectionelement.scrollIntoView({behavior:'smooth',
+    
+    block:ismobile? 'start':'center'})
+        }
+    }, [value])
+
+        
 
     const tabStyle = {
         fontFamily: 'Assistant',
@@ -221,7 +234,6 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             
                             onClick={() => {setDrawerOpen(false); setValue(0);
 
-                                handleclick(0);
                             
                               
 
@@ -234,7 +246,6 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             <MenuItem onClick={() => {
                                 
                                 setDrawerOpen(false); setValue(1); 
-                                handleclick(1);
                             
                             }}
                             
@@ -243,18 +254,17 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >שותפים</MenuItem>
                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(2); 
 
-                                handleclick(2);
 
                             
                         }
                     }
                             style={tabStyle}
                             >שירותים</MenuItem>
-                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); handleclick(3)}}
+                            <MenuItem onClick={() => {setDrawerOpen(false); setValue(3); }}
                              style={tabStyle}
 
                             >אודות</MenuItem>
-                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(4); handleclick(4)}}
+                             <MenuItem onClick={() => {setDrawerOpen(false); setValue(4); }}
                              style={tabStyle}
 
                             >צור קשר</MenuItem>
@@ -284,7 +294,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         >
 
             <Grid onClick={()=>{
-                handleclick(4);
+                setValue(4);
             }} item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
         fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px', cursor:'pointer'
         }}>

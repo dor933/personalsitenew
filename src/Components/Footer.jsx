@@ -7,6 +7,9 @@ import LinkedIn from '../assets/images/social_media/LinkedIn.png';
 import mylogo from '../assets/images/my_logo.png';
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import { useContext } from 'react';
+import AuthContext from './Usecontexts/Maincontext';
+
 
 
 
@@ -16,6 +19,8 @@ const Footer = () => {
     const ismd = useMediaQuery(theme.breakpoints.up('md'));
     const issm = useMediaQuery(theme.breakpoints.down('md'));
     const ismobile = useMediaQuery('(max-width:600px)');
+    const {value, setValue} = useContext(AuthContext);
+
 
 
     const handleclick= (value) => {
@@ -85,7 +90,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         paddingRight:'20px',
                     }}>
-                           <span onClick={()=> {handleclick(0)}}  style={{
+                           <span onClick={()=> {setValue(0)}}  style={{
                            cursor:'pointer',
 
                            }}>בית</span>                   
@@ -97,7 +102,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         paddingLeft:'20px',
                     }}>
-                           <span onClick={()=> {handleclick(1)}}  style={{
+                           <span onClick={()=> {setValue(1)}}  style={{
                            cursor:'pointer',
 
                            }}>שותפים</span>                   
@@ -111,7 +116,7 @@ const Footer = () => {
 
                     }}>
 
-                        <span onClick={()=> {handleclick(2)}}  style={{
+                        <span onClick={()=> {setValue(2)}}  style={{
                            cursor:'pointer',
 
                            }}>שירותים</span>
@@ -125,7 +130,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
 
                     }}>
-                           <span onClick={()=> {handleclick(3)}}  style={{
+                           <span onClick={()=> {setValue(3)}}  style={{
                            cursor:'pointer',
 
                            }}>אודות</span>
@@ -138,7 +143,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
 
                     }}>
-                          <span  onClick={()=> {handleclick(4)}}  style={{
+                          <span  onClick={()=> {setValue(4)}}  style={{
                            cursor:'pointer',
 
                            }}>צור קשר</span>
