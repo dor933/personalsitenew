@@ -13,22 +13,11 @@ const Contact = () => {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [businessname, setBusinessname] = useState('')
-    const {setIsincontactpage}= useContext(AuthContext);
     const {setIssucceeded}= useContext(AuthContext);
     const {setPopup}= useContext(AuthContext);
 
 
-    
-
-    useEffect(() => {
-        setIsincontactpage(true);
-        
-
-        return () => {
-            setIsincontactpage(false);
-        }
-
-    }, [])
+ 
 
 
 
