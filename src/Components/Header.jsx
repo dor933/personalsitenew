@@ -85,10 +85,7 @@ const Header = () => {
       onChange={(event, newValue) => {
         console.log(newValue);
           setValue(newValue);
-          if(ismobile){
-              setDrawerOpen(false);
-              
-          }
+         
 
             handleclick(newValue);
 

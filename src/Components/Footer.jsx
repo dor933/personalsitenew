@@ -97,7 +97,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
                         paddingLeft:'20px',
                     }}>
-                           <span onClick={()=> {handleclick(4)}}  style={{
+                           <span onClick={()=> {handleclick(1)}}  style={{
                            cursor:'pointer',
 
                            }}>שותפים</span>                   
@@ -111,7 +111,7 @@ const Footer = () => {
 
                     }}>
 
-                        <span onClick={()=> {handleclick(4)}}  style={{
+                        <span onClick={()=> {handleclick(2)}}  style={{
                            cursor:'pointer',
 
                            }}>שירותים</span>
@@ -125,7 +125,7 @@ const Footer = () => {
                         justifyContent:'flex-start',
 
                     }}>
-                           <span onClick={()=> {handleclick(4)}}  style={{
+                           <span onClick={()=> {handleclick(3)}}  style={{
                            cursor:'pointer',
 
                            }}>אודות</span>
