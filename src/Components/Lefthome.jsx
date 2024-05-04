@@ -94,7 +94,9 @@ const Lefthome = () => {
                 paddingTop:'40px',
                 paddingBottom:'40px',
             }}>
-              <Button onClick={()=> { handleclick(4)
+              <Button onClick={()=> { 
+                            window.open("https://wa.me/972544474788")
+
 
 
               }} variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'17.333px',fontWeight:600,fontFamily:'Assistant',lineHeight:'150%',letterSpacing:'0.15px'}}>
