@@ -19,6 +19,7 @@ const Product = ({name,image,description}) => {
     const issm= useMediaQuery(theme.breakpoints.down('sm'))
 //create variable of media query that will represent min 500 and max 900
     const specialsize= useMediaQuery('(min-width:500px) and (max-width:900px)')
+    const supersmall= useMediaQuery('(max-width:400px)')
     return (
 
        
@@ -28,7 +29,7 @@ const Product = ({name,image,description}) => {
             padding:'20px',
             alignItems:'flex-start',
             gap:'10px',
-            height:specialsize? '350px':'440px',
+            height:specialsize? '350px': supersmall? '490px': '440px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",

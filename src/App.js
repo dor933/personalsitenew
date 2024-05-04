@@ -23,23 +23,7 @@ function App() {
   const [value, setValue] = useState(0);
 
 
-  useEffect(() => {
-
-    for(let i=0; i<2; i++){
-    const section= ['header','partners','package','about','contact'][value];
   
-
-    const sectionelement = document.getElementById(`${section}`);
-    if(sectionelement){
-  console.log(sectionelement);
-  sectionelement.scrollIntoView({behavior:'smooth',
-
-block:'start'})
-
-
-    }
-  }
-}, [value])
   
 
 

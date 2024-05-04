@@ -94,12 +94,11 @@ const Footer = () => {
                         paddingRight:'20px',
                     }}>
                            <span onClick={()=> {
-                               if(value===0){
+                              setValue(0)
+
                                 handleclick(0);
-                            }
-                            else{
-                            setValue(0)
-                            }
+                            
+                            
                         }}  style={{
                            cursor:'pointer',
 
@@ -113,13 +112,11 @@ const Footer = () => {
                         paddingLeft:'20px',
                     }}>
                            <span onClick={()=> {
-
-if(value===1){
-    handleclick(1);
-}
-else{
 setValue(1)
-}
+
+    handleclick(1);
+
+
                            }}  style={{
                            cursor:'pointer',
 
@@ -135,13 +132,11 @@ setValue(1)
                     }}>
 
                         <span onClick={()=> {
+                          setValue(2)
 
-if(value===2){
-    handleclick(2);
-}
-else{
-setValue(2)
-}
+                           handleclick(2);
+
+
                         }}  style={{
                            cursor:'pointer',
 
@@ -157,13 +152,11 @@ setValue(2)
 
                     }}>
                            <span onClick={()=> {
+                            setValue(3)
 
-if(value===3){
-    handleclick(3);
-}
-else{
-setValue(3)
-}
+                            handleclick(3);
+
+
 
                            }}  style={{
                            cursor:'pointer',
@@ -180,13 +173,10 @@ setValue(3)
                     }}>
                           <span  onClick={()=> {
 
+                       setValue(4)
 
-if(value===4){
-    handleclick(4);
-}
-else{
-setValue(4)
-}
+                       handleclick(4);
+
 
                           }}  style={{
                            cursor:'pointer',

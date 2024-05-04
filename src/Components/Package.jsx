@@ -16,6 +16,7 @@ export default function Package() {
 
     const theme = useTheme();
     const islg= useMediaQuery(theme.breakpoints.up('lg'));
+    const isxs= useMediaQuery(theme.breakpoints.down('xs'));
 
     const firstskill={
         title:"כתיבת תוכן",
@@ -52,8 +53,8 @@ const isLg = useMediaQuery(theme.breakpoints.up('lg'));
             display: 'flex',
             paddingTop:'150px',
             paddingBottom:'150px',
-            paddingLeft:'50px',
-            paddingRight:'50px',
+            paddingLeft:isxs?'10px':'50px',
+            paddingRight:isxs?'10px':'50px',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems:'flex-start',

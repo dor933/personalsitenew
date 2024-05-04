@@ -48,7 +48,6 @@ const Header = () => {
 
     const handleclick= (value) => {
 
-        for(let i=0; i<5; i++){
 
         const section= ['header','partners','package','about','contact'][value];
 
@@ -60,7 +59,7 @@ const Header = () => {
         
         block:'start'})
             }
-    }
+    
     }
  
 
@@ -102,6 +101,8 @@ const Header = () => {
 
         console.log(newValue);
           setValue(newValue);
+
+          handleclick(newValue);
         
 
           
@@ -238,13 +239,9 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             
                             onClick={() => {setDrawerOpen(false); 
                                 
-                                if(value===0){
                                     handleclick(0);
-                                }
-                                else {
-                                    setValue(0);
-
-                                }
+                                
+                              
                                 
 
 
@@ -259,13 +256,9 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             <MenuItem onClick={() => {
                                 
                                 setDrawerOpen(false);
-                                if(value===1){
                                     handleclick(1);
-                                }
-                                else {
-                                    setValue(1);
-
-                                }
+                                
+                               
                             
                             }}
                             
@@ -275,13 +268,8 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             <MenuItem onClick={() => {setDrawerOpen(false); 
                             
                             
-                            if(value===2){
                                 handleclick(2);
-                            }
-                            else {
-                                setValue(2);
-
-                            }
+                         
 
                             
                         }
@@ -290,26 +278,18 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >שירותים</MenuItem>
                             <MenuItem onClick={() => {setDrawerOpen(false); 
 
-                                    if(value===3){
                                     handleclick(3);
-                                }
-                                else {
-                                    setValue(3);
-
-                                }
+                                
+                             
                              }}
                              style={tabStyle}
 
                             >אודות</MenuItem>
                              <MenuItem onClick={() => {setDrawerOpen(false); 
 
-                              if(value===4){
                                handleclick(4);
-                                            }
-                                     else {
-                                    setValue(4);
-
-                                           } 
+                                            
+                                 
 
 
                               }}
