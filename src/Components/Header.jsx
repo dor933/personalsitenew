@@ -91,8 +91,12 @@ const Header = () => {
       value={value} 
 
       onChange={(event, newValue) => {
+
+        if(!ismobile){
+
         console.log(newValue);
           setValue(newValue);
+        }
 
           
          
