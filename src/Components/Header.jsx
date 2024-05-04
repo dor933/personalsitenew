@@ -287,7 +287,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >אודות</MenuItem>
                              <MenuItem onClick={() => {setDrawerOpen(false); 
 
-                               handleclick(4);
+                               handleclick(3);
                                             
                                  
 
