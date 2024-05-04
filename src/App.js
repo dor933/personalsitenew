@@ -24,6 +24,8 @@ function App() {
 
 
   useEffect(() => {
+
+    for(let i=0; i<2; i++){
     const section= ['header','partners','package','about','contact'][value];
   
 
@@ -36,6 +38,7 @@ block:ismobile? 'start':'center'})
 
 
     }
+  }
 }, [value])
   
 

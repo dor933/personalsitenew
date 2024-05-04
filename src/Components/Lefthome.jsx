@@ -7,6 +7,7 @@ import { useState,useContext,useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 
 
@@ -94,7 +95,6 @@ const Lefthome = () => {
                 paddingTop:'40px',
                 paddingBottom:'40px',
             }}>
-              
               <Button onClick={()=> {handleclick(4)}} variant="contained" style={{backgroundColor:'#5E3BEE',color:'white',padding:'15px 30px',borderRadius:'10px',fontSize:'17.333px',fontWeight:600,fontFamily:'Assistant',lineHeight:'150%',letterSpacing:'0.15px'}}>
                 צור/י קשר ונצא לדרך.
                 </Button>
