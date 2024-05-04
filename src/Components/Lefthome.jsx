@@ -7,8 +7,6 @@ import { useState,useContext,useEffect } from 'react';
 import Button from '@mui/material/Button';
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 
 
 //import Text
@@ -20,6 +18,7 @@ const Lefthome = () => {
 
     const theme = useTheme();
     const ismobile = useMediaQuery('(max-width:600px)');
+
 
     const ismd = useMediaQuery(theme.breakpoints.up('md'));
 

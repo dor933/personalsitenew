@@ -23,6 +23,7 @@ const Footer = () => {
 
 
     const handleclick= (value) => {
+        for(let i=0; i<5; i++){
         const section= ['header','partners','package','about','contact'][value];
             const sectionelement = document.getElementById(`${section}`);
             if(sectionelement){
@@ -32,6 +33,7 @@ const Footer = () => {
         block:ismobile? 'start':'center'})
             }
     }
+}
   
 
     return (
