@@ -23,6 +23,7 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from './Usecontexts/Maincontext';
 import drimage from '../assets/images/DR.png'
 import mylogo from '../assets/images/my_logo.png'
+import { useTheme } from '@mui/material/styles';
 
 
 
@@ -35,10 +36,14 @@ const Header = () => {
 
   
 
+    const theme= useTheme();
+    
     const {value, setValue} = useContext(AuthContext);
     const {menupress,setMenupress}= useContext(AuthContext)
     const ismobile = useMediaQuery('(max-width:600px)');
-    const [drawerOpen, setDrawerOpen] = useState(false);    
+    const [drawerOpen, setDrawerOpen] = useState(false);   
+    const islg = useMediaQuery(theme.breakpoints.down('lg')); 
+    
 
 
     const handleclick= (value) => {
@@ -63,7 +68,7 @@ const Header = () => {
 
     const tabStyle = {
         fontFamily: 'Assistant',
-        fontSize: ismobile? '1.1rem': '1rem',
+        fontSize: ismobile? '1.1rem': islg? '0.8rem': '1rem',
         textTransform: 'none',
         color: 'black', 
         zindex:ismobile? 2: 1,
@@ -73,7 +78,7 @@ const Header = () => {
 
       const tabStyleselected = {
         fontFamily: 'Assistant',
-        fontSize: '1rem',
+        fontSize: ismobile? '1.1rem': islg? '0.8rem': '1rem',
         textTransform: 'none',
         color: "#5E3BEE",
         zindex: 1,
@@ -94,11 +99,10 @@ const Header = () => {
 
       onChange={(event, newValue) => {
 
-        if(!ismobile){
 
         console.log(newValue);
           setValue(newValue);
-        }
+        
 
           
          
@@ -114,6 +118,7 @@ const Header = () => {
         alignItems:'center',
         width:'85%',
         marginTop:'12px',
+        
 
        
     
@@ -337,7 +342,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         >
 
             <Grid onClick={()=>{
-                setValue(4);
+                handleclick(4);
             }} item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
         fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px', cursor:'pointer'
         }}>
