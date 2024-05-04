@@ -73,7 +73,7 @@ const Contact = () => {
 
         console.log('this is the data', data)
 
-        const res = await axios.post('http://localhost:8000/sendmessage', data);
+        const res = await axios.post('/sendmessage', data);
         if(res.status === 200){
 
           setIssucceeded(true);
