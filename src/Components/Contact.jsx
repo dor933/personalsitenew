@@ -85,7 +85,7 @@ const Contact = () => {
 
     return (
 
-      <Grid id="contact" container xs={12} style={{
+      <Grid id="contact" container style={{
         display:'flex',
         paddingTop:'120px',
         paddingBottom:'120px',

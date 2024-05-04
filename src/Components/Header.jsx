@@ -48,7 +48,7 @@ const Header = () => {
 
     const handleclick= (value) => {
 
-
+       
         const section= ['header','partners','package','about','contact'][value];
 
         
@@ -59,6 +59,8 @@ const Header = () => {
         
         block:'start'})
             }
+            //scroll more down 
+            
     
     }
  
@@ -287,7 +289,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                             >אודות</MenuItem>
                              <MenuItem onClick={() => {setDrawerOpen(false); 
 
-                               handleclick(3);
+                               handleclick(4);
                                             
                                  
 
