@@ -30,8 +30,9 @@ const Footer = () => {
           console.log(sectionelement);
           sectionelement.scrollIntoView({behavior:'smooth',
         
-        block:ismobile? 'start':'center'})
+        block:'center'})
             }
+            
     }
 }
   
