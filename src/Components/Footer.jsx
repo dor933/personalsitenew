@@ -73,7 +73,7 @@ const Footer = () => {
                     alignItems:'center',
                     justifyContent:'space-around',
                     fontFamily:'Assistant',
-                    fontSize:ismd? '16px' : '12px',
+                    fontSize:ismd? '16px' : '11px',
                     fontWeight:600,
                     fontStyle:'normal',
                     lineHeight:"150%",
