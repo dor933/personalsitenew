@@ -49,7 +49,7 @@ const Header = () => {
     const handleclick= (value) => {
 
        
-        const section= ['header','partners','package','about','contry'][value];
+        const section= ['header','partners','package','about','footer_replace'][value];
 
         
             const sectionelement = document.getElementById(`${section}`);
