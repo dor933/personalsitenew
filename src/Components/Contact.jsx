@@ -86,9 +86,7 @@ const Contact = () => {
     return (
 
        <>
-      <div id="contry">
-
-      </div>
+      
 
       <Grid id="contact" container style={{
         display:'flex',

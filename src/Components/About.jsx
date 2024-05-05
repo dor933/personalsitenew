@@ -16,7 +16,7 @@ const About = () => {
   const ismd= useMediaQuery(theme.breakpoints.up('md'));
 
     return (
-  
+  <>
  
         <Grid id="about" container style={{flexDirection:'row',alignItems:'center',
        display:'flex',
@@ -117,6 +117,12 @@ const About = () => {
 
 
         </Grid>
+
+<div id="contry">
+
+</div>
+
+</>
 
          
 
