@@ -9,11 +9,11 @@ import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
 
 
-const Product = ({name,image,description}) => {
+const Product = ({name,image,description,description_small}) => {
 
     const theme= useTheme()
 
-    const islg= useMediaQuery(theme.breakpoints.down('lg'))
+    const isntlg= useMediaQuery(theme.breakpoints.down('lg'))
     const isxl= useMediaQuery(theme.breakpoints.up('xl'))
     const ismd= useMediaQuery(theme.breakpoints.down('md'))
     const issm= useMediaQuery(theme.breakpoints.down('sm'))
@@ -24,17 +24,23 @@ const Product = ({name,image,description}) => {
 
        
 
-        <Grid xs={12} md={5} container style={{
+        <Grid className={isntlg?"shake": 'none'} xs={5} md={4} container style={{
             display:'flex',
             padding:'20px',
             alignItems:'flex-start',
-            gap:'10px',
-            height:specialsize? '350px': supersmall? '510px': '440px',
+            gap:'5px',
+            height:isntlg? '240px': '410px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
             boxShadow:"0px 4px 4px rgba(0, 0, 0, 0.25)",
             margin:'10px',
+            cursor:'pointer',
+            
+            
+
+
+            
             
             
             
@@ -54,6 +60,8 @@ const Product = ({name,image,description}) => {
                 <Grid xs={3} style={{
                     display:'flex',
                     padding:'10px',
+                    paddingLeft:'20px',
+                    paddingRight:'20px',
                     justifyContent:'center',
                     alignItems:'center',
                     gap:'14px',
@@ -63,7 +71,7 @@ const Product = ({name,image,description}) => {
                     
                 }}>
 
-                    <img src={image} alt="symbol" style={{width:'50px',height:'50px',objectFit:'cover'}}/>
+                    <img src={image} alt="symbol" style={{width:isxl?'50px':'30px',height:isxl?'50px':'30px',objectFit:'cover'}}/>
 
 
                 </Grid>
@@ -72,15 +80,15 @@ const Product = ({name,image,description}) => {
 
                 <Grid xs={12} style={{ flexDirection:'column', justifyContent:'flex-start' ,alignItems:'flex-start', alignSelf:'stretch', gap:'21px', height:"100%",display:'flex'}} >
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'32px':'25px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:!isntlg?'32px':'18px', fontWeight:700, fontStyle:'normal',lineHeight:"150%"}}>
 
                     {name}
                     </div>
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'18px': '16px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:!isntlg?'16px': '14px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
 
                         
-                    {description}
+                    {isntlg? description_small: description}
 
                     </div>
                     

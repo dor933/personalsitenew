@@ -7,7 +7,10 @@ import web_pen from '../assets/images/web_pen.png';
 import feather_pen from '../assets/images/feather_pen.png';
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-import {content_writing,website_building,maintainece,organic_promotion} from '../text'
+import {content_writing,website_building,maintainece,organic_promotion, 
+content_writing_small,website_building_small,maintainece_small,organic_promotion_small
+
+} from '../text'
 
 
 export default function Package() {
@@ -21,25 +24,29 @@ export default function Package() {
     const firstskill={
         title:"כתיבת תוכן",
         description:content_writing,
-        image:tag1
+        image:tag1,
+        description_small:content_writing_small
     }
 
     const secondskill={
         title:"בניית אתר",
         description:website_building,
-        image:web_pen
+        image:web_pen,
+        description_small:website_building_small
     }
 
     const thirdskill={
         title:"קידום במנועי החיפוש",
         description:organic_promotion,
-        image:feather_pen
+        image:feather_pen,
+        description_small:organic_promotion_small
     }
 
     const fourthskill={
         title:"תחזוקה שוטפת" ,
         description:maintainece,
-        image:prod_chain1
+        image:prod_chain1,
+        description_small:maintainece_small
     }
 
     const skills=[firstskill,secondskill,thirdskill,fourthskill]
@@ -53,8 +60,8 @@ const isLg = useMediaQuery(theme.breakpoints.up('lg'));
             display: 'flex',
             paddingTop:'150px',
             paddingBottom:'150px',
-            paddingLeft:isxs?'10px':'50px',
-            paddingRight:isxs?'10px':'50px',
+            paddingLeft:isxs?'10px':'2px',
+            paddingRight:isxs?'10px':'2px',
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems:'flex-start',
@@ -164,7 +171,7 @@ const isLg = useMediaQuery(theme.breakpoints.up('lg'));
                             //     paddingRight:'30px'
                     
                             // }} >
-                            <Product name= {item.title} image= {item.image} description={item.description}/>
+                            <Product name= {item.title} image= {item.image} description={item.description} description_small={item.description_small}/>
                             // </Grid>
                         )
                     })
