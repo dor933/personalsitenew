@@ -85,6 +85,11 @@ const Contact = () => {
 
     return (
 
+       <>
+      <div id="contry">
+
+      </div>
+
       <Grid id="contact" container style={{
         display:'flex',
         paddingTop:'120px',
@@ -306,6 +311,8 @@ const Contact = () => {
 
 
         </Grid>
+        </>
+
        
     )
 }
