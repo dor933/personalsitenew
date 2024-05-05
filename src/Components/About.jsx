@@ -113,14 +113,14 @@ const About = () => {
               </Grid>
           }
        
+       <div id="contry" style={{marginBottom:"-200px"}}>
 
+        </div>
 
 
         </Grid>
 
-<div id="contry">
 
-</div>
 
 </>
 
