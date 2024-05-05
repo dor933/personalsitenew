@@ -42,7 +42,7 @@ const Header = () => {
     const {menupress,setMenupress}= useContext(AuthContext)
     const ismobile = useMediaQuery('(max-width:600px)');
     const [drawerOpen, setDrawerOpen] = useState(false);   
-    const islg = useMediaQuery(theme.breakpoints.down('lg')); 
+    const isntmd = useMediaQuery(theme.breakpoints.down('md')); 
     
 
 
@@ -69,17 +69,17 @@ const Header = () => {
 
     const tabStyle = {
         fontFamily: 'Assistant',
-        fontSize: ismobile? '1.1rem': islg? '0.8rem': '1rem',
+        fontSize: isntmd? '1.1rem': '1rem',
         textTransform: 'none',
         color: 'black', 
         zindex:ismobile? 2: 1,
-        fontWeight:ismobile? 600:400
+        fontWeight:isntmd? 600:400
         
       };
 
       const tabStyleselected = {
         fontFamily: 'Assistant',
-        fontSize: ismobile? '1.1rem': islg? '0.8rem': '1rem',
+        fontSize: isntmd? '1.1rem':'1rem',
         textTransform: 'none',
         color: "#5E3BEE",
         zindex: 1,
@@ -111,6 +111,7 @@ const Header = () => {
          
            
       }}
+
 
 
 
@@ -174,7 +175,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
         padding:'0px 30px',
         display:'flex',
-        paddingBottom: ismobile? '48px': '22px',
+        paddingBottom: isntmd? '48px': '22px',
         borderBottom: '1px solid #e0e0e0',
         
         
@@ -183,7 +184,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
     }}
 
         >
-            <Grid container item xs="12" sm="9"
+            <Grid container item xs="12" md="9"
             
             style={{display:'flex',justifyContent:'space-around',alignItems:'center', 
         
@@ -192,10 +193,10 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
             >
 
                 <Grid item xs="2" style={{display:'flex',justifyContent:'center'}}>
-                <img src={mylogo} alt='logo' style={{width:ismobile? "100px":"140px",position:'absolute', 
+                <img src={mylogo} alt='logo' style={{width:isntmd? "100px":"140px",position:'absolute', 
                 
             
-            marginTop:ismobile? "-25px":'-61px',
+            marginTop:isntmd? "-25px":'-61px',
 
             }}/>
                 </Grid>
@@ -205,7 +206,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
                         
 
                 {
-                    ismobile ? (
+                    isntmd ? (
                         <>
                         
                         <IconButton edge="start" color="inherit" aria-label="menu" onClick={() => setDrawerOpen(!drawerOpen)}>
@@ -314,9 +315,9 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         </Grid>
 
   
-        <Grid container item xs="8" sm="3"
+        <Grid container item sm="0" md="3"
         
-        style={{flexDirection:'row',display:ismobile? 'none' :'flex',justifyContent:'flex-end',
+        style={{flexDirection:'row',display:isntmd? 'none' :'flex',justifyContent:'flex-end',
     alignSelf:'center', marginTop:'12px',
     
     }}
@@ -325,7 +326,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
 
             <Grid onClick={()=>{
                 handleclick(4);
-            }} item xs="6" sm="10" lg="6" xl="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
+            }} item xs="8" lg="4" style={{display:'flex',justifyContent:'center', borderRadius:'8px', border:'1.333px solid var(--Primary, #5E3BEE)',
         fontFamily:'Assistant', fontSize:'15px', fontWeight:400, color:'var(--Primary, #5E3BEE)', lineHeight:'150%',padding:'12.667px 20.667px', cursor:'pointer'
         }}>
 

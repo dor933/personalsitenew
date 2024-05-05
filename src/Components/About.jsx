@@ -113,9 +113,7 @@ const About = () => {
               </Grid>
           }
        
-       <div id="footer_replace" style={{marginBottom:"-1000px"}}>
-
-        </div>
+      
 
 
         </Grid>

@@ -45,8 +45,8 @@ const Footer = () => {
             alignItems:'flex-start',
             paddingTop:"30.667px",
             paddingBottom:"36.667px",
-            paddingLeft: ismd? "85.333px" : '30px',
-            paddingRight:ismd? "85.333px" : '30px', 
+            paddingLeft: ismd? "85.333px" : '10px',
+            paddingRight:ismd? "85.333px" : '10px', 
             background: 'var(--BG-Shade, #F5FCFF)',
 
             
@@ -91,7 +91,9 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        paddingRight:'20px',
+                        paddingRight: '10px' 
+
+                        
                     }}>
                            <span onClick={()=> {
                               setValue(0)
@@ -109,7 +111,6 @@ const Footer = () => {
                         display:'flex',
                         flexDirection:'column',
                         justifyContent:'flex-start',
-                        paddingLeft:'20px',
                     }}>
                            <span onClick={()=> {
 setValue(1)

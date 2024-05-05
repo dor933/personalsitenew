@@ -29,7 +29,7 @@ const Product = ({name,image,description}) => {
             padding:'20px',
             alignItems:'flex-start',
             gap:'10px',
-            height:specialsize? '350px': supersmall? '490px': '440px',
+            height:specialsize? '350px': supersmall? '510px': '440px',
             borderRadius:"10px",
             borderBottom:"4px solid #5E3BEE",
             backgroundColor:"#F5FCFF",
@@ -77,7 +77,7 @@ const Product = ({name,image,description}) => {
                     {name}
                     </div>
 
-                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'18px': islg? '18px': '16px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
+                    <div style={{fontFamily:'Assistant', color:'#282938', fontSize:isxl?'18px': '16px', fontWeight:400, fontStyle:'normal',lineHeight:"150%"}}>
 
                         
                     {description}
