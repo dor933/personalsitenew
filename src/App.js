@@ -31,7 +31,7 @@ function App() {
     <AuthContext.Provider value={{menupress,value,setValue,isvalidationerror,setIsvalidationerror,issucceeded,ishomepage,setIshomepage,isinprojectpage,setIsinprojectpage,setIssucceeded,setMenupress,popup,setPopup, isincontactpage, setIsincontactpage}}>
     <Router>
 
-    <div className={` ${ismobile? "inmobile" : ""}`}  >
+    <div>
 
      
      

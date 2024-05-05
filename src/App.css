@@ -8,7 +8,7 @@
 
 
 
-.inmobile {
+/* .inmobile {
   position: relative;
   height: 100vh;
   overflow-y: hidden;
@@ -23,8 +23,8 @@
   bottom: 0;
   left: 0;
   filter: blur(1px); /* Adjust the pixel value to control the amount of blur */
-  z-index: -1;
-}
+  /* z-index: -1; */
+/* } */ 
 
 
 .fadeIn {

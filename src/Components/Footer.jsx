@@ -24,7 +24,7 @@ const Footer = () => {
 
     const handleclick= (value) => {
         for(let i=0; i<5; i++){
-        const section= ['header','partners','package','about','footer_replace'][value];
+        const section= ['header','partners','package','about','contact'][value];
             const sectionelement = document.getElementById(`${section}`);
             if(sectionelement){
           console.log(sectionelement);
