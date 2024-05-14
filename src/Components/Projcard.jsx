@@ -32,14 +32,9 @@ const Projcard = ({image,description,Zindex,rotate}) => {
     useEffect(() => {
 
         
-        if(islg){
 
         window.addEventListener('scroll',handleScroll)
-        }
-        else{
-            setTransform(`rotate(${rotate}deg)`);
-
-        }
+     
 
 
     }, [])
