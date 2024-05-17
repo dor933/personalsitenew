@@ -101,7 +101,7 @@ const About = () => {
 
           
 
-                <div style={{width:'100%',height:'100%',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingTop:isxs? '13px':'10px',paddingLeft:'30px'}}>
+                <div style={{width:'100%',height:'100%',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingTop:isxs? '15px':'10px',paddingLeft:'30px'}}>
 
 <div
                 style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', 
