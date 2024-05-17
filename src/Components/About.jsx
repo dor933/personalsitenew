@@ -18,6 +18,7 @@ const About = () => {
 //check if smaller than sm
   const isxs= useMediaQuery(theme.breakpoints.down('sm'));
   const ismd= useMediaQuery(theme.breakpoints.up('md'));
+  const issmallerthen500= useMediaQuery('(max-width:500px)');
 
     return (
   <>
@@ -104,7 +105,7 @@ const About = () => {
                 <div style={{width:'100%',height:'100%',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingLeft:'30px'}}>
 
 <div
-                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', marginTop:isxs?'30px':'10px',marginBottom:isxs? '30px':'10px'
+                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', marginTop:issmallerthen500?'30px':'10px',marginBottom:issmallerthen500? '30px':'10px'
                
 
                 }}>
