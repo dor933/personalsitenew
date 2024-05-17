@@ -19,6 +19,7 @@ const About = () => {
   const isxs= useMediaQuery(theme.breakpoints.down('sm'));
   const ismd= useMediaQuery(theme.breakpoints.up('md'));
   const issmallerthen500= useMediaQuery('(max-width:500px)');
+  const issmallerthen400= useMediaQuery('(max-width:400px)');
 
     return (
   <>
@@ -42,7 +43,7 @@ const About = () => {
           display:'flex',
           justifyContent:'flex-start',
           alignItems:'flex-start',
-          paddingRight: islg?'100px': '30px',
+          paddingRight: islg?'100px': isxs? '0px': '30px',
           marginBottom:issm? '0px' : isxs? '50px': '0px',
           
         }}>
@@ -102,14 +103,14 @@ const About = () => {
 
           
 
-                <div style={{width:'100%',height:'100%',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingLeft:'30px'}}>
+                <div style={{width:'100%',height:'100%',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingLeft:'30px',borderRadius:'20px'}}>
 
 <div
-                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', marginTop:issmallerthen500?'30px':'10px',marginBottom:issmallerthen500? '30px':'10px'
+                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px', marginTop:issmallerthen500 && !issmallerthen400?'10px': issmallerthen400? '13px':'10px',marginBottom:issmallerthen500 && !issmallerthen400? '10px': issmallerthen400? '13px':'10px', borderRadius:'10px'
                
 
                 }}>
-אני מציע חבילת "הכל כלול" שכוללת בניית אתר,קידומו, קישורו לחשבונות ברשתות החברתיות ותחזוקן, ועוד דברים שלא חלמתם שיכולים להיות לעסק שלכם.
+החבילה כוללת בניית אתר,קידומו, קישורו לחשבונות ברשתות החברתיות ותחזוקן, ועוד דברים מדהימים.
 כל זה, ב {<span style={{color:'#5E3BEE',fontWeight:'700',fontSize:isxs? '18px':'29px'}}> 1/6 </span>} מהמחיר הנמוך ביותר שתקבלו כיום בשוק .
 
                 </div>
