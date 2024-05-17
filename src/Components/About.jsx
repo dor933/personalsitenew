@@ -86,7 +86,7 @@ const About = () => {
                    <div style={{width:'100%',height:'100%',top:'0',left:'0',zIndex:'1',backgroundImage:`url(${background_about})`,backgroundSize:'cover',backgroundPosition:'center',backgroundRepeat:'no-repeat',paddingLeft:'30px'}}>
           
                 <div
-                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px',marginBottom:'10px',marginTop:'10px', 
+                style={{fontFamily:'Assistant',fontSize:isxs? '14px':'23.333px',fontWeight:400, color:'#282938',lineHeight:"150%", fontStyle:'normal',letterSpacing:'0.35px',marginBottom:'10px',marginTop:'10px', borderRadius:'10px',backgroundPosition:'right',
 
             
                 //make the background position from the right
