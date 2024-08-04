@@ -3,8 +3,11 @@ import Grid from '@mui/material/Grid';
 import { useState,useContext,useEffect } from 'react';
 import axios from 'axios';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import Calander from "./Calander";
 import AuthContext from './Usecontexts/Maincontext';
 import Fieldcomp from "./fieldcomp";
+import { Checkbox,FormControl,FormControlLabel,Typography } from '@mui/material';
+
 
 
 const Contact = () => {
@@ -15,6 +18,7 @@ const Contact = () => {
     const [businessname, setBusinessname] = useState('')
     const {setIssucceeded}= useContext(AuthContext);
     const {setPopup}= useContext(AuthContext);
+    const [checked, setChecked] = useState(false);
 
 
  
@@ -41,6 +45,11 @@ const Contact = () => {
     const handleemailchange = (e) => {
 
       setEmail(e.target.value)
+    }
+
+    const handlechecked = (e) => {
+        setChecked(e.target.checked)
+        console.log('this is the checked', checked)
     }
 
 
@@ -230,6 +239,103 @@ const Contact = () => {
 
             </Grid>
 
+           
+            <Grid container style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'flex-start',
+            gap:'10px',
+
+            justifyContent:'center',
+            marginBottom:'30px'
+          }}>
+
+<Grid item xs={12} lg={3.5} style={{
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'flex-start',
+              justifyContent:'flex-start',
+              gap:'20px',
+              //make the contects closer
+          }}>
+
+        <Grid xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'center',
+            justifyContent: 'flex-start',
+
+        }}>
+
+<FormControlLabel control={
+
+<Checkbox  style={{
+  color:'var(--Primary, #5E3BEE)',
+  padding:'0px',
+  margin:'0px',
+  alignSelf:'center',
+  
+  
+  
+  
+                 }}
+                 checked={checked}
+                 onChange={handlechecked}
+                 />  }
+               label={
+                <Typography style={{
+                  fontFamily:'Assistant',
+                  color:'var(--Heading-color, #282938)',
+                  fontSize:'18px',
+                  fontWeight:400,
+                  fontStyle:'normal',
+                  padding:'5px'
+               }}>קבע פגישה</Typography>}
+               labelPlacement="start"
+           
+              
+
+
+                              />
+
+
+          </Grid>
+
+
+
+          </Grid>
+
+          <Grid item xs={12} lg={3.5} style={{
+              display:'flex',
+              flexDirection:'column',
+              alignItems:'center',
+              justifyContent:'flex-start',
+              gap:'20px',
+              //make the contects closer
+          }}>
+
+        <Grid xs={12} style={{
+            display:'flex',
+            flexDirection:'row',
+            alignItems:'center',
+            justifyContent: 'flex-start',
+
+        }}>
+
+        <Calander ischecked={checked}/>
+
+
+          </Grid>
+
+
+
+          </Grid>
+
+
+          
+
+            </Grid>
+
             <Grid container xs={12} style={{
             display:'flex',
             flexDirection:'row',
@@ -244,6 +350,8 @@ const Contact = () => {
           
 
             </Grid>
+
+        
 
             <Grid item xs={12} style={{
             display:'flex',
