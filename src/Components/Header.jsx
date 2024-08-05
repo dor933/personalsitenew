@@ -24,6 +24,10 @@ import AuthContext from './Usecontexts/Maincontext';
 import drimage from '../assets/images/DR.png'
 import mylogo from '../assets/images/my_logo.png'
 import { useTheme } from '@mui/material/styles';
+//bring router
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes,Route } from 'react-router-dom';
+
 
 
 
@@ -34,11 +38,12 @@ import { useTheme } from '@mui/material/styles';
 
 const Header = () => {
 
-  
+
 
     const theme= useTheme();
     
     const {value, setValue} = useContext(AuthContext);
+    const {ishomepage, setIshomepage} = useContext(AuthContext);
     const {menupress,setMenupress}= useContext(AuthContext)
     const ismobile = useMediaQuery('(max-width:600px)');
     const [drawerOpen, setDrawerOpen] = useState(false);   
@@ -49,7 +54,11 @@ const Header = () => {
     const handleclick= (value) => {
 
        
-        const section= ['header','partners','package','about','contact'][value];
+        const section= ['header','partners','none','package','about','contact'][value];
+
+        if(section === 'none'){
+            return;
+        }
 
         
             const sectionelement = document.getElementById(`${section}`);
@@ -134,7 +143,11 @@ const Header = () => {
       >
           <Tab label="בית"
 
+          
+
           style={ value !== 0 ? tabStyle: tabStyleselected }
+          component={!ishomepage?Link:null} to="/"
+
           
 
           
@@ -144,6 +157,20 @@ const Header = () => {
            <Tab label="שותפים"
 
 style={ value !== 1 ? tabStyle: tabStyleselected }
+component={!ishomepage?Link:null} to="/"
+
+
+
+
+
+
+/>
+
+<Tab label="בלוג"
+
+style={ value !== 2 ? tabStyle: tabStyleselected }
+component={ishomepage?Link:null} to="/blog"
+
 
 
 
@@ -151,19 +178,30 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
 
 />
              <Tab label="שירותים" 
-          style={ value !== 2 ? tabStyle: tabStyleselected }
+          style={ value !== 3 ? tabStyle: tabStyleselected }
 
+          component={!ishomepage?Link:null} to="/"
+
+         
           
           />
-          <Tab label="אודות"
-          style={ value !== 3 ? tabStyle: tabStyleselected }
           
+     
+          <Tab label="אודות"
+          style={ value !== 4 ? tabStyle: tabStyleselected }
+          component={!ishomepage?Link:null} to="/"
+
           />
        
           <Tab label="צור קשר"
-          style={ value !== 4 ? tabStyle: tabStyleselected }
+          style={ value !== 5 ? tabStyle: tabStyleselected }
+          component={!ishomepage?Link:null} to="/"
+
 
           />
+
+
+
       </Tabs>
       );
 
@@ -172,7 +210,7 @@ style={ value !== 1 ? tabStyle: tabStyleselected }
         <Grid id="header" container  direction='row' 
         justifyContent="space-between"
         style={{ zIndex:2,
-        boxShadow: '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)',
+        boxShadow: ishomepage? '0px 5.333px 80px 0px rgba(0, 0, 0, 0.10)' : null,
         padding:'0px 30px',
         display:'flex',
         paddingBottom: isntmd? '48px': '22px',

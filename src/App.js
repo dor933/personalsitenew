@@ -8,6 +8,7 @@ import AuthContext from './Components/Usecontexts/Maincontext';
 import { useMediaQuery } from '@mui/material';
 import Popup from './Components/Popup';
 import { useEffect } from 'react';
+import Main from './Components/Blog/Main';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   const [isvalidationerror, setIsvalidationerror] = useState(false);
   const ismobile = useMediaQuery('(max-width:1700px)');
   const [isincontactpage, setIsincontactpage] = useState(false);
-  const [ishomepage, setIshomepage] = useState(false);
+  const [ishomepage, setIshomepage] = useState(true);
   const [isinprojectpage, setIsinprojectpage] = useState(false);
   const [value, setValue] = useState(0);
 
@@ -50,6 +51,7 @@ function App() {
 
         <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/blog" element={<Main />} />
       
         </Routes>
 
